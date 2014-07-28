@@ -1,0 +1,89 @@
+/*
+*	Template Name: RMH
+*	Description: Boom Child theme for Ronald McDonald House San Francisco
+*	Template: Boom
+*	Version: 0.1
+*/
+@import url("../boom/style.css");
+/* RMH Layout Styles */
+/* line 11, sass/style.scss */
+body {
+  color: #a5a299;
+}
+
+/* line 18, sass/style.scss */
+header .site-logo .logo {
+  width: 225px;
+}
+/* line 24, sass/style.scss */
+header .site-head-right form[role="search"] input[type="text"] {
+  background: #e2e1de;
+  border: none;
+  width: 100%;
+  min-width: 100px;
+  padding: 15px 30px 15px 15px;
+  height: 1.5rem;
+  z-index: 9;
+}
+/* line 33, sass/style.scss */
+header .site-head-right form[role="search"] input[type="submit"] {
+  position: absolute;
+  right: 6px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 10;
+  background: url('/wp-content/themes/rmh/images/icons/search.png') no-repeat 50% 50%;
+  background-size: 90% auto;
+}
+/* line 44, sass/style.scss */
+header .site-head-right .social-links {
+  padding-left: 0;
+}
+/* line 46, sass/style.scss */
+header .site-head-right .social-links .widget {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 49, sass/style.scss */
+header .site-head-right .social-links .widget .menu-item {
+  display: inline-block;
+  color: white;
+  background: #ffc829 url('/wp-content/themes/rmh/images/icons/right-arrow-action.png') 96% center no-repeat;
+  background-size: auto 65%;
+  width: 100%;
+  padding: 5px;
+  text-align: left;
+}
+/* line 46, sass/_rmh.scss */
+header .site-head-right .social-links .widget .menu-item a {
+  color: #a5a299;
+  font-size: 22px;
+  font-size: 14px;
+  color: white;
+  padding-right: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 52, sass/style.scss */
+header .site-head-right .social-links .widget.widget_nav_menu {
+  width: 70%;
+  width: 100%;
+}
+/* line 55, sass/style.scss */
+header .site-head-right .social-links .widget.widget_nav_menu .menu {
+  padding-left: 120px;
+}
+/* line 57, sass/style.scss */
+header .site-head-right .social-links .widget.widget_cnss_widget {
+  position: absolute;
+  width: 120px;
+}
+/* line 64, sass/style.scss */
+header .menu-header-nav-container {
+  background: #628ecc;
+}
+/* line 66, sass/style.scss */
+header .menu-header-nav-container li {
+  background: #a5a299;
+}

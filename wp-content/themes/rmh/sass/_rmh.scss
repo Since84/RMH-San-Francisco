@@ -1,0 +1,54 @@
+/* RMH Layout Styles */
+
+// Colors
+$primary:	#628ecc;
+$secondary:	#ffc829;
+$tertiary:	#a5a299;
+
+$maintext: $tertiary;
+$highlight: #e2e1de;
+
+// Images
+$searchicon: image-url('icons/search.png', false, false );
+$searchiconblue: image-url('icons/search-blue.png', false, false);
+$rightarrow: image-url('icons/right-arrow-action.png', false, false );
+
+// Mixins 
+	@mixin futura {
+		// font-family: futura
+	}
+
+	@mixin header1 {
+		color: $primary;
+		font-size: 30px;
+		@include futura;
+	}
+
+	@mixin header2 {
+		color: $tertiary;
+		font-size: 22px;
+		@include futura;
+	}
+
+	@mixin bodytext {
+		color: $tertiary;
+		font-size: 22px;
+	}
+
+	@mixin action-button {
+		display: inline-block;
+		color: white;
+		background: $secondary $rightarrow 96% center no-repeat;
+		background-size: auto 65%;
+		width: 100%;
+		padding: 5px;
+		text-align: left;
+		a {
+			@include header2;
+			font-size: 14px;
+			color: white;
+			padding-right: 20px;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}

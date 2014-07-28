@@ -1,0 +1,71 @@
+/*
+*	Template Name: RMH
+*	Description: Boom Child theme for Ronald McDonald House San Francisco
+*	Template: Boom
+*	Version: 0.1
+*/
+
+@import url("../boom/style.css");
+@import "rmh";
+
+body {
+	color: $maintext;
+}
+
+//Header 
+header{
+	.site-logo{
+		.logo{
+			width: 225px;
+		}
+	}
+	.site-head-right{
+		form[role="search"]{
+			input[type="text"]{
+				background: $highlight;
+				border: none;
+				width: 100%;
+				min-width: 100px;
+				padding: 15px 30px 15px 15px;
+				height: 1.5rem;
+				z-index: 9;
+			}
+			input[type="submit"]{
+				position: absolute;
+				right: 6px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				z-index: 10;
+				background: $searchicon no-repeat 50% 50%;
+				background-size: 90% auto;
+			}
+		}
+		.social-links{
+			padding-left: 0;
+			.widget{
+				display: inline-block;
+				vertical-align: top;
+				.menu-item {
+					@include action-button;
+				}
+				&.widget_nav_menu{
+					width: 70%;
+					width: 100%;
+					.menu{ padding-left: 120px; }
+				}
+				&.widget_cnss_widget{
+					position: absolute;
+					width: 120px;
+				}
+			}
+		}
+	}
+	.menu-header-nav-container {
+		background: $primary;
+		li{
+			//TODO: change to current menu item
+			background: $tertiary;
+		}
+	}
+}
