@@ -1,0 +1,91 @@
+/* 	
+	Theme Name: Boom 
+	Version: 0.1
+	Author: *~==
+	Description: Boom theme for Boom Creative Co. Site Development
+*/
+$blueprint_grid_columns: 12;
+$blueprint_grid_width: 110px;
+ 
+@import "blueprint";
+@import 'base';
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body {
+
+}
+
+.container {
+	max-width: $frameWidth;
+	width: 100%; 
+	margin: auto;
+}
+
+//Header
+ header {
+ 	.site-logo, .site-head-right {
+ 		display: inline-block;
+ 		vertical-align:middle;
+ 	}
+ 	.site-logo {
+ 		@include col(8);
+ 		vertical-align: middle;
+ 	}
+ 	.site-head-right {
+ 		@include col(4);
+ 		text-align: right;
+ 		vertical-align: middle;
+
+ 		.menu {
+ 			li {
+ 				display: inline-block;
+ 				vertical-align: middle;
+ 			}
+ 			
+ 		}
+ 	}
+
+ 	form[role='search'] {
+ 		text-align: right;
+ 		position: relative; 
+ 		input {
+ 			display: inline-block;
+ 			vertical-align: middle;
+ 			&[type='submit']{
+ 				border: 0;
+ 				width: 20px;
+ 				height: 20px;
+ 			}
+ 			&[type='text']{
+ 				border: none;
+ 				border-bottom: 1px solid #ccc;
+ 				height: 20px;
+ 			}
+ 		}
+ 	}
+ 	.social-icons-widget {
+ 		list-style: none;
+ 		display: inline-block;
+ 		margin-top: 10px;
+
+ 		ul li {
+ 			margin-left: 10px;
+ 			margin-right: 0;
+ 		}
+ 	}
+ 	.menu-header-nav-container {
+		background: gray;
+		li {
+			display: inline-block;
+			padding: 15px 20px;
+			background: lightgray;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}	
+ }

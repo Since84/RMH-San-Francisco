@@ -1,0 +1,58 @@
+/*
+	Base Styles for Boom Theme
+*/
+
+// Type
+@mixin h1 {
+	
+}
+
+@mixin h2 {
+	
+}
+
+@mixin h3 {
+	
+}
+
+@mixin h4 {
+	
+}
+
+@mixin h5 {
+	
+}
+
+@mixin p {
+	
+}
+
+@mixin sub {
+
+}
+
+@mixin sup {
+
+}
+
+@mixin ul {
+
+}
+
+@mixin li {
+
+}
+
+// Colors
+
+// Grid
+$columns: 12;
+$frameWidth: 1370px;
+$columnWidth: $frameWidth / $columns;
+
+@mixin col($count){
+	display: inline-block;
+	vertical-align: top;
+	width: (( 100% /  $columns ) * $count ) - .5;
+	max-width: ( $count * $columnWidth );
+}
