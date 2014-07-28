@@ -44,13 +44,13 @@ elseif (strpos($_SERVER['HTTP_HOST'], 'ronaldhouse-sf.org') !== false) {
 	define('DB_NAME', 'rmh');
 
 	/** MySQL database username */
-	define('DB_USER', 'rmh_user');
+	define('DB_USER', 'WPagduser');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', 'vMf3EJs7');
+	define('DB_PASSWORD', '7CseiwLe');
 
 	/** MySQL hostname */
-	define('DB_HOST', '127.0.0.1');
+	define('DB_HOST', 'localhost');
 
 	/** Database Charset to use in creating database tables. */
 	define('DB_CHARSET', 'utf8');
