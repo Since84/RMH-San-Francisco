@@ -41,10 +41,10 @@ if (strpos($_SERVER['HTTP_HOST'], 'rmh.ag') !== false) {
 elseif (strpos($_SERVER['HTTP_HOST'], 'ronaldhouse-sf.org') !== false) { 
 
 	/** The name of the database for WordPress */
-	define('DB_NAME', 'root');
+	define('DB_NAME', 'rmh');
 
 	/** MySQL database username */
-	define('DB_USER', 'rmh');
+	define('DB_USER', 'root');
 
 	/** MySQL database password */
 	define('DB_PASSWORD', 'Ng1s3dgA');
