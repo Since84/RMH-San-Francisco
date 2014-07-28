@@ -47,7 +47,7 @@ elseif (strpos($_SERVER['HTTP_HOST'], 'ronaldhouse-sf.org') !== false) {
 	define('DB_USER', 'rmh_user');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', 'Ng1s3dgA');
+	define('DB_PASSWORD', 'vMf3EJs7');
 
 	/** MySQL hostname */
 	define('DB_HOST', '127.0.0.1');
