@@ -7,92 +7,142 @@
 /*
 	Base Styles for Boom Theme
 */
-/* line 13, sass/style.scss */
+/* line 14, sass/style.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 21, sass/style.scss */
+/* line 22, sass/style.scss */
 .container {
-  max-width: 1370px;
+  max-width: 1140px;
   width: 100%;
   margin: auto;
 }
 
-/* line 29, sass/style.scss */
+/* line 30, sass/style.scss */
 header .site-logo, header .site-head-right {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 33, sass/style.scss */
+/* line 34, sass/style.scss */
 header .site-logo {
   display: inline-block;
   vertical-align: top;
   width: 66.16667%;
-  max-width: 913.33333px;
+  max-width: 760px;
   vertical-align: middle;
 }
-/* line 37, sass/style.scss */
+/* line 38, sass/style.scss */
 header .site-head-right {
   display: inline-block;
   vertical-align: top;
   width: 32.83333%;
-  max-width: 456.66667px;
+  max-width: 380px;
   text-align: right;
   vertical-align: middle;
+  float: right;
+  margin-top: 1em;
 }
-/* line 43, sass/style.scss */
+/* line 46, sass/style.scss */
 header .site-head-right .menu li {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 51, sass/style.scss */
+/* line 54, sass/style.scss */
 header form[role='search'] {
   text-align: right;
   position: relative;
 }
-/* line 54, sass/style.scss */
+/* line 57, sass/style.scss */
 header form[role='search'] input {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 57, sass/style.scss */
+/* line 60, sass/style.scss */
 header form[role='search'] input[type='submit'] {
   border: 0;
   width: 20px;
   height: 20px;
 }
-/* line 62, sass/style.scss */
+/* line 65, sass/style.scss */
 header form[role='search'] input[type='text'] {
   border: none;
   border-bottom: 1px solid #ccc;
   height: 20px;
 }
-/* line 69, sass/style.scss */
+/* line 72, sass/style.scss */
 header .social-icons-widget {
   list-style: none;
   display: inline-block;
   margin-top: 10px;
 }
-/* line 74, sass/style.scss */
+/* line 77, sass/style.scss */
 header .social-icons-widget ul li {
   margin-left: 10px;
   margin-right: 0;
 }
-/* line 79, sass/style.scss */
+/* line 82, sass/style.scss */
 header .menu-header-nav-container {
   background: gray;
 }
-/* line 81, sass/style.scss */
+/* line 84, sass/style.scss */
 header .menu-header-nav-container li {
   display: inline-block;
   padding: 15px 20px;
   background: lightgray;
 }
-/* line 85, sass/style.scss */
+/* line 88, sass/style.scss */
 header .menu-header-nav-container li a {
   color: white;
   text-decoration: none;
+}
+/* line 93, sass/style.scss */
+header .menu-header-nav-container .menu {
+  margin: 0;
+}
+
+/* line 108, sass/style.scss */
+.post-scroller {
+  padding: 2em;
+}
+
+/* line 111, sass/style.scss */
+.blog-post-preview {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+  width: 24.5%;
+}
+/* line 116, sass/style.scss */
+.blog-post-preview:not(:last-of-type) {
+  border-right: 1px solid #fafafa;
+}
+/* line 119, sass/style.scss */
+.blog-post-preview .post-meta {
+  display: none;
+}
+
+/* line 126, sass/style.scss */
+.home .call-to-action {
+  padding: 20px;
+  text-align: center;
+}
+/* line 129, sass/style.scss */
+.home .call-to-action .menu {
+  padding-left: 0;
+}
+/* line 132, sass/style.scss */
+.home .call-to-action .menu li {
+  padding: 10px;
+  background: #fafafa;
+  display: inline-block;
+}
+/* line 140, sass/style.scss */
+.home .call-to-action .widget {
+  display: block;
+  clear: both;
+  text-align: center;
+  width: 100%;
 }

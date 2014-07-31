@@ -8,11 +8,21 @@
 @import url("../boom/style.css");
 @import "rmh";
 
+$containerWidth: 1140px;
+
 body {
 	color: $maintext;
+	@include futura;
 }
 
-//Header 
+//Headings
+h1 {}
+h2 {}
+h3 {
+	@include header3;
+}
+
+// Main Header 
 header{
 	.site-logo{
 		.logo{
@@ -48,6 +58,9 @@ header{
 				vertical-align: top;
 				.menu-item {
 					@include action-button;
+					font-size: 10px;
+					padding: 5px 1em;
+					width: 90%;
 				}
 				&.widget_nav_menu{
 					width: 70%;
@@ -68,4 +81,80 @@ header{
 			background: $tertiary;
 		}
 	}
+}
+
+//Call To Action Buttons
+.home .call-to-action {
+
+	// Background
+	background: $calltoactionback;
+	color: white;
+	width: 100%;
+	max-width: $containerWidth + 44px;
+	position: relative;
+
+	// Background Banner Tails 
+	&::before, &::after{
+		content: "";
+		width: 22px;
+		height: 30px;
+		bottom: -30px;
+		display: block;
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+	&::before{
+		background: $bannertailleft;
+		left: 0;
+	}
+	&::after{
+		background: $bannertailright;
+		right: 0;
+	}
+
+	//Section Header Text
+	.widget_text{ 
+		font-size: 26px;	
+	}
+
+	//Highlighted text
+	.special {
+		font-size: 30px;
+	}
+	
+	// Action Buttons
+	#menu-action-buttons li{
+		@include action-button;
+		width: 200px;
+		&:not(:last-of-type){
+			margin-right: 2em;
+		}
+	}
+}
+
+//Post Scroller
+.post-scroller {
+	padding: 1em 2em 0;
+	box-shadow: 0px -4px 6px 2px #bdb9b9;
+}
+
+
+//Post Preview block
+.blog-post-preview {
+	padding: 10px 25px;
+	&:not(:last-of-type){
+		border-right: 1px solid black;
+	}
+	&:hover {
+		background: #eee;
+	}
+
+	a {
+		color: $maintext;
+		text-decoration: none;
+	}
+	p {
+		margin-top: .5rem;
+	}
+
 }

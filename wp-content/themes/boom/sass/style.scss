@@ -6,6 +6,7 @@
 */
 $blueprint_grid_columns: 12;
 $blueprint_grid_width: 110px;
+$containerWidth: 1140px;
  
 @import "blueprint";
 @import 'base';
@@ -38,6 +39,8 @@ body {
  		@include col(4);
  		text-align: right;
  		vertical-align: middle;
+ 		float: right;
+ 		margin-top: 1em;
 
  		.menu {
  			li {
@@ -87,5 +90,60 @@ body {
 				text-decoration: none;
 			}
 		}
+		.menu{
+			margin: 0;
+		}
 	}	
  }
+
+ //Footer 
+ footer {
+
+ }
+
+ //Components
+
+ ///Post Scroller
+ 	// Four Per Page
+.post-scroller {
+ 	padding: 2em;
+ }
+ .blog-post-preview {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+	width: 24.5%;
+	&:not(:last-of-type){
+		border-right: 1px solid $secondary;
+	}
+	.post-meta{
+		display: none;
+	}
+ }
+
+ ///Call To Action Buttons
+ 	// Home Page
+ 	.home .call-to-action {
+ 		padding: 20px;
+ 		text-align: center;
+ 		.menu {
+ 			padding-left:0;
+ 		
+	 		li {
+	 			padding: 10px;
+	 			background: $secondary;
+	 			display: inline-block;
+	 			// margin-left: 1em;
+	 			// padding-left: 0;
+	 		}
+	 	}
+ 		.widget{
+ 			display: block;
+ 			clear: both;
+ 			text-align: center;
+ 			width: 100%;
+ 		}
+ 		.special {
+ 			//Thirsty Font
+ 		}
+ 	}

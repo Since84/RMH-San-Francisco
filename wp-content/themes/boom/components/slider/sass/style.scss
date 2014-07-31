@@ -1,0 +1,145 @@
+@import "dynamite";
+
+$sliderHeight: 465px;
+$sliderWidth: 100%;
+$containerWidth: 1140px;
+
+.dynamite-slide {
+
+	display: block;
+	position: relative;
+	width: 100%; 
+
+	.dynamite-slide{
+		// position: absolute;
+	}
+ 
+	.dynamite-slide-container{
+		position: relative;
+		width: 100%;
+		max-width: $containerWidth;
+		padding: 0;
+		white-space: nowrap;
+		margin: auto;
+	}
+	
+	.dynamite-slide-window {
+		width: $sliderWidth;
+		// max-width: $containerWidth;
+		// padding: 0 5%;
+		overflow: hidden;
+	}
+
+	.dynamite-slide-pager{
+		text-align: right;
+		padding-right: 1rem;
+		position: absolute;
+		bottom: 1rem;
+		left: 0;
+		right: 0;
+		margin: auto;
+		z-index: 1000;
+	}
+
+	.paging{
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		display:inline-block;
+		border:none;
+		z-index: 5; 
+		top: 0;
+		background: none;
+	    -moz-transition:opacity .5s, -moz-transform .5s;
+	    -webkit-transition:opacity .5s, -webkit-transform .5s;
+	    -o-transition:opacity .5s, -o-transform .5s;
+	    transition:opacity .5s, transform .5s;
+		&.prev{ 
+			// left: 0; 
+			background-image: $left-arrow-slider;
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			background-size: 28px;
+
+		}
+		&.next{ 
+			// right: 0; 
+			background-image: $right-arrow-slider;
+			background-position: 100% 50%;
+			background-repeat: no-repeat;
+			background-size: 28px;
+		}
+	}
+
+	.dynamite-slider{
+		display: block;
+		width: $sliderWidth;
+		top: 0;
+		left: 0;
+		// height: $sliderHeight;
+		background: white;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+
+		.slide{
+			position: absolute;
+			display: inline-block;
+			vertical-align: top;
+			position: relative;
+			// max-width: 1000px;
+			width: 100%;
+			height: $sliderHeight;
+			overflow: hidden;
+			-webkit-transition: height .5s;
+    		transition: height .5s;
+
+
+
+			& > img, & > a > img {
+				// max-width: 1000px;
+				width: 100%;
+				height: auto;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				-webkit-transition: height .5s;
+	    		transition: height .5s;
+			}
+
+			&.active {
+				height: $sliderHeight;
+				box-shadow: 0px 0px 7px 2px #bdb9b9;
+			}
+			&:not(.active) {
+				opacity: .5;
+				height: $sliderHeight - 40;
+				padding: 20px 0;
+			}
+
+
+
+			video { 
+				width: auto;
+				max-width: 100%;
+				height: auto;
+				max-height: 100%;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+		}
+		.slide-transition .slide:not('.active') {
+			img {
+				height: 100%;
+				width: auto;
+				padding: 0;
+			}
+		}
+
+	}
+}

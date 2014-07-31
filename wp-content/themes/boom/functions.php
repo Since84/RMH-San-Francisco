@@ -5,3 +5,7 @@
 	require_once('functions/header-image.php');
 	require_once('functions/sidebars.php');
 
+
+	require_once('components/slider/slider.php');
+
+	add_theme_support( 'post-thumbnails' ); 

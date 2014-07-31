@@ -5,17 +5,23 @@ $primary:	#628ecc;
 $secondary:	#ffc829;
 $tertiary:	#a5a299;
 
+$secondaryGray: #565656;
+
 $maintext: $tertiary;
 $highlight: #e2e1de;
+$border: #999d9f;
 
 // Images
 $searchicon: image-url('icons/search.png', false, false );
 $searchiconblue: image-url('icons/search-blue.png', false, false);
 $rightarrow: image-url('icons/right-arrow-action.png', false, false );
+$calltoactionback: image-url('icons/call-to-action.png', false, false );
+$bannertailleft: image-url('icons/blue-banner-tail-left.png', false, false );
+$bannertailright: image-url('icons/blue-banner-tail-right.png', false, false );
 
 // Mixins 
 	@mixin futura {
-		// font-family: futura
+		font-family: 'Nunito', sans-serif;
 	}
 
 	@mixin header1 {
@@ -30,6 +36,13 @@ $rightarrow: image-url('icons/right-arrow-action.png', false, false );
 		@include futura;
 	}
 
+	@mixin header3 {
+		color: $secondaryGray;
+		font-size: 16px;
+		margin-bottom: 0px;
+		@include futura;
+	}
+
 	@mixin bodytext {
 		color: $tertiary;
 		font-size: 22px;
@@ -40,14 +53,18 @@ $rightarrow: image-url('icons/right-arrow-action.png', false, false );
 		color: white;
 		background: $secondary $rightarrow 96% center no-repeat;
 		background-size: auto 65%;
-		width: 100%;
-		padding: 5px;
+		padding: 10px;
+		padding-left: 1em;
 		text-align: left;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+
 		a {
 			@include header2;
-			font-size: 14px;
+			font-size: 18px;
 			color: white;
-			padding-right: 20px;
+			// padding-right: 2em;
 			text-decoration: none;
 			text-transform: uppercase;
 		}

@@ -6,16 +6,25 @@
 */
 @import url("../boom/style.css");
 /* RMH Layout Styles */
-/* line 11, sass/style.scss */
+/* line 13, sass/style.scss */
 body {
   color: #a5a299;
+  font-family: 'Nunito', sans-serif;
 }
 
-/* line 18, sass/style.scss */
+/* line 21, sass/style.scss */
+h3 {
+  color: #565656;
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* line 28, sass/style.scss */
 header .site-logo .logo {
   width: 225px;
 }
-/* line 24, sass/style.scss */
+/* line 34, sass/style.scss */
 header .site-head-right form[role="search"] input[type="text"] {
   background: #e2e1de;
   border: none;
@@ -25,7 +34,7 @@ header .site-head-right form[role="search"] input[type="text"] {
   height: 1.5rem;
   z-index: 9;
 }
-/* line 33, sass/style.scss */
+/* line 43, sass/style.scss */
 header .site-head-right form[role="search"] input[type="submit"] {
   position: absolute;
   right: 6px;
@@ -36,54 +45,153 @@ header .site-head-right form[role="search"] input[type="submit"] {
   background: url('/wp-content/themes/rmh/images/icons/search.png') no-repeat 50% 50%;
   background-size: 90% auto;
 }
-/* line 44, sass/style.scss */
+/* line 54, sass/style.scss */
 header .site-head-right .social-links {
   padding-left: 0;
 }
-/* line 46, sass/style.scss */
+/* line 56, sass/style.scss */
 header .site-head-right .social-links .widget {
   display: inline-block;
   vertical-align: top;
 }
-/* line 49, sass/style.scss */
+/* line 59, sass/style.scss */
 header .site-head-right .social-links .widget .menu-item {
   display: inline-block;
   color: white;
   background: #ffc829 url('/wp-content/themes/rmh/images/icons/right-arrow-action.png') 96% center no-repeat;
   background-size: auto 65%;
-  width: 100%;
-  padding: 5px;
+  padding: 10px;
+  padding-left: 1em;
   text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 5px 1em;
+  width: 90%;
 }
-/* line 46, sass/_rmh.scss */
+/* line 63, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item a {
   color: #a5a299;
   font-size: 22px;
-  font-size: 14px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
   color: white;
-  padding-right: 20px;
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 52, sass/style.scss */
+/* line 65, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu {
   width: 70%;
   width: 100%;
 }
-/* line 55, sass/style.scss */
+/* line 68, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu .menu {
   padding-left: 120px;
 }
-/* line 57, sass/style.scss */
+/* line 70, sass/style.scss */
 header .site-head-right .social-links .widget.widget_cnss_widget {
   position: absolute;
   width: 120px;
 }
-/* line 64, sass/style.scss */
+/* line 77, sass/style.scss */
 header .menu-header-nav-container {
   background: #628ecc;
 }
-/* line 66, sass/style.scss */
+/* line 79, sass/style.scss */
 header .menu-header-nav-container li {
   background: #a5a299;
+}
+
+/* line 87, sass/style.scss */
+.home .call-to-action {
+  background: url('/wp-content/themes/rmh/images/icons/call-to-action.png');
+  color: white;
+  width: 100%;
+  max-width: 1184px;
+  position: relative;
+}
+/* line 97, sass/style.scss */
+.home .call-to-action::before, .home .call-to-action::after {
+  content: "";
+  width: 22px;
+  height: 30px;
+  bottom: -30px;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+/* line 106, sass/style.scss */
+.home .call-to-action::before {
+  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-left.png');
+  left: 0;
+}
+/* line 110, sass/style.scss */
+.home .call-to-action::after {
+  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-right.png');
+  right: 0;
+}
+/* line 116, sass/style.scss */
+.home .call-to-action .widget_text {
+  font-size: 26px;
+}
+/* line 121, sass/style.scss */
+.home .call-to-action .special {
+  font-size: 30px;
+}
+/* line 126, sass/style.scss */
+.home .call-to-action #menu-action-buttons li {
+  display: inline-block;
+  color: white;
+  background: #ffc829 url('/wp-content/themes/rmh/images/icons/right-arrow-action.png') 96% center no-repeat;
+  background-size: auto 65%;
+  padding: 10px;
+  padding-left: 1em;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
+/* line 63, sass/_rmh.scss */
+.home .call-to-action #menu-action-buttons li a {
+  color: #a5a299;
+  font-size: 22px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 129, sass/style.scss */
+.home .call-to-action #menu-action-buttons li:not(:last-of-type) {
+  margin-right: 2em;
+}
+
+/* line 136, sass/style.scss */
+.post-scroller {
+  padding: 1em 2em 0;
+  box-shadow: 0px -4px 6px 2px #bdb9b9;
+}
+
+/* line 143, sass/style.scss */
+.blog-post-preview {
+  padding: 10px 25px;
+}
+/* line 145, sass/style.scss */
+.blog-post-preview:not(:last-of-type) {
+  border-right: 1px solid black;
+}
+/* line 148, sass/style.scss */
+.blog-post-preview:hover {
+  background: #eee;
+}
+/* line 152, sass/style.scss */
+.blog-post-preview a {
+  color: #a5a299;
+  text-decoration: none;
+}
+/* line 156, sass/style.scss */
+.blog-post-preview p {
+  margin-top: .5rem;
 }

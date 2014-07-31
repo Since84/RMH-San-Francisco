@@ -44,10 +44,12 @@
 }
 
 // Colors
+$primary: #eeeeee;
+$secondary: #fafafa;
 
 // Grid
 $columns: 12;
-$frameWidth: 1370px;
+$frameWidth: 1140px;
 $columnWidth: $frameWidth / $columns;
 
 @mixin col($count){
