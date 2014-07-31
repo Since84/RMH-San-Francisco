@@ -49,7 +49,7 @@ $secondary: #fafafa;
 
 // Grid
 $columns: 12;
-$frameWidth: 1140px;
+$frameWidth: 1260px;
 $columnWidth: $frameWidth / $columns;
 
 @mixin col($count){

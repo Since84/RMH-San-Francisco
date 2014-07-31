@@ -12,7 +12,7 @@
 .dynamite-slide .dynamite-slide-container {
   position: relative;
   width: 100%;
-  max-width: 1140px;
+  max-width: 1260px;
   padding: 0;
   white-space: nowrap;
   margin: auto;
@@ -93,21 +93,27 @@
   top: 0;
   bottom: 0;
   margin: auto;
-  -webkit-transition: height .5s;
-  transition: height .5s;
+  -webkit-transition: height .25s;
+  transition: height .25s;
 }
 /* line 111, ../sass/style.scss */
 .dynamite-slide .dynamite-slider .slide.active {
   height: 465px;
-  box-shadow: 0px 0px 7px 2px #bdb9b9;
+  box-shadow: 0px 5px 7px 2px #bdb9b9;
+  z-index: 1;
 }
-/* line 115, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .dynamite-slide .dynamite-slider .slide:not(.active) {
   opacity: .5;
   height: 425px;
   padding: 20px 0;
 }
-/* line 123, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
+.dynamite-slide .dynamite-slider .slide:not(.active) img {
+  -webkit-transition: height .25s;
+  transition: height .25s;
+}
+/* line 128, ../sass/style.scss */
 .dynamite-slide .dynamite-slider .slide video {
   width: auto;
   max-width: 100%;
@@ -120,8 +126,8 @@
   right: 0;
   margin: auto;
 }
-/* line 137, ../sass/style.scss */
-.dynamite-slide .dynamite-slider .slide-transition .slide:not('.active') img {
+/* line 144, ../sass/style.scss */
+.dynamite-slide .dynamite-slider .slide-transition .slide :not('.active') img {
   height: 100%;
   width: auto;
   padding: 0;

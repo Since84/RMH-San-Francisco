@@ -118,7 +118,7 @@
 				var pagerSpacing = $( self.options.sliderClass ).parents('.dynamite-slider').find('.paging').width() ;
 				console.log(pagerSpacing);
 
-				activeSlide.parent().addClass('slide-transition');
+				// activeSlide.parent().addClass('slide-transition');
 				
 				activeSlide.removeClass('active');
 				nextSlide.addClass('active');

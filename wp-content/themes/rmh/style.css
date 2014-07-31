@@ -12,7 +12,14 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-/* line 21, sass/style.scss */
+/* line 20, sass/style.scss */
+h2 {
+  color: #a5a299;
+  font-size: 22px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* line 23, sass/style.scss */
 h3 {
   color: #565656;
   font-size: 16px;
@@ -20,11 +27,16 @@ h3 {
   font-family: 'Nunito', sans-serif;
 }
 
-/* line 28, sass/style.scss */
+/* line 31, sass/style.scss */
+header {
+  z-index: 10;
+  position: relative;
+}
+/* line 36, sass/style.scss */
 header .site-logo .logo {
   width: 225px;
 }
-/* line 34, sass/style.scss */
+/* line 42, sass/style.scss */
 header .site-head-right form[role="search"] input[type="text"] {
   background: #e2e1de;
   border: none;
@@ -34,7 +46,7 @@ header .site-head-right form[role="search"] input[type="text"] {
   height: 1.5rem;
   z-index: 9;
 }
-/* line 43, sass/style.scss */
+/* line 51, sass/style.scss */
 header .site-head-right form[role="search"] input[type="submit"] {
   position: absolute;
   right: 6px;
@@ -45,16 +57,16 @@ header .site-head-right form[role="search"] input[type="submit"] {
   background: url('/wp-content/themes/rmh/images/icons/search.png') no-repeat 50% 50%;
   background-size: 90% auto;
 }
-/* line 54, sass/style.scss */
+/* line 62, sass/style.scss */
 header .site-head-right .social-links {
   padding-left: 0;
 }
-/* line 56, sass/style.scss */
+/* line 64, sass/style.scss */
 header .site-head-right .social-links .widget {
   display: inline-block;
   vertical-align: top;
 }
-/* line 59, sass/style.scss */
+/* line 67, sass/style.scss */
 header .site-head-right .social-links .widget .menu-item {
   display: inline-block;
   color: white;
@@ -66,11 +78,18 @@ header .site-head-right .social-links .widget .menu-item {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+  cursor: pointer;
   font-size: 10px;
   padding: 5px 1em;
   width: 90%;
 }
-/* line 63, sass/_rmh.scss */
+/* line 84, sass/_rmh.scss */
+header .site-head-right .social-links .widget .menu-item:hover {
+  background-color: #F1D480;
+}
+/* line 88, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item a {
   color: #a5a299;
   font-size: 22px;
@@ -80,38 +99,59 @@ header .site-head-right .social-links .widget .menu-item a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 65, sass/style.scss */
+/* line 73, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu {
   width: 70%;
   width: 100%;
 }
-/* line 68, sass/style.scss */
+/* line 76, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu .menu {
   padding-left: 120px;
 }
-/* line 70, sass/style.scss */
+/* line 78, sass/style.scss */
 header .site-head-right .social-links .widget.widget_cnss_widget {
   position: absolute;
   width: 120px;
 }
-/* line 77, sass/style.scss */
+/* line 85, sass/style.scss */
 header .menu-header-nav-container {
   background: #628ecc;
 }
-/* line 79, sass/style.scss */
+/* line 87, sass/style.scss */
 header .menu-header-nav-container li {
   background: #a5a299;
 }
 
-/* line 87, sass/style.scss */
+/* line 95, sass/style.scss */
+.dynamite-slide .dynamite-slider {
+  overflow: visible !important;
+}
+/* line 99, sass/style.scss */
+.dynamite-slide .dynamite-slider .dynamite-slide-window {
+  margin-top: -39px;
+}
+/* line 101, sass/style.scss */
+.dynamite-slide .dynamite-slider .dynamite-slide-window::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 40px;
+  position: relative;
+  top: 20px;
+  left: 0;
+  background: #628ecc;
+  z-index: 1;
+}
+
+/* line 116, sass/style.scss */
 .home .call-to-action {
   background: url('/wp-content/themes/rmh/images/icons/call-to-action.png');
   color: white;
   width: 100%;
-  max-width: 1184px;
+  max-width: 1304px;
   position: relative;
 }
-/* line 97, sass/style.scss */
+/* line 126, sass/style.scss */
 .home .call-to-action::before, .home .call-to-action::after {
   content: "";
   width: 22px;
@@ -121,25 +161,25 @@ header .menu-header-nav-container li {
   position: absolute;
   background-repeat: no-repeat;
 }
-/* line 106, sass/style.scss */
+/* line 135, sass/style.scss */
 .home .call-to-action::before {
-  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-left.png');
+  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-left.png') no-repeat;
   left: 0;
 }
-/* line 110, sass/style.scss */
+/* line 139, sass/style.scss */
 .home .call-to-action::after {
-  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-right.png');
+  background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-right.png') no-repeat;
   right: 0;
 }
-/* line 116, sass/style.scss */
+/* line 145, sass/style.scss */
 .home .call-to-action .widget_text {
   font-size: 26px;
 }
-/* line 121, sass/style.scss */
+/* line 150, sass/style.scss */
 .home .call-to-action .special {
   font-size: 30px;
 }
-/* line 126, sass/style.scss */
+/* line 155, sass/style.scss */
 .home .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -151,9 +191,16 @@ header .menu-header-nav-container li {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+  cursor: pointer;
   width: 200px;
 }
-/* line 63, sass/_rmh.scss */
+/* line 84, sass/_rmh.scss */
+.home .call-to-action #menu-action-buttons li:hover {
+  background-color: #F1D480;
+}
+/* line 88, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
@@ -163,35 +210,175 @@ header .menu-header-nav-container li {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 129, sass/style.scss */
+/* line 158, sass/style.scss */
 .home .call-to-action #menu-action-buttons li:not(:last-of-type) {
   margin-right: 2em;
 }
 
-/* line 136, sass/style.scss */
-.post-scroller {
-  padding: 1em 2em 0;
+/* line 165, sass/style.scss */
+.content-area {
+  padding: 4em 1em 0;
   box-shadow: 0px -4px 6px 2px #bdb9b9;
 }
-
-/* line 143, sass/style.scss */
-.blog-post-preview {
-  padding: 10px 25px;
+/* line 169, sass/style.scss */
+.content-area h2 {
+  margin: 0 1rem 0;
+  padding-bottom: .25rem;
+  border-bottom: 1px solid #a5a299;
 }
-/* line 145, sass/style.scss */
+/* line 176, sass/style.scss */
+.content-area .whats-happening .blog-post-preview {
+  min-height: 200px;
+}
+/* line 178, sass/style.scss */
+.content-area .whats-happening .blog-post-preview:not(:last-of-type) {
+  border-right: 1px solid #999d9f;
+}
+/* line 182, sass/style.scss */
+.content-area .whats-happening .pager-button {
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 34px;
+  height: 180px;
+  z-index: 80;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+}
+/* line 197, sass/style.scss */
+.content-area .whats-happening:hover .pager-button {
+  opacity: .25;
+}
+/* line 201, sass/style.scss */
+.content-area .whats-happening .cycle-next {
+  right: 0;
+  background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_right.png');
+}
+/* line 205, sass/style.scss */
+.content-area .whats-happening .cycle-prev {
+  left: 0;
+  background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_left.png');
+}
+/* line 210, sass/style.scss */
+.content-area .whats-happening .post-meta {
+  display: none;
+}
+/* line 214, sass/style.scss */
+.content-area .family-stories {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 66.16667%;
+  max-width: 840px;
+}
+/* line 218, sass/style.scss */
+.content-area .family-stories h2 {
+  margin-right: 4.1em;
+}
+/* line 222, sass/style.scss */
+.content-area .family-stories h3 {
+  color: #628ecc;
+  margin-top: 0;
+}
+/* line 227, sass/style.scss */
+.content-area .family-stories .one-per-page {
+  padding-top: 1.6em;
+}
+/* line 230, sass/style.scss */
+.content-area .family-stories .one-per-page .thumbnail {
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+/* line 235, sass/style.scss */
+.content-area .family-stories .one-per-page .blog-post-preview {
+  width: 100%;
+  padding: 2em 1em;
+  border: 0;
+}
+/* line 240, sass/style.scss */
+.content-area .family-stories .one-per-page .blog-post-preview .post-date {
+  margin-bottom: 2em;
+}
+/* line 244, sass/style.scss */
+.content-area .family-stories .one-per-page .blog-post-preview .post-categories {
+  display: none;
+}
+/* line 250, sass/style.scss */
+.content-area .social-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 32.83333%;
+  max-width: 420px;
+}
+/* line 253, sass/style.scss */
+.content-area .social-block .fb-activity {
+  padding-top: 1.6em;
+  margin: 0 1em 0;
+}
+
+/* line 263, sass/style.scss */
+.slider-pagination {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 80px;
+}
+/* line 103, sass/_rmh.scss */
+.slider-pagination .paging {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  display: inline-block;
+  border: none;
+  z-index: 5;
+  top: 0;
+  background: none;
+  -moz-transition: opacity .5s, -moz-transform .5s;
+  -webkit-transition: opacity .5s, -webkit-transform .5s;
+  -o-transition: opacity .5s, -o-transform .5s;
+  transition: opacity .5s, transform .5s;
+  position: absolute;
+}
+/* line 118, sass/_rmh.scss */
+.slider-pagination .paging.prev {
+  left: 10px;
+  background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+/* line 126, sass/_rmh.scss */
+.slider-pagination .paging.next {
+  right: 10px;
+  background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
+  background-position: 100% 50%;
+  background-repeat: no-repeat;
+  background-size: 28px;
+}
+
+/* line 268, sass/style.scss */
+.blog-post-preview {
+  padding: 10px .75em;
+}
+/* line 270, sass/style.scss */
 .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid black;
 }
-/* line 148, sass/style.scss */
+/* line 273, sass/style.scss */
 .blog-post-preview:hover {
   background: #eee;
 }
-/* line 152, sass/style.scss */
+/* line 277, sass/style.scss */
 .blog-post-preview a {
   color: #a5a299;
   text-decoration: none;
 }
-/* line 156, sass/style.scss */
+/* line 281, sass/style.scss */
 .blog-post-preview p {
   margin-top: .5rem;
 }

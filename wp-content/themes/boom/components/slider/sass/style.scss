@@ -2,7 +2,7 @@
 
 $sliderHeight: 465px;
 $sliderWidth: 100%;
-$containerWidth: 1140px;
+$containerWidth: 1260px;
 
 .dynamite-slide {
 
@@ -104,18 +104,23 @@ $containerWidth: 1140px;
 				top: 0;
 				bottom: 0;
 				margin: auto;
-				-webkit-transition: height .5s;
-	    		transition: height .5s;
+				-webkit-transition: height .25s;
+	    		transition: height .25s;
 			}
 
 			&.active {
 				height: $sliderHeight;
-				box-shadow: 0px 0px 7px 2px #bdb9b9;
+				box-shadow: 0px 5px 7px 2px #bdb9b9;
+				z-index: 1;
 			}
 			&:not(.active) {
 				opacity: .5;
 				height: $sliderHeight - 40;
 				padding: 20px 0;
+				img {
+				-webkit-transition: height .25s;
+	    		transition: height .25s;
+	    		}
 			}
 
 
@@ -133,13 +138,16 @@ $containerWidth: 1140px;
 				margin: auto;
 			}
 		}
-		.slide-transition .slide:not('.active') {
-			img {
-				height: 100%;
-				width: auto;
-				padding: 0;
-			}
-		}
+		.slide-transition .slide{
 
+			:not('.active') {
+				img {
+					height: 100%;
+					width: auto;
+					padding: 0;
+				}
+			}
+
+		}
 	}
 }

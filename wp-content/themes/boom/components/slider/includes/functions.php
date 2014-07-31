@@ -12,7 +12,7 @@ $slides = new WP_Query( $fArgs );
 ?>
 <div class='featured-content dynamite-slide'>
 	<div class='dynamite-slider'>
-		<div class="container dynamite-slide-pager">
+		<div class="container dynamite-slide-pager .slider-pagination">
 			<button class='prev paging'></button>
 			<button class='next paging'></button>
 		</div>
