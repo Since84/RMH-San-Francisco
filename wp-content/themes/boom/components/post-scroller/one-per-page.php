@@ -4,7 +4,7 @@
 	*/
 	$postArgs = array(
 		'posts_per_page' 	=> 	5,
-		'category_name'		=>	'whats-happening'
+		'category_name'		=>	'family-stories'
 	);
 	$postQuery = new WP_Query($postArgs);
 ?>

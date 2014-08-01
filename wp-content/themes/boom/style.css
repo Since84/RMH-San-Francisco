@@ -154,6 +154,7 @@ header .menu-header-nav-container .menu {
   display: block;
   height: 180px;
   width: 100%;
+  text-align: center;
 }
 /* line 157, sass/style.scss */
 .blog-post-preview img {

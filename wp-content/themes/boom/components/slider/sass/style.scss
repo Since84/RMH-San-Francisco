@@ -91,10 +91,10 @@ $containerWidth: 1260px;
 			width: 100%;
 			height: $sliderHeight;
 			overflow: hidden;
-		    -webkit-transition: height 1s ease;
-		    -moz-transition: height 1s ease;
-		    -o-transition: height 1s ease;
-		    transition: height 1s ease;
+		    -webkit-transition: height 5s, padding 5s;
+		    -moz-transition: height 5s, padding 5s;
+		    -o-transition: height 5s, padding 5s;
+		    transition: height 5s, padding 5s;
 
 
 
@@ -106,10 +106,10 @@ $containerWidth: 1260px;
 				top: 0;
 				bottom: 0;
 				margin: auto;
-			    -webkit-transition: height 1s ease;
-			    -moz-transition: height 1s ease;
-			    -o-transition: height 1s ease;
-			    transition: height 1s ease;
+			    -webkit-transition: height 5s, padding 5s;
+			    -moz-transition: height 5s, padding 5s;
+			    -o-transition: height 5s, padding 5s;
+			    transition: height 5s, padding 5s;
 			}
 
 			&.active {

@@ -23,3 +23,8 @@
 	    add_editor_style( get_stylesheet_uri() );
 	 
 	}
+
+	function custom_excerpt_length( $length ) {
+		return 20;
+	}
+	add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
