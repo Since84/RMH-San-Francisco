@@ -306,6 +306,9 @@ header{
 		font-size: 16px;
 		color: $tertiary;
 	}
+	p {
+		@include col(9);
+	}
 }
 
 //Page Sidebar
