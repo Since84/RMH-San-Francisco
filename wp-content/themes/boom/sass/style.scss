@@ -16,7 +16,7 @@ $containerWidth: 1260px;
  }
 
 body {
-
+	margin: 0;
 }
 
 .container {
@@ -81,18 +81,48 @@ body {
  	}
  	.menu-header-nav-container {
 		background: gray;
+		
 		li {
 			display: inline-block;
+			vertical-align: top;
 			padding: 15px 20px;
-			background: lightgray;
+			position: relative;
+
 			a {
 				color: white;
 				text-decoration: none;
 			}
+
+			.sub-menu {
+				display: none;
+				position: absolute;
+				width: 150;
+				left: 0;
+				padding-left: 0;
+				margin-top: 1em;
+
+				li {
+					position: relative;
+					width: 100%;
+					.sub-menu{
+						position: absolute;
+						right: -100%;
+					}
+				}
+			}
+
+			&:hover {
+				> .sub-menu{
+					display: block;
+				}
+			}
+
 		}
 		.menu{
 			margin: 0;
 		}
+
+
 	}	
  }
 
@@ -211,4 +241,25 @@ body {
  	height: 200px;
  	vertical-align: top;
  	@include col(4);
+ }
+
+
+ //Default Page Template 
+ .single, .page {
+ 	.content-area{
+ 		padding: 1em 1em 1em 240px;
+ 		position: relative;
+ 		min-height: 600px;
+ 	}
+ 	.page-sidebar{
+ 		position: absolute;
+ 		padding-top: 1em;
+ 		left: 0;
+
+ 		.call-to-action{
+ 			.widget_text {
+ 				display: none;
+ 			}
+ 		}
+ 	}
  }

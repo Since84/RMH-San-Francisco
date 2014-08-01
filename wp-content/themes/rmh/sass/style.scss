@@ -16,7 +16,9 @@ body {
 }
 
 //Headings
-h1 {}
+h1 {
+	@include header1;
+}
 h2 {
 	@include header2;
 }
@@ -84,12 +86,22 @@ header{
 	}
 	.menu-header-nav-container {
 		background: $primary;
-		li{
-			//TODO: change to current menu item
-			background: $tertiary;
+		
+		//Nav Menu
+		li {
+			background: $primary;
+			&.current-menu-item {
+				//TODO: change to current menu item
+				background: $tertiary;
+			}
+			li:hover:not(.current-menu-item) {
+				background: $primaryLight;
+			}
 		}
 	}
 }
+
+
 
 //Dynamite Slider
 .dynamite-slide .dynamite-slider{
@@ -284,11 +296,78 @@ header{
 
 }
 
+//Page Content 
+.page-content{
+	color: $maintext;
+	h2 {
+		border: none;
+		padding: 0;
+		margin-left: 0;
+		font-size: 16px;
+		color: $tertiary;
+	}
+}
+
+//Page Sidebar
+.page-sidebar {
+	@include col(2);
+	li {
+		list-style: none;
+		width: 90%;
+	}
+	.call-to-action{
+		#menu-action-buttons{
+			padding-left: 0;
+			width: 100%;
+			li{
+				@include action-button;
+				display: list-item;
+				margin-bottom: .5em;
+				width: 100%;
+			}
+		}
+	}
+
+	.parent-menu {
+		text-transform: uppercase;
+		ul {
+			padding: 0;
+		}
+
+		a, li {
+			margin-top: .5em;
+			color: $primary;
+			text-decoration: none;
+		}
+		& > div > ul {
+			list-style: none;
+			padding: 1em;
+			margin-top: .5em;
+
+			ul {
+				padding-left: 1em;
+			}
+		}
+		& > div > ul > li {
+			& > a {
+				// font-weight: bold;
+				// text-decoration: underline;
+			}
+		}
+	}
+}
+
 //Footer
 footer{
 	background: $primary;
 	color: white;
-	padding: 0 1em;
+	font-size: 10px;
+	line-height: 1.5em;
+	width: 100%;
+
+	.container {
+		padding: 0 2em;
+	}
 
 	h2, h4 {
 		text-transform: uppercase;

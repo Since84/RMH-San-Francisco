@@ -12,14 +12,22 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-/* line 20, sass/style.scss */
+/* line 19, sass/style.scss */
+h1 {
+  color: #628ecc;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* line 22, sass/style.scss */
 h2 {
   color: #a5a299;
   font-size: 22px;
   font-family: 'Nunito', sans-serif;
 }
 
-/* line 23, sass/style.scss */
+/* line 25, sass/style.scss */
 h3 {
   color: #565656;
   font-size: 16px;
@@ -27,16 +35,16 @@ h3 {
   font-family: 'Nunito', sans-serif;
 }
 
-/* line 31, sass/style.scss */
+/* line 33, sass/style.scss */
 header {
   z-index: 10;
   position: relative;
 }
-/* line 36, sass/style.scss */
+/* line 38, sass/style.scss */
 header .site-logo .logo {
   width: 225px;
 }
-/* line 42, sass/style.scss */
+/* line 44, sass/style.scss */
 header .site-head-right form[role="search"] input[type="text"] {
   background: #e2e1de;
   border: none;
@@ -46,7 +54,7 @@ header .site-head-right form[role="search"] input[type="text"] {
   height: 1.5rem;
   z-index: 9;
 }
-/* line 51, sass/style.scss */
+/* line 53, sass/style.scss */
 header .site-head-right form[role="search"] input[type="submit"] {
   position: absolute;
   right: 6px;
@@ -57,16 +65,16 @@ header .site-head-right form[role="search"] input[type="submit"] {
   background: url('/wp-content/themes/rmh/images/icons/search.png') no-repeat 50% 50%;
   background-size: 90% auto;
 }
-/* line 62, sass/style.scss */
+/* line 64, sass/style.scss */
 header .site-head-right .social-links {
   padding-left: 0;
 }
-/* line 64, sass/style.scss */
+/* line 66, sass/style.scss */
 header .site-head-right .social-links .widget {
   display: inline-block;
   vertical-align: top;
 }
-/* line 67, sass/style.scss */
+/* line 69, sass/style.scss */
 header .site-head-right .social-links .widget .menu-item {
   display: inline-block;
   color: white;
@@ -85,11 +93,11 @@ header .site-head-right .social-links .widget .menu-item {
   padding: 5px 1em;
   width: 90%;
 }
-/* line 84, sass/_rmh.scss */
+/* line 86, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item:hover {
   background-color: #F1D480;
 }
-/* line 88, sass/_rmh.scss */
+/* line 90, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item a {
   color: #a5a299;
   font-size: 22px;
@@ -99,38 +107,46 @@ header .site-head-right .social-links .widget .menu-item a {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 73, sass/style.scss */
+/* line 75, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu {
   width: 70%;
   width: 100%;
 }
-/* line 76, sass/style.scss */
+/* line 78, sass/style.scss */
 header .site-head-right .social-links .widget.widget_nav_menu .menu {
   padding-left: 120px;
 }
-/* line 78, sass/style.scss */
+/* line 80, sass/style.scss */
 header .site-head-right .social-links .widget.widget_cnss_widget {
   position: absolute;
   width: 120px;
 }
-/* line 85, sass/style.scss */
+/* line 87, sass/style.scss */
 header .menu-header-nav-container {
   background: #628ecc;
 }
-/* line 87, sass/style.scss */
+/* line 91, sass/style.scss */
 header .menu-header-nav-container li {
+  background: #628ecc;
+}
+/* line 93, sass/style.scss */
+header .menu-header-nav-container li.current-menu-item {
   background: #a5a299;
 }
+/* line 97, sass/style.scss */
+header .menu-header-nav-container li li:hover:not(.current-menu-item) {
+  background: rgba(98, 142, 204, 0.75);
+}
 
-/* line 95, sass/style.scss */
+/* line 107, sass/style.scss */
 .dynamite-slide .dynamite-slider {
   overflow: visible !important;
 }
-/* line 99, sass/style.scss */
+/* line 111, sass/style.scss */
 .dynamite-slide .dynamite-slider .dynamite-slide-window {
   margin-top: -39px;
 }
-/* line 101, sass/style.scss */
+/* line 113, sass/style.scss */
 .dynamite-slide .dynamite-slider .dynamite-slide-window::before {
   content: '';
   display: block;
@@ -143,7 +159,7 @@ header .menu-header-nav-container li {
   z-index: 1;
 }
 
-/* line 116, sass/style.scss */
+/* line 128, sass/style.scss */
 .home .call-to-action {
   background: url('/wp-content/themes/rmh/images/icons/call-to-action.png');
   color: white;
@@ -151,7 +167,7 @@ header .menu-header-nav-container li {
   max-width: 1304px;
   position: relative;
 }
-/* line 126, sass/style.scss */
+/* line 138, sass/style.scss */
 .home .call-to-action::before, .home .call-to-action::after {
   content: "";
   width: 22px;
@@ -161,25 +177,25 @@ header .menu-header-nav-container li {
   position: absolute;
   background-repeat: no-repeat;
 }
-/* line 135, sass/style.scss */
+/* line 147, sass/style.scss */
 .home .call-to-action::before {
   background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-left.png') no-repeat;
   left: 0;
 }
-/* line 139, sass/style.scss */
+/* line 151, sass/style.scss */
 .home .call-to-action::after {
   background: url('/wp-content/themes/rmh/images/icons/blue-banner-tail-right.png') no-repeat;
   right: 0;
 }
-/* line 145, sass/style.scss */
+/* line 157, sass/style.scss */
 .home .call-to-action .widget_text {
   font-size: 26px;
 }
-/* line 150, sass/style.scss */
+/* line 162, sass/style.scss */
 .home .call-to-action .special {
   font-size: 30px;
 }
-/* line 155, sass/style.scss */
+/* line 167, sass/style.scss */
 .home .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -196,11 +212,11 @@ header .menu-header-nav-container li {
   cursor: pointer;
   width: 200px;
 }
-/* line 84, sass/_rmh.scss */
+/* line 86, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li:hover {
   background-color: #F1D480;
 }
-/* line 88, sass/_rmh.scss */
+/* line 90, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
@@ -210,31 +226,31 @@ header .menu-header-nav-container li {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 158, sass/style.scss */
+/* line 170, sass/style.scss */
 .home .call-to-action #menu-action-buttons li:not(:last-of-type) {
   margin-right: 2em;
 }
 
-/* line 165, sass/style.scss */
+/* line 177, sass/style.scss */
 .content-area {
   padding: 4em 1em;
   box-shadow: 0px -4px 6px 2px #bdb9b9;
 }
-/* line 169, sass/style.scss */
+/* line 181, sass/style.scss */
 .content-area h2 {
   margin: 0 1rem 0;
   padding-bottom: .25rem;
   border-bottom: 1px solid #a5a299;
 }
-/* line 176, sass/style.scss */
+/* line 188, sass/style.scss */
 .content-area .whats-happening .blog-post-preview {
   min-height: 200px;
 }
-/* line 178, sass/style.scss */
+/* line 190, sass/style.scss */
 .content-area .whats-happening .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid #999d9f;
 }
-/* line 182, sass/style.scss */
+/* line 194, sass/style.scss */
 .content-area .whats-happening .pager-button {
   display: block;
   position: absolute;
@@ -249,25 +265,25 @@ header .menu-header-nav-container li {
   -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
-/* line 197, sass/style.scss */
+/* line 209, sass/style.scss */
 .content-area .whats-happening:hover .pager-button {
   opacity: .25;
 }
-/* line 201, sass/style.scss */
+/* line 213, sass/style.scss */
 .content-area .whats-happening .cycle-next {
   right: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_right.png');
 }
-/* line 205, sass/style.scss */
+/* line 217, sass/style.scss */
 .content-area .whats-happening .cycle-prev {
   left: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_left.png');
 }
-/* line 210, sass/style.scss */
+/* line 222, sass/style.scss */
 .content-area .whats-happening .post-meta {
   display: none;
 }
-/* line 214, sass/style.scss */
+/* line 226, sass/style.scss */
 .content-area .family-stories {
   position: relative;
   display: inline-block;
@@ -275,60 +291,60 @@ header .menu-header-nav-container li {
   width: 66.16667%;
   max-width: 840px;
 }
-/* line 218, sass/style.scss */
+/* line 230, sass/style.scss */
 .content-area .family-stories h2 {
   margin-right: 4.1em;
 }
-/* line 222, sass/style.scss */
+/* line 234, sass/style.scss */
 .content-area .family-stories h3 {
   color: #628ecc;
   margin-top: 0;
 }
-/* line 227, sass/style.scss */
+/* line 239, sass/style.scss */
 .content-area .family-stories .one-per-page {
   padding-top: 1.6em;
 }
-/* line 230, sass/style.scss */
+/* line 242, sass/style.scss */
 .content-area .family-stories .one-per-page .thumbnail {
   float: right;
   width: 50%;
   text-align: center;
 }
-/* line 235, sass/style.scss */
+/* line 247, sass/style.scss */
 .content-area .family-stories .one-per-page .blog-post-preview {
   width: 100%;
   padding: 2em 1em;
   border: 0;
 }
-/* line 240, sass/style.scss */
+/* line 252, sass/style.scss */
 .content-area .family-stories .one-per-page .blog-post-preview .post-date {
   margin-bottom: 2em;
 }
-/* line 244, sass/style.scss */
+/* line 256, sass/style.scss */
 .content-area .family-stories .one-per-page .blog-post-preview .post-categories {
   display: none;
 }
-/* line 250, sass/style.scss */
+/* line 262, sass/style.scss */
 .content-area .social-block {
   display: inline-block;
   vertical-align: top;
   width: 32.83333%;
   max-width: 420px;
 }
-/* line 253, sass/style.scss */
+/* line 265, sass/style.scss */
 .content-area .social-block .fb-activity {
   padding-top: 1.6em;
   margin: 0 1em 0;
 }
 
-/* line 263, sass/style.scss */
+/* line 275, sass/style.scss */
 .slider-pagination {
   position: absolute;
   top: 0px;
   right: 0;
   width: 80px;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 .slider-pagination .paging {
   width: 30px;
   height: 30px;
@@ -344,7 +360,7 @@ header .menu-header-nav-container li {
   transition: opacity .5s, transform .5s;
   position: absolute;
 }
-/* line 118, sass/_rmh.scss */
+/* line 120, sass/_rmh.scss */
 .slider-pagination .paging.prev {
   left: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
@@ -352,7 +368,7 @@ header .menu-header-nav-container li {
   background-repeat: no-repeat;
   background-size: 28px;
 }
-/* line 126, sass/_rmh.scss */
+/* line 128, sass/_rmh.scss */
 .slider-pagination .paging.next {
   right: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
@@ -361,74 +377,168 @@ header .menu-header-nav-container li {
   background-size: 28px;
 }
 
-/* line 268, sass/style.scss */
+/* line 280, sass/style.scss */
 .blog-post-preview {
   padding: 10px .75em;
 }
-/* line 270, sass/style.scss */
+/* line 282, sass/style.scss */
 .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid black;
 }
-/* line 273, sass/style.scss */
+/* line 285, sass/style.scss */
 .blog-post-preview:hover {
   background: #eee;
 }
-/* line 277, sass/style.scss */
+/* line 289, sass/style.scss */
 .blog-post-preview a {
   color: #a5a299;
   text-decoration: none;
 }
-/* line 281, sass/style.scss */
+/* line 293, sass/style.scss */
 .blog-post-preview p {
   margin-top: .5rem;
 }
 
-/* line 288, sass/style.scss */
+/* line 300, sass/style.scss */
+.page-content {
+  color: #a5a299;
+}
+/* line 302, sass/style.scss */
+.page-content h2 {
+  border: none;
+  padding: 0;
+  margin-left: 0;
+  font-size: 16px;
+  color: #a5a299;
+}
+
+/* line 312, sass/style.scss */
+.page-sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 16.16667%;
+  max-width: 210px;
+}
+/* line 314, sass/style.scss */
+.page-sidebar li {
+  list-style: none;
+  width: 90%;
+}
+/* line 319, sass/style.scss */
+.page-sidebar .call-to-action #menu-action-buttons {
+  padding-left: 0;
+  width: 100%;
+}
+/* line 322, sass/style.scss */
+.page-sidebar .call-to-action #menu-action-buttons li {
+  display: inline-block;
+  color: white;
+  background: #ffc829 url('/wp-content/themes/rmh/images/icons/right-arrow-action.png') 96% center no-repeat;
+  background-size: auto 65%;
+  padding: 10px;
+  padding-left: 1em;
+  text-align: left;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+  cursor: pointer;
+  display: list-item;
+  margin-bottom: .5em;
+  width: 100%;
+}
+/* line 86, sass/_rmh.scss */
+.page-sidebar .call-to-action #menu-action-buttons li:hover {
+  background-color: #F1D480;
+}
+/* line 90, sass/_rmh.scss */
+.page-sidebar .call-to-action #menu-action-buttons li a {
+  color: #a5a299;
+  font-size: 22px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 331, sass/style.scss */
+.page-sidebar .parent-menu {
+  text-transform: uppercase;
+}
+/* line 333, sass/style.scss */
+.page-sidebar .parent-menu ul {
+  padding: 0;
+}
+/* line 337, sass/style.scss */
+.page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
+  margin-top: .5em;
+  color: #628ecc;
+  text-decoration: none;
+}
+/* line 342, sass/style.scss */
+.page-sidebar .parent-menu > div > ul {
+  list-style: none;
+  padding: 1em;
+  margin-top: .5em;
+}
+/* line 347, sass/style.scss */
+.page-sidebar .parent-menu > div > ul ul {
+  padding-left: 1em;
+}
+
+/* line 361, sass/style.scss */
 footer {
   background: #628ecc;
   color: white;
-  padding: 0 1em;
+  font-size: 10px;
+  line-height: 1.5em;
+  width: 100%;
 }
-/* line 293, sass/style.scss */
+/* line 368, sass/style.scss */
+footer .container {
+  padding: 0 2em;
+}
+/* line 372, sass/style.scss */
 footer h2, footer h4 {
   text-transform: uppercase;
   font-size: 14px;
 }
-/* line 297, sass/style.scss */
+/* line 376, sass/style.scss */
 footer h4 {
   margin: .5em 0;
 }
-/* line 301, sass/style.scss */
+/* line 380, sass/style.scss */
 footer a {
   color: white;
   text-decoration: none;
 }
-/* line 305, sass/style.scss */
+/* line 384, sass/style.scss */
 footer a:hover {
   border-bottom: 1px solid white;
 }
-/* line 311, sass/style.scss */
+/* line 390, sass/style.scss */
 footer .footer-sidebar {
   padding: 1em 0;
   padding-left: 4em;
   margin-top: 1em;
 }
-/* line 317, sass/style.scss */
+/* line 396, sass/style.scss */
 footer .footer-sidebar .widget:not(:last-of-type) {
   margin-bottom: 3em;
 }
-/* line 322, sass/style.scss */
+/* line 401, sass/style.scss */
 footer .footer-sidebar h2.widgettitle {
   list-style: none;
   color: white;
   margin: .5em 0;
 }
-/* line 327, sass/style.scss */
+/* line 406, sass/style.scss */
 footer .footer-sidebar .menu {
   padding: 0;
   margin: .5em 0;
 }
-/* line 333, sass/style.scss */
+/* line 412, sass/style.scss */
 footer li {
   list-style: none;
 }

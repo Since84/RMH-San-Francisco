@@ -5,6 +5,7 @@ $primary:	#628ecc;
 $secondary:	#ffc829;
 $tertiary:	#a5a299;
 
+$primaryLight: rgba(98, 142, 204, .75);
 $secondaryGray: #565656;
 
 $maintext: $tertiary;
@@ -33,6 +34,7 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 	@mixin header1 {
 		color: $primary;
 		font-size: 30px;
+		text-transform: uppercase;
 		@include futura;
 	}
 
