@@ -157,3 +157,69 @@ header .menu-header-nav-container .menu {
   text-align: center;
   width: 100%;
 }
+
+/* line 167, sass/style.scss */
+.footer-main {
+  vertical-align: top;
+  padding: 1em;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  width: 66.16667%;
+  max-width: 840px;
+}
+/* line 172, sass/style.scss */
+.footer-main .footer-sitemap {
+  padding: 0 0 1em 0;
+}
+/* line 174, sass/style.scss */
+.footer-main .footer-sitemap > ul {
+  list-style: none;
+}
+/* line 176, sass/style.scss */
+.footer-main .footer-sitemap > ul > li {
+  display: inline-block;
+  list-style: none;
+  vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+  width: 24.5%;
+  max-width: 315px;
+}
+/* line 184, sass/style.scss */
+.footer-main .footer-sitemap ul {
+  list-style: none;
+  padding-left: 0;
+}
+/* line 187, sass/style.scss */
+.footer-main .footer-sitemap ul li {
+  padding: 0;
+}
+/* line 193, sass/style.scss */
+.footer-main .corporate .copyright {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 1em 0;
+}
+/* line 198, sass/style.scss */
+.footer-main .corporate .menu {
+  display: inline-block;
+}
+/* line 201, sass/style.scss */
+.footer-main .corporate .menu li {
+  display: inline-block;
+}
+/* line 205, sass/style.scss */
+.footer-main .corporate .menu-corporate-menu-container {
+  display: inline-block;
+}
+
+/* line 210, sass/style.scss */
+.footer-sidebar {
+  height: 200px;
+  vertical-align: top;
+  display: inline-block;
+  vertical-align: top;
+  width: 32.83333%;
+  max-width: 420px;
+}

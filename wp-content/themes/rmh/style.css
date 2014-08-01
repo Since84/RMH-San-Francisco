@@ -217,7 +217,7 @@ header .menu-header-nav-container li {
 
 /* line 165, sass/style.scss */
 .content-area {
-  padding: 4em 1em 0;
+  padding: 4em 1em;
   box-shadow: 0px -4px 6px 2px #bdb9b9;
 }
 /* line 169, sass/style.scss */
@@ -381,4 +381,54 @@ header .menu-header-nav-container li {
 /* line 281, sass/style.scss */
 .blog-post-preview p {
   margin-top: .5rem;
+}
+
+/* line 288, sass/style.scss */
+footer {
+  background: #628ecc;
+  color: white;
+  padding: 0 1em;
+}
+/* line 293, sass/style.scss */
+footer h2, footer h4 {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+/* line 297, sass/style.scss */
+footer h4 {
+  margin: .5em 0;
+}
+/* line 301, sass/style.scss */
+footer a {
+  color: white;
+  text-decoration: none;
+}
+/* line 305, sass/style.scss */
+footer a:hover {
+  border-bottom: 1px solid white;
+}
+/* line 311, sass/style.scss */
+footer .footer-sidebar {
+  padding: 1em 0;
+  padding-left: 4em;
+  margin-top: 1em;
+}
+/* line 317, sass/style.scss */
+footer .footer-sidebar .widget:not(:last-of-type) {
+  margin-bottom: 3em;
+}
+/* line 322, sass/style.scss */
+footer .footer-sidebar h2.widgettitle {
+  list-style: none;
+  color: white;
+  margin: .5em 0;
+}
+/* line 327, sass/style.scss */
+footer .footer-sidebar .menu {
+  padding: 0;
+  margin: .5em 0;
+}
+/* line 333, sass/style.scss */
+footer li {
+  list-style: none;
 }

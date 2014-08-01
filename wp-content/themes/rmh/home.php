@@ -41,8 +41,8 @@
 
 
 <? //SOCIAL	?>
-	<div class="social-block">
-		<h2>Social</h2>
+		<div class="social-block">
+			<h2>Social</h2>
 <?php
 //FAMILY STORIES
 		Boom_Util::get_template_parts(
@@ -51,12 +51,14 @@
 			)
 		);
 ?>		
+		</div>
 	</div>
-<?php
+</div>
+<?php 
 //FOOTER
-		Boom_Util::get_template_parts(
-			array(
-				'block/layout/footer'
-				,'block/layout/html-footer'
-			)
-		);
+	Boom_Util::get_template_parts(
+		array(
+			'block/layout/footer'
+			,'block/layout/html-footer'
+		)
+	);
