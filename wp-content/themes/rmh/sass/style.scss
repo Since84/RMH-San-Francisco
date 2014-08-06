@@ -71,6 +71,9 @@ header{
 					font-size: 10px;
 					padding: 5px 1em;
 					width: 90%;
+					a{
+						font-size: 1.5em;
+					}
 				}
 				&.widget_nav_menu{
 					width: 70%;
@@ -280,26 +283,6 @@ header{
 	@include pagination;
 } 
 
-//Post Preview block
-.blog-post-preview {
-	padding: 10px .75em;
-	&:not(:last-of-type){
-		border-right: 1px solid black;
-	}
-	&:hover {
-		background: #eee;
-	}
-
-	a {
-		color: $maintext;
-		text-decoration: none;
-	}
-	p {
-		margin-top: .5rem;
-	}
-
-}
-
 //Page Content 
 .page-content{
 	color: $maintext;
@@ -315,11 +298,77 @@ header{
 	}
 }
 
+//Blog Roll 
+.page-template-blog-php {
+	.blog-content {
+		.blog-post-preview{
+			width: 100%;
+			border-bottom: 1px solid $border;
+			margin-bottom: 2em;
+
+
+			a, h3 {
+				text-decoration: none;
+				color: $tertiary;
+			}
+
+			p {
+				margin-top: .5em;
+			}
+
+			.post-feature {
+				float: right;
+				display: block;
+				width: 50%;
+				min-height: 200px;
+			}
+			.post-meta {
+				display: none;
+			}
+		}
+	}
+	.blog-paging {
+		font-size: 12px;
+
+		.next-prev {
+			@include pagination;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			.paging.next, .paging.prev { 
+				width: 20px;
+				height: 20px;
+				background-size: auto 100%;
+				position: relative;
+				left: auto;
+				right: auto;
+			}
+		}
+
+		.page-numbers {
+			color: $tertiary;
+			display: inline-block;
+			vertical-align: middle;
+			&:not(:last-child){
+			 	margin-right: .75em;
+			 	padding-right: .75em;
+			 	border-right: 1px solid $border;
+			}
+			&.current {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
 //Page Sidebar
 .page-sidebar {
-	@include col(2);
+	@include col(2.5);
 	min-width: 200px;
 	position: relative;
+	padding-top: 5em;
+	font-size: 14px;
+
 	li {
 		list-style: none;
 		width: 90%;
@@ -344,7 +393,7 @@ header{
 		}
 
 		a, li {
-			margin-top: .5em;
+			margin-top: 1.5em;
 			color: $primary;
 			text-decoration: none;
 		}

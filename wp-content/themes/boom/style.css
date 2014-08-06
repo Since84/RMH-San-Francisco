@@ -256,7 +256,7 @@ header .menu-header-nav-container .menu {
 
 /* line 249, sass/style.scss */
 .single .content-area, .page .content-area {
-  padding: 1em 1em 1em 240px;
+  padding: 1em 1em 1em 270px;
   position: relative;
   min-height: 600px;
 }
