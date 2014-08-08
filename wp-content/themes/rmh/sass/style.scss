@@ -374,6 +374,14 @@ header{
 }
 
 //Page Sidebar
+
+.sidebar-container {
+	width: 100%;
+	max-width: $containerWidth;
+	margin: auto;
+	position: relative;
+}
+
 .page-sidebar {
 	@include col(2.5);
 	min-width: 200px;

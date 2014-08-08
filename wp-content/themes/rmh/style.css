@@ -517,7 +517,15 @@ header .menu-header-nav-container li li:hover:not(.current-menu-item) {
   font-weight: bold;
 }
 
-/* line 377, sass/style.scss */
+/* line 378, sass/style.scss */
+.sidebar-container {
+  width: 100%;
+  max-width: 1260px;
+  margin: auto;
+  position: relative;
+}
+
+/* line 385, sass/style.scss */
 .page-sidebar {
   display: inline-block;
   vertical-align: top;
@@ -529,22 +537,22 @@ header .menu-header-nav-container li li:hover:not(.current-menu-item) {
   font-size: 14px;
   z-index: 1001;
 }
-/* line 385, sass/style.scss */
+/* line 393, sass/style.scss */
 .page-sidebar li {
   list-style: none;
   width: 90%;
 }
-/* line 389, sass/style.scss */
+/* line 397, sass/style.scss */
 .page-sidebar .call-to-action {
   height: 200px;
   padding-top: 5em;
 }
-/* line 392, sass/style.scss */
+/* line 400, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons {
   padding-left: 0;
   width: 100%;
 }
-/* line 395, sass/style.scss */
+/* line 403, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -577,32 +585,32 @@ header .menu-header-nav-container li li:hover:not(.current-menu-item) {
   text-decoration: none;
   text-transform: uppercase;
 }
-/* line 404, sass/style.scss */
+/* line 412, sass/style.scss */
 .page-sidebar .parent-menu {
   text-transform: uppercase;
 }
-/* line 406, sass/style.scss */
+/* line 414, sass/style.scss */
 .page-sidebar .parent-menu ul {
   padding: 0;
 }
-/* line 410, sass/style.scss */
+/* line 418, sass/style.scss */
 .page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
   margin-top: 1.5em;
   color: #628ecc;
   text-decoration: none;
 }
-/* line 415, sass/style.scss */
+/* line 423, sass/style.scss */
 .page-sidebar .parent-menu > div > ul {
   list-style: none;
   padding: 1em;
   margin-top: .5em;
 }
-/* line 420, sass/style.scss */
+/* line 428, sass/style.scss */
 .page-sidebar .parent-menu > div > ul ul {
   padding-left: 1em;
 }
 
-/* line 434, sass/style.scss */
+/* line 442, sass/style.scss */
 footer {
   background: #628ecc;
   color: white;
@@ -610,50 +618,50 @@ footer {
   line-height: 1.5em;
   width: 100%;
 }
-/* line 441, sass/style.scss */
+/* line 449, sass/style.scss */
 footer .container {
   padding: 0 2em;
 }
-/* line 445, sass/style.scss */
+/* line 453, sass/style.scss */
 footer h2, footer h4 {
   text-transform: uppercase;
   font-size: 14px;
 }
-/* line 449, sass/style.scss */
+/* line 457, sass/style.scss */
 footer h4 {
   margin: .5em 0;
 }
-/* line 453, sass/style.scss */
+/* line 461, sass/style.scss */
 footer a {
   color: white;
   text-decoration: none;
 }
-/* line 457, sass/style.scss */
+/* line 465, sass/style.scss */
 footer a:hover {
   border-bottom: 1px solid white;
 }
-/* line 463, sass/style.scss */
+/* line 471, sass/style.scss */
 footer .footer-sidebar {
   padding: 1em 0;
   padding-left: 4em;
   margin-top: 1em;
 }
-/* line 469, sass/style.scss */
+/* line 477, sass/style.scss */
 footer .footer-sidebar .widget:not(:last-of-type) {
   margin-bottom: 3em;
 }
-/* line 474, sass/style.scss */
+/* line 482, sass/style.scss */
 footer .footer-sidebar h2.widgettitle {
   list-style: none;
   color: white;
   margin: .5em 0;
 }
-/* line 479, sass/style.scss */
+/* line 487, sass/style.scss */
 footer .footer-sidebar .menu {
   padding: 0;
   margin: .5em 0;
 }
-/* line 485, sass/style.scss */
+/* line 493, sass/style.scss */
 footer li {
   list-style: none;
 }
