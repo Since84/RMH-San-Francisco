@@ -32,6 +32,11 @@
 	if ( has_post_format( 'image' ) && has_post_thumbnail() ) {
 ?>
 	<div class="post-feature-image container">
+		<div class="sidebar-container">
+<?php 		
+			Boom_Util::get_template_parts(array('block/layout/page-feature-sidebar')); 
+?>
+		</div>
 <?php
 	  	the_post_thumbnail();	
 ?>
