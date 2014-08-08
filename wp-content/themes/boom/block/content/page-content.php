@@ -18,7 +18,9 @@
 ?>	
 	<div class="post-feature-gallery">
 		<div class="sidebar-container">
-<?php 		Boom_Util::get_template_parts(array('block/layout/page-feature-sidebar')); ?>
+<?php 		
+			Boom_Util::get_template_parts(array('block/layout/page-feature-sidebar')); 
+?>
 		</div>
 <?php
 		getSlideshow($slider);
@@ -37,7 +39,13 @@
 <?	} ?>
 
 <div class="page-content container">
-	<?php Boom_Util::get_template_parts(array('block/layout/page-sidebar')); ?>
+<?php  
+	$format = 'page-sidebar';	
+	if ( has_post_format('gallery' ) || has_post_format('image') )
+		$format = 'page-wfeature-sidebar';
+			
+	Boom_Util::get_template_parts(array('block/layout/'.$format)); 
+?>
 	<div class="content-area">
 		<h1><?php the_title(); ?></h1>
 <?php 
