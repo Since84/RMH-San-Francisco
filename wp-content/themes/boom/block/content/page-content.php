@@ -7,11 +7,31 @@
 			,'block/layout/header'
 		)
 	);
+
+
 //PAGE CONTENT
+
+//GALLERY 
+	$slider = get_post_meta( get_the_id(), 'slider_images', true );
+	if ( has_post_format( 'gallery' ) && $slider ) {
+		$slider = strpos( $slider, ',' ) ? explode(',', $slider) : $slider;
+
+		getSlideshow($slider);
+	}
+//IMAGE 
+	if ( has_post_format( 'image' ) && has_post_thumbnail() ) {
 ?>
-<div class="content-area page-content container">
-<?php Boom_Util::get_template_parts(array('block/layout/page-sidebar')); ?>
-	<h1><?php the_title(); ?></h1>
+	<div class="post-feature-image container">
+<?php
+	  	the_post_thumbnail();	
+?>
+	</div>
+<?	} ?>
+
+<div class="page-content container">
+	<?php Boom_Util::get_template_parts(array('block/layout/page-sidebar')); ?>
+	<div class="content-area">
+		<h1><?php the_title(); ?></h1>
 <?php 
 	if( have_posts() ) :
 		while( have_posts() ) :
@@ -22,6 +42,7 @@
 		endwhile;
 	endif;
 ?>
+	</div>
 </div>
 <?php 
 //FOOTER

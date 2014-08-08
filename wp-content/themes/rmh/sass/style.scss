@@ -176,6 +176,17 @@ header{
 	}
 }
 
+//Feature Image
+.post-feature-image{
+	background: white;
+	position: relative;
+	z-index: 1000;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
 //Content Area
 .content-area {
 	padding: 4em 1em;
@@ -286,6 +297,7 @@ header{
 //Page Content 
 .page-content{
 	color: $maintext;
+	position: relative;
 	h2 {
 		border: none;
 		padding: 0;
@@ -368,12 +380,15 @@ header{
 	position: relative;
 	padding-top: 5em;
 	font-size: 14px;
+	z-index: 1001;
 
 	li {
 		list-style: none;
 		width: 90%;
 	}
 	.call-to-action{
+		height: 200px; 
+		padding-top: 5em;
 		#menu-action-buttons{
 			padding-left: 0;
 			width: 100%;
