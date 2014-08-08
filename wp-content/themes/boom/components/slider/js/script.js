@@ -87,6 +87,10 @@
 			}
 
 			$(self.element).find( self.options.slideClass + ':nth-of-type(2) img' ).each(function(){
+				var oldSlideHeightCss	= '	.dynamite-slide .dynamite-slider .slide-transition .slide img { '   
+										+ '			height: auto;'
+										+ '	}';
+				$('head #slide').html(oldSlideHeightCss);
 
 				var slideHeight 	= activeSlideImgHeight;
 				var inactiveHeight	= ( slideHeight - 40 ).toString();

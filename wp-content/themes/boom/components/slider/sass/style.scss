@@ -101,15 +101,15 @@ $containerWidth: 1260px;
 			& > img, & > a > img {
 				// max-width: 1000px;
 				width: 100%;
-				height: auto;
+				height: 100%;
 				position: absolute;
 				top: 0;
 				bottom: 0;
 				margin: auto;
-			    -webkit-transition: height 5s, padding 5s;
-			    -moz-transition: height 5s, padding 5s;
-			    -o-transition: height 5s, padding 5s;
-			    transition: height 5s, padding 5s;
+			    -webkit-transition: height .25s, padding .25s;
+			    -moz-transition: height .25s, padding .25s;
+			    -o-transition: height .25s, padding .25s;
+			    transition: height .25s, padding .25s;
 			}
 
 			&.active {
