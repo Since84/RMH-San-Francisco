@@ -1,0 +1,88 @@
+/* Mobile Styles for RMH */
+
+@media (max-width: 780px){ 
+
+//Header 
+	header {
+		.site-logo {
+			@include col(7.25); 
+			text-align: center;
+			display: inline-block;
+			img {
+				height: 90px;
+				width: auto !important;
+			}
+		}
+		.mobile {
+			display: inline-block;
+			background: $mobilemenuicon 50% 50% no-repeat;
+			height: 100px;
+			@include col(2);
+			&.menu-button {			
+				background: $mobilemenuicon 50% 50% no-repeat;
+				background-size: 40% auto;
+				border-right: 1px solid gray;
+				margin-right: 10px;
+			}
+			&.search-button {
+				background: $searchicon 50% 50% no-repeat;
+				background-size: 40% auto;
+				border-left: 1px solid gray;
+				margin-right: 10px;
+				@include col(2);
+			}
+		}
+
+		//Hide on Mobile
+		.site-head-right
+		{ display:none; }
+
+	}
+
+	//Menu
+	.main-menu {
+		display: none;
+	}
+
+	//Slider
+	.dynamite-slide {
+		.dynamite-slider .dynamite-slide-window {
+			margin-top: 0;
+			&:before{
+				content: none;
+			}
+		}
+	}
+
+	//Call to Action Buttons
+	.home {
+		div.call-to-action {
+			padding: 0;
+			ul#menu-action-buttons {
+				margin: 0;
+				white-space: nowrap;
+				li.menu-item {
+					margin-right: 0;
+					border-radius: 0;
+					padding: 0;
+					width: 33.7%;
+					margin-left: -5px;
+					background-image: none;
+					text-align: center;
+					a{
+						display: block;
+						width: auto;
+						margin: .5em 0;
+					}
+					&:not(:nth-child(3)) a{
+						border-right: 1px solid white;
+						margin-right: 1px;
+					}
+
+				}
+			}
+		}
+	}
+
+
+}

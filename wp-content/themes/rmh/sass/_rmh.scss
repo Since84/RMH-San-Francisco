@@ -14,6 +14,7 @@ $border: #999d9f;
 // $border: $tertiary;
 
 // Images
+$mobilemenuicon: image-url('icons/search.png', false, false );
 $searchicon: image-url('icons/search.png', false, false );
 $searchiconblue: image-url('icons/search-blue.png', false, false);
 $rightarrow: image-url('icons/right-arrow-action.png', false, false );
@@ -28,7 +29,7 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 
 // Mixins 
 	@mixin futura {
-		font-family: 'Nunito', sans-serif;
+		font-family: "futura-pt",sans-serif;
 	}
 
 	@mixin header1 {
