@@ -16,7 +16,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 
-if (strpos($_SERVER['HTTP_HOST'], 'rmh.ag') !== false) { 
+if (strpos($_SERVER['HTTP_HOST'], 'rmh.dev') !== false) { 
 
 	/** The name of the database for WordPress */
 	define('DB_NAME', 'rmh');
@@ -105,7 +105,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 define('FS_METHOD', 'direct');
 
 /* That's all, stop editing! Happy blogging. */

@@ -31,7 +31,7 @@ h3 {
 
 // Main Header 
 header{
-	z-index: 10;
+	z-index: 10000;
 	position: relative;
 
 	.site-logo{
@@ -89,16 +89,23 @@ header{
 	}
 	.menu-header-nav-container {
 		background: $primary;
+
+		ul { text-align: center; }
 		
 		//Nav Menu
 		li {
 			background: $primary;
+			padding: 15px 3vw;
+			font-family: "futura-pt",sans-serif;
 			&.current-menu-item {
 				//TODO: change to current menu item
 				background: $tertiary;
 			}
 			li:hover:not(.current-menu-item) {
 				background: $primaryLight;
+			}
+			a {
+				font-size: 20px;
 			}
 		}
 	}
@@ -495,3 +502,5 @@ footer{
 	}
 
 }
+
+@import "mobile";

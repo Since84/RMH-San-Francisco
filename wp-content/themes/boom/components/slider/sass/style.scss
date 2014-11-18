@@ -101,7 +101,7 @@ $containerWidth: 1260px;
 			& > img, & > a > img {
 				// max-width: 1000px;
 				width: 100%;
-				height: 100%;
+				height: auto;
 				position: absolute;
 				top: 0;
 				bottom: 0;
@@ -142,7 +142,7 @@ $containerWidth: 1260px;
 		}
 		.slide-transition .slide{
 
-			:not('.active') {
+			:not(.active) {
 				img {
 					height: 100%;
 					width: auto;

@@ -90,7 +90,7 @@
 /* line 101, ../sass/style.scss */
 .dynamite-slide .dynamite-slider .slide > img, .dynamite-slide .dynamite-slider .slide > a > img {
   width: 100%;
-  height: 100%;
+  height: auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -126,7 +126,7 @@
   margin: auto;
 }
 /* line 146, ../sass/style.scss */
-.dynamite-slide .dynamite-slider .slide-transition .slide :not('.active') img {
+.dynamite-slide .dynamite-slider .slide-transition .slide :not(.active) img {
   height: 100%;
   width: auto;
   padding: 0;
