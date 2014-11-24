@@ -199,85 +199,95 @@ header .menu-header-nav-container .menu {
   width: 100%;
 }
 
-/* line 207, sass/style.scss */
-.footer-main {
-  vertical-align: top;
-  padding: 1em;
+/* line 3, sass/_footer-w-sidebar.scss */
+footer {
+  color: black;
+}
+/* line 6, sass/_footer-w-sidebar.scss */
+footer a {
+  text-decoration: none;
+}
+/* line 10, sass/_footer-w-sidebar.scss */
+footer ul, footer li {
   list-style: none;
-  display: inline-block;
-  vertical-align: top;
-  width: 66.16667%;
-  max-width: 840px;
-}
-/* line 212, sass/style.scss */
-.footer-main .footer-sitemap {
-  padding: 0 0 1em 0;
-}
-/* line 214, sass/style.scss */
-.footer-main .footer-sitemap > ul {
-  list-style: none;
-}
-/* line 216, sass/style.scss */
-.footer-main .footer-sitemap > ul > li {
-  display: inline-block;
-  list-style: none;
-  vertical-align: top;
-  display: inline-block;
-  vertical-align: top;
-  width: 23.66667%;
-  max-width: 304.5px;
-}
-/* line 224, sass/style.scss */
-.footer-main .footer-sitemap ul {
-  list-style: none;
-  padding-left: 0;
-}
-/* line 227, sass/style.scss */
-.footer-main .footer-sitemap ul li {
   padding: 0;
 }
-/* line 233, sass/style.scss */
-.footer-main .corporate .copyright {
-  display: inline-block;
-  margin-right: 1em;
-  padding: 1em 0;
-}
-/* line 238, sass/style.scss */
-.footer-main .corporate .menu {
-  display: inline-block;
-}
-/* line 241, sass/style.scss */
-.footer-main .corporate .menu li {
+/* line 15, sass/_footer-w-sidebar.scss */
+footer .widgettitle, footer .menu-header-nav-container > ul > li > a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: .5em;
+  margin-top: 0;
   display: inline-block;
 }
-/* line 245, sass/style.scss */
-.footer-main .corporate .menu-corporate-menu-container {
-  display: inline-block;
+/* line 25, sass/_footer-w-sidebar.scss */
+footer .sub-menu {
+  padding: none;
 }
-
-/* line 250, sass/style.scss */
-.footer-sidebar {
-  height: 200px;
-  vertical-align: top;
+/* line 29, sass/_footer-w-sidebar.scss */
+footer .container {
+  padding: 1vw 2vw;
+}
+/* line 33, sass/_footer-w-sidebar.scss */
+footer .footer-main, footer .footer-sidebar {
   display: inline-block;
   vertical-align: top;
-  width: 32.83333%;
-  max-width: 420px;
+}
+/* line 38, sass/_footer-w-sidebar.scss */
+footer .footer-main {
+  width: 70%;
+  margin: 20px 2vw 20px 0;
+  padding: 0;
+}
+/* line 43, sass/_footer-w-sidebar.scss */
+footer .footer-main .footer-sitemap {
+  padding: 0;
+}
+/* line 46, sass/_footer-w-sidebar.scss */
+footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 2%;
+  margin-bottom: 2em;
+}
+/* line 53, sass/_footer-w-sidebar.scss */
+footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li a {
+  color: white;
+}
+/* line 57, sass/_footer-w-sidebar.scss */
+footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li.menu-item-home {
+  display: none;
+}
+/* line 62, sass/_footer-w-sidebar.scss */
+footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li .sub-menu li {
+  margin-bottom: .5em;
+}
+/* line 70, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar {
+  width: 25%;
+  margin: 20px 0;
+}
+/* line 74, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar .widget {
+  margin-bottom: 1em;
 }
 
-/* line 259, sass/style.scss */
+/* line 208, sass/style.scss */
 .single .content-area, .page .content-area, .category .content-area {
   padding: 1em 1em 1em 270px;
   position: relative;
   min-height: 600px;
 }
-/* line 264, sass/style.scss */
+/* line 213, sass/style.scss */
 .single .page-sidebar, .page .page-sidebar, .category .page-sidebar {
   position: absolute;
   padding-top: 1em;
   left: 0;
 }
-/* line 270, sass/style.scss */
+/* line 219, sass/style.scss */
 .single .page-sidebar .call-to-action .widget_text, .page .page-sidebar .call-to-action .widget_text, .category .page-sidebar .call-to-action .widget_text {
   display: none;
 }

@@ -200,58 +200,7 @@ body {
  		}
  	}
 
- //Footer
- footer{
- 	// padding: 1em;
- }
- .footer-main{
- 	vertical-align: top;
- 	padding: 1em;
- 	list-style: none;
- 	@include col(8);
- 	.footer-sitemap{
- 		padding: 0 0 1em 0;
- 		& > ul {
- 			list-style: none;
- 			& > li {
-	 			display: inline-block;
-	 			list-style: none;
-	 			vertical-align: top;
-	 			@include col(2.9);
- 			}
- 		}
-
- 		ul {
- 			list-style: none;
- 			padding-left: 0;
- 			li {
- 				padding: 0;
- 			}
- 		}
- 	}
- 	.corporate {
- 		.copyright{ 
- 			display: inline-block; 
- 			margin-right: 1em;
- 			padding: 1em 0;
- 		}
- 		.menu{
-	 		display: inline-block;
-
-	 		li {
-	 			display: inline-block;
-	 		}
- 		}
- 		.menu-corporate-menu-container {
- 			display: inline-block;
- 		}
- 	}
- }
- .footer-sidebar {
- 	height: 200px;
- 	vertical-align: top;
- 	@include col(4);
- }
+ @import "footer-w-sidebar";
 
 
  //Default Page Template 

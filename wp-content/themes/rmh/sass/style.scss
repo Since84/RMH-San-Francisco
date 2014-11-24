@@ -27,6 +27,10 @@ h3 {
 	@include header3;
 }
 
+.container {
+	overflow: hidden;
+}
+
 //Components 
 // @include cycle;
 
@@ -439,7 +443,8 @@ header{
 		width: 90%;
 	}
 	.call-to-action{
-		height: 200px; 
+		// height: 200px; 
+		white-space: nowrap;
 		padding-top: 5em;
 		#menu-action-buttons{
 			padding-left: 0;
@@ -483,61 +488,7 @@ header{
 }
 
 //Footer
-footer{
-	background: $primary;
-	color: white;
-	font-size: 16px;
-	line-height: 1.5em;
-	width: 100%;
 
-	.container {
-		padding: 0 2em;
-	}
-
-	h2, h4 {
-		text-transform: uppercase;
-		font-size: 14px;
-	}
-	h4{
-		margin: .5em 0;
-	}
-
-	a{
-		color: white;
-		text-decoration: none;
-
-		&:hover {
-			border-bottom: 1px solid white;
-		}
-	}
-
-	// Sidebar
-	.footer-sidebar{
-		padding: 1em 0;
-		padding-left: 4em;
-		margin-top: 1em;
-
-		.widget{
-			&:not(:last-of-type){
-				margin-bottom: 3em;
-			}
-		}
-
-		h2.widgettitle{
-			list-style: none;
-			color: white;
-			margin: .5em 0;
-		}
-		.menu {
-			padding: 0;
-			margin:.5em 0;
-		}
-	}
-
-	li {
-		list-style: none;
-	}
-
-}
+@import "footer";
 
 @import "mobile";

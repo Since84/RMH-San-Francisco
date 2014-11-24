@@ -2,11 +2,28 @@
 
 @media (max-width: 780px){ 
 
+h1 {
+	font-size: 14px;
+}
+
+h2 {
+
+}
+
+h3 {
+	font-size: 13px;
+}
+
+p  {
+	font-size: 13px;
+	line-height: 1.3em;
+}
+
 //Header 
 	header {
 		white-space: nowrap;
 		.site-logo {
-			@include col(7.8); 
+			@include col(7.5); 
 			text-align: center;
 			display: inline-block;
 			img {
@@ -134,6 +151,8 @@
 			.post-content {
 				display: inline-block;
 				width: 60vw;
+				font-size: 14px;
+				line-height: 1.3em;
 			}
 		}
 
@@ -221,6 +240,105 @@
 		.corporate .menu {
 			padding-left: 0;
 		}
+	}
+
+	// Blog Roll 
+	.page-template-blog-php, .archive.category, .single {
+		.content-area {
+			padding: 0;
+			width: 100%;
+
+			.page-sidebar {
+				padding: 0;
+				position: relative;
+				width: 100%;
+				max-width: none;
+				.call-to-action {
+					height: auto;
+					padding: 0;
+					white-space: nowrap;
+					& > li {
+						width: 100%;
+						&.widget_text{
+							display: none;
+						}
+						#menu-action-buttons {
+							margin: 0;
+							li{
+								display: inline-block;
+								vertical-align: middle;
+								height: 7vw; 
+								width: 33.4vw;
+								margin: 0;
+								background-image: none;
+								padding: 1vw 0;
+								text-align: center;
+								border-radius: 0;
+								font-weight: 600;
+								letter-spacing: 1px; 
+								a {
+									font-size: 3vw;
+									height: 1.5em;
+									line-height: 1.6em;
+								}
+								&:not(:first-child) {
+									margin-left: -5px;
+									a {
+										display: block;
+										border-left: 1px solid white;
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
+
+			.page-title, .blog-post-preview { //TODO: Wrap title and posts in own div
+				margin: 0 1em;
+				padding: 1em 0;
+				width: 93%;
+			}
+			.page-title {
+				border-bottom: 1px solid $border;
+				box-sizing: border-box;
+			}
+
+			.blog-post-preview {
+				height: auto;
+
+				.post-feature {
+					float: none;
+					width: 100%;
+					text-align: center;
+					height: auto;
+					min-height: inherit;
+					.thumbnail {
+						max-height: 40vw;
+						img {
+							position: relative;
+							width: auto;
+							max-height: 100%;
+
+						}
+					}
+				}
+				.post-content {
+					width: 100%;
+				}
+			}
+
+			.blog-paging {
+				.next-prev {
+					top: auto;
+					vertical-align: middle;
+					line-height: 1em;
+					padding: 0.4em 1em;
+				}
+			}
+
+		}
+		
 	}
 
 }

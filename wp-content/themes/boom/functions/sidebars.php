@@ -13,6 +13,12 @@
 		) );
 
 		register_sidebar( array(
+		    'name'         => __( 'Footer Sitemap' ),
+		    'id'           => 'footer',
+		    'description'  => __( 'Widgets for Sitemap.' )
+		) );
+
+		register_sidebar( array(
 		    'name'         => __( 'Footer Sidebar' ),
 		    'id'           => 'footer-sidebar',
 		    'description'  => __( 'Sidebar for Site Footer.' )
