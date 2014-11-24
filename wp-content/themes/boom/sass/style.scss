@@ -40,7 +40,7 @@ body {
  		text-align: right;
  		vertical-align: middle;
  		float: right;
- 		margin-top: 1em;
+ 		padding-top: 1.5em;
 
  		.menu {
  			li {
@@ -96,10 +96,10 @@ body {
 			.sub-menu {
 				display: none;
 				position: absolute;
-				width: 150;
+				width: 150px;
 				left: 0;
 				padding-left: 0;
-				margin-top: 1em;
+				margin-top: 1.3em;
 
 				li {
 					position: relative;
@@ -142,7 +142,7 @@ body {
  .blog-post-preview {
 	display: inline-block;
 	vertical-align: top;
-	padding: 0 5px;
+	padding: 0 10px;
 	width: 24.5%;
 	&:not(:last-of-type){
 		border-right: 1px solid $secondary;
@@ -153,13 +153,22 @@ body {
 		height: 180px;
 		width: 100%;
 		text-align:center;
+		position: relative;
 	}
 	img{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
 		height: auto;
 		max-height: 100%;
 		width: auto;
 		max-width: 100%;
 		margin: auto;
+	}
+	a {
+		text-decoration: none;
 	}
  }
 
@@ -174,6 +183,7 @@ body {
 	 		li {
 	 			padding: 10px;
 	 			background: $secondary;
+	 			letter-spacing: 2px;
 	 			display: inline-block;
 	 			// margin-left: 1em;
 	 			// padding-left: 0;
@@ -207,7 +217,7 @@ body {
 	 			display: inline-block;
 	 			list-style: none;
 	 			vertical-align: top;
-	 			@include col(3);
+	 			@include col(2.9);
  			}
  		}
 
@@ -245,7 +255,7 @@ body {
 
 
  //Default Page Template 
- .single, .page {
+ .single, .page, .category {
  	.content-area{
  		padding: 1em 1em 1em 270px;
  		position: relative;
@@ -263,3 +273,5 @@ body {
  		}
  	}
  }
+
+ @import "mobile";

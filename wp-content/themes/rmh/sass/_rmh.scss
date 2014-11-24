@@ -14,7 +14,7 @@ $border: #999d9f;
 // $border: $tertiary;
 
 // Images
-$mobilemenuicon: image-url('icons/search.png', false, false );
+$mobilemenuicon: image-url('icons/menu-icon.png', false, false );
 $searchicon: image-url('icons/search.png', false, false );
 $searchiconblue: image-url('icons/search-blue.png', false, false);
 $rightarrow: image-url('icons/right-arrow-action.png', false, false );
@@ -30,6 +30,8 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 // Mixins 
 	@mixin futura {
 		font-family: "futura-pt",sans-serif;
+		//LOCALHOST
+		font-family: "Futura",sans-serif;
 	}
 
 	@mixin header1 {
@@ -90,17 +92,23 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 
 		a {
 			@include header2;
-			font-size: 1.2em;
+			font-size: 16px;
 			color: white;
 			// padding-right: 2em;
 			text-decoration: none;
 			text-transform: uppercase;
+			@media screen and ( max-width: 780px ) {
+				font-size: 2.5vw;
+			}
+			@media screen and ( max-width: 590px ) {
+				font-size: 4vw;
+			}
 		}
 	}
 
 	@mixin pagination {
 		position: absolute;
-		top: 0px;
+		top: -5px;
 		right: 0;
 		width: 80px;
 		.paging {
@@ -119,19 +127,19 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 		    position: absolute;
 
 			&.prev{ 
-				left: 10px; 
+				left: -20px; 
 				background-image: $right-arrow-slider;
 				background-position: 0% 50%;
 				background-repeat: no-repeat;
-				background-size: 28px;
+				background-size: 100% auto;
 
 			}
 			&.next{ 
-				right: 10px; 
+				right: 30px; 
 				background-image: $left-arrow-slider;
 				background-position: 100% 50%;
 				background-repeat: no-repeat;
-				background-size: 28px;
+				background-size: 100% auto;
 			}
 		}
 
