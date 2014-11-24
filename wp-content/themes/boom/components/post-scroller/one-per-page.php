@@ -16,8 +16,8 @@
 		data-cycle-slides=".blog-post-preview"
 		data-cycle-fx="scrollHorz"
 		data-cycle-timeout="0"
-		data-cycle-prev=".paging.prev"
-		data-cycle-next=".paging.next"
+		data-cycle-prev=".family-stories .paging.prev"
+		data-cycle-next=".family-stories .paging.next"
 >
 <?php
 	if( $postQuery->have_posts() ) : 

@@ -48,7 +48,7 @@ header .site-head-right {
   text-align: right;
   vertical-align: middle;
   float: right;
-  margin-top: 1em;
+  padding-top: 1.5em;
 }
 /* line 46, sass/style.scss */
 header .site-head-right .menu li {
@@ -108,10 +108,10 @@ header .menu-header-nav-container li a {
 header .menu-header-nav-container li .sub-menu {
   display: none;
   position: absolute;
-  width: 150;
+  width: 150px;
   left: 0;
   padding-left: 0;
-  margin-top: 1em;
+  margin-top: 1.3em;
 }
 /* line 104, sass/style.scss */
 header .menu-header-nav-container li .sub-menu li {
@@ -142,7 +142,7 @@ header .menu-header-nav-container .menu {
 .blog-post-preview {
   display: inline-block;
   vertical-align: top;
-  padding: 0 5px;
+  padding: 0 10px;
   width: 24.5%;
 }
 /* line 147, sass/style.scss */
@@ -155,32 +155,43 @@ header .menu-header-nav-container .menu {
   height: 180px;
   width: 100%;
   text-align: center;
+  position: relative;
 }
-/* line 157, sass/style.scss */
+/* line 158, sass/style.scss */
 .blog-post-preview img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: auto;
   max-height: 100%;
   width: auto;
   max-width: 100%;
   margin: auto;
 }
+/* line 170, sass/style.scss */
+.blog-post-preview a {
+  text-decoration: none;
+}
 
-/* line 168, sass/style.scss */
+/* line 177, sass/style.scss */
 .home .call-to-action {
   padding: 20px;
   text-align: center;
 }
-/* line 171, sass/style.scss */
+/* line 180, sass/style.scss */
 .home .call-to-action .menu {
   padding-left: 0;
 }
-/* line 174, sass/style.scss */
+/* line 183, sass/style.scss */
 .home .call-to-action .menu li {
   padding: 10px;
   background: #fafafa;
+  letter-spacing: 2px;
   display: inline-block;
 }
-/* line 182, sass/style.scss */
+/* line 192, sass/style.scss */
 .home .call-to-action .widget {
   display: block;
   clear: both;
@@ -188,7 +199,7 @@ header .menu-header-nav-container .menu {
   width: 100%;
 }
 
-/* line 197, sass/style.scss */
+/* line 207, sass/style.scss */
 .footer-main {
   vertical-align: top;
   padding: 1em;
@@ -198,53 +209,53 @@ header .menu-header-nav-container .menu {
   width: 66.16667%;
   max-width: 840px;
 }
-/* line 202, sass/style.scss */
+/* line 212, sass/style.scss */
 .footer-main .footer-sitemap {
   padding: 0 0 1em 0;
 }
-/* line 204, sass/style.scss */
+/* line 214, sass/style.scss */
 .footer-main .footer-sitemap > ul {
   list-style: none;
 }
-/* line 206, sass/style.scss */
+/* line 216, sass/style.scss */
 .footer-main .footer-sitemap > ul > li {
   display: inline-block;
   list-style: none;
   vertical-align: top;
   display: inline-block;
   vertical-align: top;
-  width: 24.5%;
-  max-width: 315px;
+  width: 23.66667%;
+  max-width: 304.5px;
 }
-/* line 214, sass/style.scss */
+/* line 224, sass/style.scss */
 .footer-main .footer-sitemap ul {
   list-style: none;
   padding-left: 0;
 }
-/* line 217, sass/style.scss */
+/* line 227, sass/style.scss */
 .footer-main .footer-sitemap ul li {
   padding: 0;
 }
-/* line 223, sass/style.scss */
+/* line 233, sass/style.scss */
 .footer-main .corporate .copyright {
   display: inline-block;
   margin-right: 1em;
   padding: 1em 0;
 }
-/* line 228, sass/style.scss */
+/* line 238, sass/style.scss */
 .footer-main .corporate .menu {
   display: inline-block;
 }
-/* line 231, sass/style.scss */
+/* line 241, sass/style.scss */
 .footer-main .corporate .menu li {
   display: inline-block;
 }
-/* line 235, sass/style.scss */
+/* line 245, sass/style.scss */
 .footer-main .corporate .menu-corporate-menu-container {
   display: inline-block;
 }
 
-/* line 240, sass/style.scss */
+/* line 250, sass/style.scss */
 .footer-sidebar {
   height: 200px;
   vertical-align: top;
@@ -254,19 +265,27 @@ header .menu-header-nav-container .menu {
   max-width: 420px;
 }
 
-/* line 249, sass/style.scss */
-.single .content-area, .page .content-area {
+/* line 259, sass/style.scss */
+.single .content-area, .page .content-area, .category .content-area {
   padding: 1em 1em 1em 270px;
   position: relative;
   min-height: 600px;
 }
-/* line 254, sass/style.scss */
-.single .page-sidebar, .page .page-sidebar {
+/* line 264, sass/style.scss */
+.single .page-sidebar, .page .page-sidebar, .category .page-sidebar {
   position: absolute;
   padding-top: 1em;
   left: 0;
 }
-/* line 260, sass/style.scss */
-.single .page-sidebar .call-to-action .widget_text, .page .page-sidebar .call-to-action .widget_text {
+/* line 270, sass/style.scss */
+.single .page-sidebar .call-to-action .widget_text, .page .page-sidebar .call-to-action .widget_text, .category .page-sidebar .call-to-action .widget_text {
   display: none;
+}
+
+/* Mobile Styles for Boom */
+@media (min-width: 780px) {
+  /* line 3, sass/_mobile.scss */
+  .mobile {
+    display: none !important;
+  }
 }

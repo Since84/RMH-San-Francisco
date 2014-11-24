@@ -4,19 +4,20 @@
 
 //Header 
 	header {
+		white-space: nowrap;
 		.site-logo {
-			@include col(7.25); 
+			@include col(7.8); 
 			text-align: center;
 			display: inline-block;
 			img {
-				height: 90px;
+				height: 13vw;
 				width: auto !important;
 			}
 		}
 		.mobile {
 			display: inline-block;
 			background: $mobilemenuicon 50% 50% no-repeat;
-			height: 100px;
+			height: 13vw;
 			@include col(2);
 			&.menu-button {			
 				background: $mobilemenuicon 50% 50% no-repeat;
@@ -25,7 +26,7 @@
 				margin-right: 10px;
 			}
 			&.search-button {
-				background: $searchicon 50% 50% no-repeat;
+				background: $searchiconblue 50% 50% no-repeat;
 				background-size: 40% auto;
 				border-left: 1px solid gray;
 				margin-right: 10px;
@@ -58,6 +59,17 @@
 	.home {
 		div.call-to-action {
 			padding: 0;
+
+			.widget_text {
+				font-size: 4.5vw;
+				padding: 10px 0;
+				.special {
+					display: block;
+					clear: both;
+					font-size: 7vw;
+				}
+			}
+
 			ul#menu-action-buttons {
 				margin: 0;
 				white-space: nowrap;
@@ -69,6 +81,7 @@
 					margin-left: -5px;
 					background-image: none;
 					text-align: center;
+					letter-spacing: 0;
 					a{
 						display: block;
 						width: auto;
@@ -81,8 +94,133 @@
 
 				}
 			}
+
+			&:before, &:after {
+				content: none;
+			}
+		}
+
+	}
+
+	//Content
+	.content-area {
+		padding: 10px 1vw;
+		box-shadow: none;
+		h2 { 
+			font-size: 18px; 
+			padding-bottom: .4rem;
+			margin: 0 0.5em;
+		}
+
+		.blog-post-preview {
+			padding: 1em .5em;
+			a {
+				display: inline-block;
+				width: auto;
+				img {
+					
+					width: 100%;
+					height: auto;
+					bottom: auto;
+				}
+			}
+			h3 { margin-top: 0; }
+			.post-feature {
+				width: 23vw;
+				margin-right: 3vw;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.post-content {
+				display: inline-block;
+				width: 60vw;
+			}
+		}
+
+		.family-stories {
+			width: 100%;
+			h2 {
+				margin-right: 0;
+			}
+			.one-per-page .blog-post-preview {
+				height: 200px;
+				padding: 1em .5em;
+				.thumbnail {
+					img { bottom: auto; }
+				}
+				.post-meta {
+					display: none;
+				}
+				.post-excerpt {
+					p { margin-top: .5em; }
+				}
+			}
+		}
+
+				//Blog Post Blocks
+		.home & {
+			.whats-happening {
+				margin: 1rem .5rem 3rem;
+				.blog-post-preview {}
+			}
+			.social-block {
+				display: none;
+			}	
+		}		
+	}
+
+
+	.slider-pagination, .mobile-four-per-pagination {
+		button.paging {
+			width: 25px;
+			height: 25px;
+			background-size: 100% auto;
+			&.prev {
+				left: 15px;
+			}
+			&.next {
+				right: 10px;
+			}
 		}
 	}
 
+	//Post Scroller
+	.post-scroller {
+		&.four-per-page {
+			display: none;
+		}
+
+		.mobile-cycle-prev{
+			display: inline-block;
+			background-image: $largeleftarrow;
+		}
+		.mobile-cycle-next{
+			display: inline-block;
+			background-image: $largerightarrow;
+		}
+
+		.pager-button.cycle-next, .pager-button.cycle-prev {
+			display: none;  
+		}
+
+		.four-per-page {
+			.four-post {
+
+			}
+		}
+
+	}
+
+	.footer-main {
+		.footer-sitemap{
+			> ul > li {
+				width: 100%;
+				margin-bottom: 1em;
+			}
+		}
+		.corporate .menu {
+			padding-left: 0;
+		}
+	}
 
 }

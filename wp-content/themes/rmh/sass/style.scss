@@ -13,6 +13,7 @@ $containerWidth: 1260px;
 body {
 	color: $maintext;
 	@include futura;
+	font-weight: 300;
 }
 
 //Headings
@@ -31,7 +32,7 @@ h3 {
 
 // Main Header 
 header{
-	z-index: 10000;
+	z-index: 499;
 	position: relative;
 
 	.site-logo{
@@ -63,6 +64,7 @@ header{
 		}
 		.social-links{
 			padding-left: 0;
+			margin: 10px 0;
 			.widget{
 				display: inline-block;
 				vertical-align: top;
@@ -85,27 +87,53 @@ header{
 					width: 120px;
 				}
 			}
+
+			@media screen and ( max-width: 880px ) {
+				.widget .menu-item {
+					padding: 10px;
+					height: 3em;
+					a {
+						font-size: 1.2em;
+					}
+				}
+			}
 		}
 	}
 	.menu-header-nav-container {
 		background: $primary;
 
-		ul { text-align: center; }
+		ul { 
+			text-align: center; 
+			padding-left: 0;
+		}
 		
 		//Nav Menu
 		li {
 			background: $primary;
-			padding: 15px 3vw;
-			font-family: "futura-pt",sans-serif;
+			padding: 15px 1.2vw;
 			&.current-menu-item {
 				//TODO: change to current menu item
 				background: $tertiary;
 			}
-			li:hover:not(.current-menu-item) {
-				background: $primaryLight;
+			li {
+				padding: .7em;
+				&:hover:not(.current-menu-item) {
+					background: $primaryLight;
+				}
 			}
 			a {
-				font-size: 20px;
+				font-size: 16px;
+			}
+			@media screen and ( max-width: 920px ) {
+				a { font-size: 16px; }
+			}
+
+			//Sub Menu
+			.sub-menu {
+				margin-top: 1em;
+				width: 200px;
+				text-align: left;
+				a { font-size: .9em; }
 			}
 		}
 	}
@@ -176,6 +204,8 @@ header{
 	// Action Buttons
 	#menu-action-buttons li{
 		@include action-button;
+		font-weight: 700;
+		font-size: 20px;
 		width: 200px;
 		&:not(:last-of-type){
 			margin-right: 2em;
@@ -198,16 +228,21 @@ header{
 .content-area {
 	padding: 4em 1em;
 	box-shadow: 0px -4px 6px 2px #bdb9b9;
+	font-size: 15px;
+	line-height: 1.3em;
 
 	h2 {
-		margin: 0 1rem 0;
-		padding-bottom: .25rem;
+		margin: 0 1rem 1rem;
+		padding-bottom: 1rem;
 		border-bottom: 1px solid $tertiary;
+		font-size: 26px;
 	}
 
 	.whats-happening {
-		.blog-post-preview {
-			min-height: 200px;
+		position: relative;
+		.four-per-page .blog-post-preview {
+			height: 300px;
+			overflow: hidden;
 			&:not(:last-of-type){
 				border-right: 1px solid $border;
 			}
@@ -246,6 +281,8 @@ header{
 
 		.post-meta{
 			display: none;
+		}
+		.post-content {
 		}
 	}
 	.family-stories{
@@ -297,7 +334,7 @@ header{
 
 
 //Scroller/Slider Paging
-.slider-pagination {
+.slider-pagination, .mobile-four-per-pagination {
 	@include pagination;
 } 
 
@@ -318,7 +355,7 @@ header{
 }
 
 //Blog Roll 
-.page-template-blog-php {
+.page-template-blog-php, .archive.category {
 	.blog-content {
 		.blog-post-preview{
 			width: 100%;
@@ -449,7 +486,7 @@ header{
 footer{
 	background: $primary;
 	color: white;
-	font-size: 10px;
+	font-size: 16px;
 	line-height: 1.5em;
 	width: 100%;
 
