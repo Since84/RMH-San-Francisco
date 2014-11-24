@@ -22,6 +22,10 @@ footer {
 		display: inline-block;
 	}
 
+	.menu {
+		margin-top: 0;
+	}
+
 	.sub-menu {
 		padding: none;
 	}
@@ -68,12 +72,36 @@ footer {
 		}
 	}
 	.footer-sidebar {
-		width: 25%;
-		margin: 20px 0;
+		width: 23%;
+		margin: 20px 0 10px;
+		float: right;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+		}
 
 		.widget {
 			margin-bottom: 1em;
 		}
 
+		.widget_text {
+			width: 53vw;
+			margin-right: 2vw;
+		}
+		.widget_nav_menu {
+			width: 30vw;
+		}
+
+	}
+	@media screen and ( max-width: 780px ) {
+		.container {
+			.footer-sitemap {
+				display: none;
+			}
+			.footer-sidebar {
+				width: 100%;
+			}
+		}
 	}
 }

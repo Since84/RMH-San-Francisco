@@ -223,29 +223,33 @@ footer .widgettitle, footer .menu-header-nav-container > ul > li > a {
   display: inline-block;
 }
 /* line 25, sass/_footer-w-sidebar.scss */
+footer .menu {
+  margin-top: 0;
+}
+/* line 29, sass/_footer-w-sidebar.scss */
 footer .sub-menu {
   padding: none;
 }
-/* line 29, sass/_footer-w-sidebar.scss */
+/* line 33, sass/_footer-w-sidebar.scss */
 footer .container {
   padding: 1vw 2vw;
 }
-/* line 33, sass/_footer-w-sidebar.scss */
+/* line 37, sass/_footer-w-sidebar.scss */
 footer .footer-main, footer .footer-sidebar {
   display: inline-block;
   vertical-align: top;
 }
-/* line 38, sass/_footer-w-sidebar.scss */
+/* line 42, sass/_footer-w-sidebar.scss */
 footer .footer-main {
   width: 70%;
   margin: 20px 2vw 20px 0;
   padding: 0;
 }
-/* line 43, sass/_footer-w-sidebar.scss */
+/* line 47, sass/_footer-w-sidebar.scss */
 footer .footer-main .footer-sitemap {
   padding: 0;
 }
-/* line 46, sass/_footer-w-sidebar.scss */
+/* line 50, sass/_footer-w-sidebar.scss */
 footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li {
   display: inline-block;
   vertical-align: top;
@@ -253,26 +257,51 @@ footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li {
   margin-right: 2%;
   margin-bottom: 2em;
 }
-/* line 53, sass/_footer-w-sidebar.scss */
+/* line 57, sass/_footer-w-sidebar.scss */
 footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li a {
   color: white;
 }
-/* line 57, sass/_footer-w-sidebar.scss */
+/* line 61, sass/_footer-w-sidebar.scss */
 footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li.menu-item-home {
   display: none;
 }
-/* line 62, sass/_footer-w-sidebar.scss */
+/* line 66, sass/_footer-w-sidebar.scss */
 footer .footer-main .footer-sitemap .menu-header-nav-container > ul > li .sub-menu li {
   margin-bottom: .5em;
 }
-/* line 70, sass/_footer-w-sidebar.scss */
-footer .footer-sidebar {
-  width: 25%;
-  margin: 20px 0;
-}
 /* line 74, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar {
+  width: 23%;
+  margin: 20px 0 10px;
+  float: right;
+}
+/* line 79, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar li {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 84, sass/_footer-w-sidebar.scss */
 footer .footer-sidebar .widget {
   margin-bottom: 1em;
+}
+/* line 88, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar .widget_text {
+  width: 53vw;
+  margin-right: 2vw;
+}
+/* line 92, sass/_footer-w-sidebar.scss */
+footer .footer-sidebar .widget_nav_menu {
+  width: 30vw;
+}
+@media screen and (max-width: 780px) {
+  /* line 99, sass/_footer-w-sidebar.scss */
+  footer .container .footer-sitemap {
+    display: none;
+  }
+  /* line 102, sass/_footer-w-sidebar.scss */
+  footer .container .footer-sidebar {
+    width: 100%;
+  }
 }
 
 /* line 208, sass/style.scss */

@@ -715,15 +715,30 @@ header .menu-header-nav-container li .sub-menu a {
 footer {
   background: #628ecc;
   color: white;
+  font-size: 10px;
+  line-height: 1.5em;
+  padding: 0 1em;
 }
-/* line 6, sass/_footer.scss */
+/* line 9, sass/_footer.scss */
 footer a {
   color: white;
 }
-/* line 10, sass/_footer.scss */
+/* line 13, sass/_footer.scss */
+footer h2, footer .widgettitle, footer p {
+  font-size: 10px;
+}
+/* line 17, sass/_footer.scss */
 footer .menu-corporate-menu-container {
   display: inline-block;
   margin-left: 2em;
+}
+/* line 22, sass/_footer.scss */
+footer .footer-sidebar {
+  border-bottom: 1px solid white;
+}
+/* line 25, sass/_footer.scss */
+footer .footer-main {
+  width: 100%;
 }
 
 /* Mobile Styles for RMH */
