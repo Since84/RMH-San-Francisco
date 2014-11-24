@@ -1,0 +1,79 @@
+//Footer with Sidebar
+ 
+footer {
+	color: black;
+
+	a { 
+		text-decoration: none;
+	}
+
+	ul, li {
+		list-style: none;
+		padding: 0;
+	}
+
+	.widgettitle, .menu-header-nav-container > ul > li > a {
+		color: white;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+		margin-bottom: .5em;
+		margin-top: 0;
+		display: inline-block;
+	}
+
+	.sub-menu {
+		padding: none;
+	}
+	
+	.container{
+		padding: 1vw 2vw;
+	}
+
+	.footer-main, .footer-sidebar {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.footer-main {
+		width: 70%;
+		margin: 20px 2vw 20px 0;
+		padding: 0;
+
+		.footer-sitemap {
+			padding: 0;
+			.menu-header-nav-container {
+				& > ul > li {
+					display: inline-block;
+					vertical-align: top;
+					width: 30%;
+					margin-right: 2%;
+					margin-bottom: 2em;
+
+					a {
+						color: white;
+					}
+
+					&.menu-item-home {
+						display: none;
+					}
+
+					.sub-menu {
+						li {
+							margin-bottom: .5em;
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-sidebar {
+		width: 25%;
+		margin: 20px 0;
+
+		.widget {
+			margin-bottom: 1em;
+		}
+
+	}
+}
