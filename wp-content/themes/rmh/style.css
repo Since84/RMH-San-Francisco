@@ -54,7 +54,7 @@ a {
 
 /* line 3, sass/_header.scss */
 header {
-  z-index: 499;
+  z-index: 1001;
   position: relative;
 }
 /* line 8, sass/_header.scss */
@@ -264,7 +264,7 @@ header .menu-header-nav-container li .sub-menu {
 }
 /* line 37, sass/_menu.scss */
 header .menu-header-nav-container li .sub-menu a {
-  font-size: .9em;
+  font-size: .9rem;
 }
 
 /* line 3, sass/_slider.scss */
