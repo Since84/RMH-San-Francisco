@@ -3,11 +3,11 @@
 @media (max-width: 780px){ 
 
 h1 {
-	font-size: 14px;
+	font-size: 16px;
 }
 
 h2 {
-
+	font-size: 16px;
 }
 
 h3 {
@@ -18,44 +18,6 @@ p  {
 	font-size: 13px;
 	line-height: 1.3em;
 }
-
-//Header 
-	header {
-		white-space: nowrap;
-		.site-logo {
-			@include col(7.5); 
-			text-align: center;
-			display: inline-block;
-			img {
-				height: 13vw;
-				width: auto !important;
-			}
-		}
-		.mobile {
-			display: inline-block;
-			background: $mobilemenuicon 50% 50% no-repeat;
-			height: 13vw;
-			@include col(2);
-			&.menu-button {			
-				background: $mobilemenuicon 50% 50% no-repeat;
-				background-size: 40% auto;
-				border-right: 1px solid gray;
-				margin-right: 10px;
-			}
-			&.search-button {
-				background: $searchiconblue 50% 50% no-repeat;
-				background-size: 40% auto;
-				border-left: 1px solid gray;
-				margin-right: 10px;
-				@include col(2);
-			}
-		}
-
-		//Hide on Mobile
-		.site-head-right
-		{ display:none; }
-
-	}
 
 	//Menu
 	.main-menu {
@@ -70,122 +32,6 @@ p  {
 				content: none;
 			}
 		}
-	}
-
-	//Call to Action Buttons
-	.home {
-		div.call-to-action {
-			padding: 0;
-
-			.widget_text {
-				font-size: 4.5vw;
-				padding: 10px 0;
-				.special {
-					display: block;
-					clear: both;
-					font-size: 7vw;
-				}
-			}
-
-			ul#menu-action-buttons {
-				margin: 0;
-				white-space: nowrap;
-				li.menu-item {
-					margin-right: 0;
-					border-radius: 0;
-					padding: 0;
-					width: 33.7%;
-					margin-left: -5px;
-					background-image: none;
-					text-align: center;
-					letter-spacing: 0;
-					a{
-						display: block;
-						width: auto;
-						margin: .5em 0;
-					}
-					&:not(:nth-child(3)) a{
-						border-right: 1px solid white;
-						margin-right: 1px;
-					}
-
-				}
-			}
-
-			&:before, &:after {
-				content: none;
-			}
-		}
-
-	}
-
-	//Content
-	.content-area {
-		padding: 10px 1vw;
-		box-shadow: none;
-		h2 { 
-			font-size: 18px; 
-			padding-bottom: .4rem;
-			margin: 0 0.5em;
-		}
-
-		.blog-post-preview {
-			padding: 1em .5em;
-			a {
-				display: inline-block;
-				width: auto;
-				img {
-					
-					width: 100%;
-					height: auto;
-					bottom: auto;
-				}
-			}
-			h3 { margin-top: 0; }
-			.post-feature {
-				width: 23vw;
-				margin-right: 3vw;
-				display: inline-block;
-				vertical-align: top;
-			}
-			.post-content {
-				display: inline-block;
-				width: 60vw;
-				font-size: 14px;
-				line-height: 1.3em;
-			}
-		}
-
-		.family-stories {
-			width: 100%;
-			h2 {
-				margin-right: 0;
-			}
-			.one-per-page .blog-post-preview {
-				height: 200px;
-				padding: 1em .5em;
-				.thumbnail {
-					img { bottom: auto; }
-				}
-				.post-meta {
-					display: none;
-				}
-				.post-excerpt {
-					p { margin-top: .5em; }
-				}
-			}
-		}
-
-				//Blog Post Blocks
-		.home & {
-			.whats-happening {
-				margin: 1rem .5rem 3rem;
-				.blog-post-preview {}
-			}
-			.social-block {
-				display: none;
-			}	
-		}		
 	}
 
 

@@ -1,0 +1,103 @@
+// Header 
+
+header {
+	.site-logo, .site-head-right {
+		display: inline-block;
+		vertical-align:middle;
+	}
+	.site-logo {
+		@include col(8);
+		vertical-align: middle;
+	}
+	.site-head-right {
+		@include col(4);
+		text-align: right;
+		vertical-align: middle;
+		float: right;
+		padding-top: 1.5em;
+
+		.menu {
+			li {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			
+		}
+	}
+
+	form[role='search'] {
+		text-align: right;
+		position: relative; 
+		input {
+			display: inline-block;
+			vertical-align: middle;
+			&[type='submit']{
+				border: 0;
+				width: 20px;
+				height: 20px;
+			}
+			&[type='text']{
+				border: none;
+				border-bottom: 1px solid #ccc;
+				height: 20px;
+			}
+		}
+	}
+	.social-icons-widget {
+		list-style: none;
+		display: inline-block;
+		margin-top: 10px;
+
+		ul li {
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
+	.menu-header-nav-container {
+	background: gray;
+	
+		li {
+			display: inline-block;
+			vertical-align: top;
+			padding: 15px 20px;
+			position: relative;
+
+			a {
+				color: white;
+				text-decoration: none;
+			}
+
+			.sub-menu {
+				display: none;
+				position: absolute;
+				width: 150px;
+				left: 0;
+				padding-left: 0;
+				margin-top: 1.3em;
+
+				li {
+					position: relative;
+					width: 100%;
+					.sub-menu{
+						position: absolute;
+						right: -100%;
+					}
+				}
+			}
+
+			&:hover {
+				> .sub-menu{
+					display: block;
+				}
+			}
+
+		}
+		.menu{
+			margin: 0;
+		}
+
+
+	}	
+
+}
+

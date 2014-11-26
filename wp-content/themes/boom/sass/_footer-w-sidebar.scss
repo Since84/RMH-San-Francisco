@@ -22,6 +22,10 @@ footer {
 		display: inline-block;
 	}
 
+	.menu {
+		margin-top: 0;
+	}
+
 	.sub-menu {
 		padding: none;
 	}
@@ -60,7 +64,6 @@ footer {
 
 					.sub-menu {
 						li {
-							margin-bottom: .5em;
 						}
 					}
 				}
@@ -68,12 +71,45 @@ footer {
 		}
 	}
 	.footer-sidebar {
-		width: 25%;
-		margin: 20px 0;
+		width: 26%;
+		margin: 20px 0 10px;
+		float: right;
+
+		li {
+			display: inline-block;
+			vertical-align: top;
+		}
 
 		.widget {
 			margin-bottom: 1em;
 		}
 
+		.widget_text {
+			width: 100%;
+			margin-right: 2vw;
+		}
+		.widget_nav_menu {
+			width: 100%;
+		}
+
+	}
+	@media screen and ( max-width: 780px ) {
+		h2, .widgettitle, p {
+			font-size: 10px;
+		}
+
+		.container {
+			.footer-sitemap {
+				display: none;
+			}
+			.footer-sidebar {
+				width: 100%;
+				border-bottom: 1px solid white;
+			}
+			.footer-main {
+				width: 100%;
+			}
+
+		}
 	}
 }

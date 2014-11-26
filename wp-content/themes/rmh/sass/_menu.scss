@@ -1,0 +1,40 @@
+//Menu
+
+header .menu-header-nav-container {
+	background: $primary;
+
+	ul { 
+		text-align: center; 
+		padding-left: 0;
+	}
+	
+	//Nav Menu
+	li {
+		background: $primary;
+		padding: 15px 1.2vw;
+		&.current-menu-item {
+			//TODO: change to current menu item
+			background: $tertiary;
+		}
+		li {
+			padding: .7em;
+			&:hover:not(.current-menu-item) {
+				background: $primaryLight;
+			}
+		}
+		a {
+			font-size: 16px;
+		}
+		@media screen and ( max-width: 920px ) {
+			a { font-size: 16px; }
+		}
+
+		//Sub Menu
+		.sub-menu {
+			margin-top: 1em;
+			width: 200px;
+			text-align: left;
+			a { font-size: .9em; }
+		}
+	}
+}

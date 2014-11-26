@@ -5,7 +5,7 @@
 <div class="blog-post-preview">
 	<div class="post-feature">
 		<a class="thumbnail" href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail('thumbnail'); ?>
 		</a>
 	</div>
 	<div class="post-content">
@@ -22,7 +22,8 @@
 				</div>
 			</div>
 			<div class="post-excerpt">
-<?php 				the_excerpt(); ?>
+<?php 			the_excerpt(); ?>
+				<a class="readmore" href="<?php the_permalink();?>">Read More</a>
 			</div>
 		</a>
 	</div>

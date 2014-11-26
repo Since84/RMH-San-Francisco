@@ -46,7 +46,7 @@
 	<button class='prev paging cycle-prev'></button>
 	<button class='next paging cycle-next'></button>
 </div>
-<div 	class="mobile four-per-mobile cycle-slideshow"
+<div 	class="post-scroller mobile four-per-mobile cycle-slideshow"
 		data-cycle-slides=".blog-post-preview"
 		data-cycle-timeout="0"
 		data-cycle-fx="scrollHorz"
