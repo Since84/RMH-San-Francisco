@@ -64,7 +64,6 @@ footer {
 
 					.sub-menu {
 						li {
-							margin-bottom: .5em;
 						}
 					}
 				}
@@ -72,7 +71,7 @@ footer {
 		}
 	}
 	.footer-sidebar {
-		width: 23%;
+		width: 26%;
 		margin: 20px 0 10px;
 		float: right;
 
@@ -86,22 +85,31 @@ footer {
 		}
 
 		.widget_text {
-			width: 53vw;
+			width: 100%;
 			margin-right: 2vw;
 		}
 		.widget_nav_menu {
-			width: 30vw;
+			width: 100%;
 		}
 
 	}
 	@media screen and ( max-width: 780px ) {
+		h2, .widgettitle, p {
+			font-size: 10px;
+		}
+
 		.container {
 			.footer-sitemap {
 				display: none;
 			}
 			.footer-sidebar {
 				width: 100%;
+				border-bottom: 1px solid white;
 			}
+			.footer-main {
+				width: 100%;
+			}
+
 		}
 	}
 }

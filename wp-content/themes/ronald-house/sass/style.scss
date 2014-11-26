@@ -1,0 +1,53 @@
+/*
+*	Template Name: Ronald House SF
+*	Description: Boom Child theme for Ronald McDonald House San Francisco
+*	Template: boom
+*	Version: 0.1
+*/
+@import url("../boom/style.css");
+@import "ronaldhouse";
+
+//BASE STYLES
+body {
+	color: $maintext;
+	@include futura;
+	font-weight: 300;
+}
+
+///Headings
+h1 {
+	@include header1;
+}
+h2 {
+	@include header2;
+}
+h3 {
+	@include header3;
+}
+
+//HEADER
+header {
+
+	.site-logo{
+		.logo{
+			width: 225px;
+		}
+	}
+	@media screen and ( max-width: $tablet ) {
+		.nav-menu {
+			display: none;
+		}
+	}
+}
+
+
+//FOOTER
+
+//HOME PAGE
+
+//INTERIOR PAGE
+
+//BLOGROLL
+
+//BLOG PAGE
+

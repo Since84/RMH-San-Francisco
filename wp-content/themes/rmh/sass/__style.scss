@@ -1,0 +1,494 @@
+/*
+*	Template Name: RMH
+*	Description: Boom Child theme for Ronald McDonald House San Francisco
+*	Template: boom
+*	Version: 0.1
+*/
+
+@import url("../boom/style.css");
+@import "rmh";
+
+$containerWidth: 1260px;
+
+body {
+	color: $maintext;
+	@include futura;
+	font-weight: 300;
+}
+
+//Headings
+h1 {
+	@include header1;
+}
+h2 {
+	@include header2;
+}
+h3 {
+	@include header3;
+}
+
+.container {
+	overflow: hidden;
+}
+
+//Components 
+// @include cycle;
+
+// Main Header 
+header{
+	z-index: 499;
+	position: relative;
+
+	.site-logo{
+		.logo{
+			width: 225px;
+		}
+	}
+	.site-head-right{
+		form[role="search"]{
+			input[type="text"]{
+				background: $highlight;
+				border: none;
+				width: 100%;
+				min-width: 100px;
+				padding: 15px 30px 15px 15px;
+				height: 1.5rem;
+				z-index: 9;
+			}
+			input[type="submit"]{
+				position: absolute;
+				right: 6px;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				z-index: 10;
+				background: $searchicon no-repeat 50% 50%;
+				background-size: 90% auto;
+			}
+		}
+		.social-links{
+			padding-left: 0;
+			margin: 10px 0;
+			.widget{
+				display: inline-block;
+				vertical-align: top;
+				.menu-item {
+					@include action-button;
+					font-size: 10px;
+					padding: 5px 1em;
+					width: 90%;
+					a{
+						font-size: 1.5em;
+					}
+				}
+				&.widget_nav_menu{
+					width: 70%;
+					width: 100%;
+					.menu{ padding-left: 120px; }
+				}
+				&.widget_cnss_widget{
+					position: absolute;
+					width: 120px;
+				}
+			}
+
+			@media screen and ( max-width: 880px ) {
+				.widget .menu-item {
+					padding: 10px;
+					height: 3em;
+					a {
+						font-size: 1.2em;
+					}
+				}
+			}
+		}
+	}
+	.menu-header-nav-container {
+		background: $primary;
+
+		ul { 
+			text-align: center; 
+			padding-left: 0;
+		}
+		
+		//Nav Menu
+		li {
+			background: $primary;
+			padding: 15px 1.2vw;
+			&.current-menu-item {
+				//TODO: change to current menu item
+				background: $tertiary;
+			}
+			li {
+				padding: .7em;
+				&:hover:not(.current-menu-item) {
+					background: $primaryLight;
+				}
+			}
+			a {
+				font-size: 16px;
+			}
+			@media screen and ( max-width: 920px ) {
+				a { font-size: 16px; }
+			}
+
+			//Sub Menu
+			.sub-menu {
+				margin-top: 1em;
+				width: 200px;
+				text-align: left;
+				a { font-size: .9em; }
+			}
+		}
+	}
+}
+
+
+
+//Dynamite Slider
+.dynamite-slide .dynamite-slider{
+	overflow: visible !important;
+
+
+	.dynamite-slide-window {
+		margin-top: -39px;
+		&::before{
+			content:'';
+			display: block;
+			width: 100%;
+			height: 40px;
+			position: relative;
+			top: 20px;
+			left: 0;
+			background: $primary;
+			z-index: 1;
+		}
+	}
+}
+
+//Call To Action Buttons
+.home .call-to-action {
+
+	// Background
+	background: $calltoactionback;
+	color: white;
+	width: 100%;
+	max-width: $containerWidth + 44px;
+	position: relative;
+
+	// Background Banner Tails 
+	&::before, &::after{
+		content: "";
+		width: 22px;
+		height: 30px;
+		bottom: -30px;
+		display: block;
+		position: absolute;
+		background-repeat: no-repeat;
+	}
+	&::before{
+		background: $bannertailleft no-repeat;
+		left: 0;
+	}
+	&::after{
+		background: $bannertailright no-repeat;
+		right: 0;
+	}
+
+	//Section Header Text
+	.widget_text{ 
+		font-size: 26px;	
+	}
+
+	//Highlighted text
+	.special {
+		font-size: 30px;
+	}
+	
+	// Action Buttons
+	#menu-action-buttons li{
+		@include action-button;
+		font-weight: 700;
+		font-size: 20px;
+		width: 200px;
+		&:not(:last-of-type){
+			margin-right: 2em;
+		}
+	}
+}
+
+//Feature Image
+.post-feature-image{
+	background: white;
+	position: relative;
+	z-index: 1000;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+//Content Area
+.content-area {
+	padding: 4em 1em;
+	box-shadow: 0px -4px 6px 2px #bdb9b9;
+	font-size: 15px;
+	line-height: 1.3em;
+
+	h2 {
+		margin: 0 1rem 1rem;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid $tertiary;
+		font-size: 26px;
+	}
+
+	.whats-happening {
+		position: relative;
+		.four-per-page .blog-post-preview {
+			height: 300px;
+			overflow: hidden;
+			&:not(:last-of-type){
+				border-right: 1px solid $border;
+			}
+		}
+		.pager-button {
+			display: block;
+			position: absolute;
+			background-repeat: no-repeat;
+			top:0;
+			bottom: 0;
+			margin: auto;
+			width: 34px;
+			height: 180px;
+			z-index:1000;
+			padding-left: 1em;
+			opacity:0;
+			-webkit-transition: opacity .5s;
+    		transition: opacity .5s;
+		}
+
+		&:hover .pager-button {
+			opacity: .25;
+		}
+
+		.cycle-next {
+			right: 0;
+			background-image: $largerightarrow;
+		}
+		.cycle-prev {
+			left: 0;
+			background-image: $largeleftarrow;
+		}
+		.cycle-slide{
+			width: 100%;
+		}
+
+		.post-meta{
+			display: none;
+		}
+		.post-content {
+		}
+	}
+	.family-stories{
+		position: relative;
+		@include col(8);
+
+		h2 {
+			margin-right: 4.1em;
+		}
+
+		h3{
+			color: $primary;
+			margin-top: 0;
+		}
+
+		.one-per-page {
+			padding-top: 1.6em;
+
+			.thumbnail{
+				float: right;
+				width: 50%;
+				text-align: center;
+			}
+			.blog-post-preview {
+				width: 100%;
+				padding: 2em 1em;
+				border: 0;
+
+				.post-date {
+					margin-bottom: 2em;
+				}
+
+				.post-categories {
+					display: none;
+				}
+			}
+		}
+	}
+	.social-block {
+		@include col(4);
+
+		.fb-activity {
+			padding-top: 1.6em;	
+			margin: 0 1em 0;
+		}
+		
+	}
+}
+
+
+//Scroller/Slider Paging
+.slider-pagination, .mobile-four-per-pagination {
+	@include pagination;
+} 
+
+//Page Content 
+.page-content{
+	color: $maintext;
+	position: relative;
+	h2 {
+		border: none;
+		padding: 0;
+		margin-left: 0;
+		font-size: 16px;
+		color: $tertiary;
+	}
+	p {
+		@include col(9);
+	}
+}
+
+//Blog Roll 
+.page-template-blog-php, .archive.category {
+	.blog-content {
+		.blog-post-preview{
+			width: 100%;
+			border-bottom: 1px solid $border;
+			margin-bottom: 2em;
+
+
+			a, h3 {
+				text-decoration: none;
+				color: $tertiary;
+			}
+
+			p {
+				margin-top: .5em;
+			}
+
+			.post-feature {
+				float: right;
+				display: block;
+				width: 50%;
+				min-height: 200px;
+			}
+			.post-meta {
+				display: none;
+			}
+		}
+	}
+	.blog-paging {
+		font-size: 12px;
+
+		.next-prev {
+			@include pagination;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			.paging.next, .paging.prev { 
+				width: 20px;
+				height: 20px;
+				background-size: auto 100%;
+				position: relative;
+				left: auto;
+				right: auto;
+			}
+		}
+
+		.page-numbers {
+			color: $tertiary;
+			display: inline-block;
+			vertical-align: middle;
+			&:not(:last-child){
+			 	margin-right: .75em;
+			 	padding-right: .75em;
+			 	border-right: 1px solid $border;
+			}
+			&.current {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+//Page Sidebar
+
+.sidebar-container {
+	width: 100%;
+	max-width: $containerWidth;
+	margin: auto;
+	position: relative;
+}
+
+.page-sidebar {
+	@include col(2.5);
+	min-width: 200px;
+	position: relative;
+	padding-top: 5em;
+	font-size: 14px;
+	z-index: 1001;
+
+	li {
+		list-style: none;
+		width: 90%;
+	}
+	.call-to-action{
+		// height: 200px; 
+		white-space: nowrap;
+		padding-top: 5em;
+		#menu-action-buttons{
+			padding-left: 0;
+			width: 100%;
+			li{
+				@include action-button;
+				display: list-item;
+				margin-bottom: .5em;
+				width: 100%;
+			}
+		}
+	}
+
+	.parent-menu {
+		text-transform: uppercase;
+		ul {
+			padding: 0;
+		}
+
+		a, li {
+			margin-top: 1.5em;
+			color: $primary;
+			text-decoration: none;
+		}
+		& > div > ul {
+			list-style: none;
+			padding: 1em;
+			margin-top: .5em;
+
+			ul {
+				padding-left: 1em;
+			}
+		}
+		& > div > ul > li {
+			& > a {
+				// font-weight: bold;
+				// text-decoration: underline;
+			}
+		}
+	}
+}
+
+//Footer
+
+@import "footer";
+
+@import "mobile";

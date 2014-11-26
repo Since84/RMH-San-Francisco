@@ -1,0 +1,21 @@
+//Slider
+
+.dynamite-slide .dynamite-slider{
+	overflow: visible !important;
+
+
+	.dynamite-slide-window {
+		margin-top: -39px;
+		&::before{
+			content:'';
+			display: block;
+			width: 100%;
+			height: 40px;
+			position: relative;
+			top: 20px;
+			left: 0;
+			background: $primary;
+			z-index: 1;
+		}
+	}
+}

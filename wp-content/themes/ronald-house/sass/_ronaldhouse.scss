@@ -1,0 +1,142 @@
+//Ronald House Template Style Variables
+
+// Media breaks
+$tablet: 780px;
+$mobile: 600px;
+
+//Colors
+$primary-blue: #628ecc;
+$secondary-yellow: #ffc829;
+$tertiary-gray: #a5a299;
+$text-gray: #918e89;
+$header-gray: #565656;
+$border-gray: #999d9f;
+
+//Images
+$mobilemenuicon: image-url('icons/menu-icon.png', false, false );
+$searchicon: image-url('icons/search.png', false, false );
+$searchiconblue: image-url('icons/search-blue.png', false, false);
+$rightarrow: image-url('icons/right-arrow-action.png', false, false );
+$calltoactionback: image-url('icons/call-to-action.png', false, false );
+$bannertailleft: image-url('icons/blue-banner-tail-left.png', false, false );
+$bannertailright: image-url('icons/blue-banner-tail-right.png', false, false );
+$left-arrow-slider: image-url('icons/slider-page-next.png', false, false );
+$right-arrow-slider: image-url('icons/slider-page-prev.png', false, false );
+$largeleftarrow: image-url('icons/four_scroll_paging_arrow_left.png', false, false );
+$largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, false );
+
+// Typography
+	@mixin futura {
+		font-family: "futura-pt",sans-serif;
+		//LOCALHOST
+		font-family: "Futura",sans-serif;
+	}
+
+	@mixin header1 {
+		color: $primary-blue;
+		font-size: 30px;
+		text-transform: uppercase;
+		@include futura;
+	}
+
+	@mixin header2 {
+		color: $tertiary-gray;
+		font-size: 26px;
+		@include futura;
+	}
+
+	@mixin header3 {
+		color: $header-gray;
+		font-size: 16px;
+		margin-bottom: 0px;
+		@include futura;
+	
+
+	@mixin bodytext {
+		color: $tertiary-gray;
+		font-size: 22px;
+	}
+
+	@mixin previewtext {
+		font-size: 16px;
+	}
+
+// Grid
+$columns: 12;
+$frameWidth: 1260px;
+$columnWidth: $frameWidth / $columns;
+
+//UI
+@mixin action-button {
+	display: inline-block;
+	color: white;
+	background: $secondary $rightarrow 96% center no-repeat;
+	background-size: auto 65%;
+	padding: 10px;
+	padding-left: 1em;
+	text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: background-color .25s;
+    transition: background-color .25s;
+    cursor: pointer;
+
+	&:hover{
+		background-color: #F1D480;
+	}
+
+	a {
+		@include header2;
+		font-size: 16px;
+		color: white;
+		// padding-right: 2em;
+		text-decoration: none;
+		text-transform: uppercase;
+		@media screen and ( max-width: 780px ) {
+			font-size: 2.5vw;
+		}
+		@media screen and ( max-width: 590px ) {
+			font-size: 4vw;
+		}
+	}
+}
+
+@mixin pagination {
+	position: absolute;
+	top: -5px;
+	right: 0;
+	width: 80px;
+	.paging {
+		width: 30px;
+		height: 30px;
+		padding: 0;
+		display:inline-block;
+		border:none;
+		z-index: 5; 
+		top: 0;
+		background: none;
+	    -moz-transition:opacity .5s, -moz-transform .5s;
+	    -webkit-transition:opacity .5s, -webkit-transform .5s;
+	    -o-transition:opacity .5s, -o-transform .5s;
+	    transition:opacity .5s, transform .5s;
+	    position: absolute;
+
+		&.prev{ 
+			left: -20px; 
+			background-image: $right-arrow-slider;
+			background-position: 0% 50%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+
+		}
+		&.next{ 
+			right: 30px; 
+			background-image: $left-arrow-slider;
+			background-position: 100% 50%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+		}
+	}
+
+}
