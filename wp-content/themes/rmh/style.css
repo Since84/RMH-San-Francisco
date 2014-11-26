@@ -52,11 +52,6 @@ a {
   text-decoration: none;
 }
 
-/* line 38, sass/style.scss */
-.container {
-  overflow: hidden;
-}
-
 /* line 3, sass/_header.scss */
 header {
   z-index: 499;
