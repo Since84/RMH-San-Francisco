@@ -12,7 +12,7 @@
 //PAGE CONTENT
 
 //GALLERY 
-	$slider = get_post_meta( get_the_id(), 'slider_images', true );
+	$slider = get_post_meta( get_the_id(), 'gallery', true );
 	if ( has_post_format( 'gallery' ) && $slider ) {
 		$slider = strpos( $slider, ',' ) ? explode(',', $slider) : $slider;
 ?>	
