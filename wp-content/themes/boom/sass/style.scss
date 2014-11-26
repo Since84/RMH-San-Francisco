@@ -1,0 +1,89 @@
+/* 	
+	Theme Name: Boom 
+	Version: 0.1
+	Author: *~==
+	Description: Boom theme for Boom Creative Co. Site Development
+*/
+$blueprint_grid_columns: 12;
+$blueprint_grid_width: 110px;
+$containerWidth: 1260px;
+ 
+@import "blueprint";
+@import "base";
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+body {
+	margin: 0;
+}
+
+.container {
+	max-width: $frameWidth;
+	width: 100%; 
+	margin: auto;
+}
+
+//Header
+@import "header";
+
+ //Footer 
+ footer {
+
+ }
+
+ //Components
+
+ ///Call To Action Buttons
+ 	// Home Page
+ 	.home .call-to-action {
+ 		padding: 20px;
+ 		text-align: center;
+ 		.menu {
+ 			padding-left:0;
+ 		
+	 		li {
+	 			padding: 10px;
+	 			background: $secondary;
+	 			letter-spacing: 2px;
+	 			display: inline-block;
+	 			// margin-left: 1em;
+	 			// padding-left: 0;
+	 		}
+	 	}
+ 		.widget{
+ 			display: block;
+ 			clear: both;
+ 			text-align: center;
+ 			width: 100%;
+ 		}
+ 		.special {
+ 			//Thirsty Font
+ 		}
+ 	}
+
+ @import "footer-w-sidebar";
+
+
+ //Default Page Template 
+ .single, .page, .category {
+ 	.content-area{
+ 		padding: 1em 1em 1em 270px;
+ 		position: relative;
+ 		min-height: 600px;
+ 	}
+ 	.page-sidebar{
+ 		position: absolute;
+ 		padding-top: 1em;
+ 		left: 0;
+
+ 		.call-to-action{
+ 			.widget_text {
+ 				display: none;
+ 			}
+ 		}
+ 	}
+ }
+
+ @import "mobile";
