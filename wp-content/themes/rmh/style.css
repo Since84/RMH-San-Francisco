@@ -543,14 +543,14 @@ header .menu-header-nav-container li .sub-menu a {
 .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
   position: absolute;
   right: 0;
-  width: 80px;
-  height: 30px;
+  width: 70px;
+  height: 25px;
   top: 0;
 }
 /* line 128, sass/_rmh.scss */
 .content-area .slider-pagination .paging, .content-area .mobile-four-per-pagination .paging {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   padding: 0;
   display: inline-block;
   border: none;
@@ -650,13 +650,13 @@ header .menu-header-nav-container li .sub-menu a {
   margin: 0 1em 0;
 }
 /* line 54, sass/_content.scss */
-.home .content-area .whats-happening h2, .home .content-area .family-stories h2 {
+.home .content-area .whats-happening h2, .home .content-area .family-stories h2, .home .content-area .social-block h2 {
   border-bottom: 1px solid #999d9f;
   padding-bottom: 5px;
   margin-top: 0;
 }
 /* line 59, sass/_content.scss */
-.home .content-area .whats-happening .post-meta, .home .content-area .family-stories .post-meta {
+.home .content-area .whats-happening .post-meta, .home .content-area .family-stories .post-meta, .home .content-area .social-block .post-meta {
   display: none;
 }
 /* line 69, sass/_content.scss */
@@ -702,16 +702,16 @@ header .menu-header-nav-container li .sub-menu a {
 .page-template-blog-php .content-area .blog-paging .next-prev, .content-area .archive.category .blog-paging .next-prev {
   position: absolute;
   right: 0;
-  width: 80px;
-  height: 30px;
+  width: 70px;
+  height: 25px;
   position: relative;
   display: inline-block;
   vertical-align: top;
 }
 /* line 128, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging, .content-area .archive.category .blog-paging .next-prev .paging {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   padding: 0;
   display: inline-block;
   border: none;
