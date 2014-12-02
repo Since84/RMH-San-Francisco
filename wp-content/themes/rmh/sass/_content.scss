@@ -46,7 +46,7 @@
 			@include col(3);
 
 			.fb-activity {
-				padding-top: 1.6em;	
+				// padding-top: 1.6em;  	
 				margin: 0 1em 0;
 			}		
 		}
@@ -64,11 +64,11 @@
 	}
 
 	//Blogroll
-	.page-template-blog-php &, .archive.category {
+	.page-template-blog-php &, .archive.category & {
 
 		.blog-post-preview{
 			width: 100%;
-			height: 16em;
+			height: 21vw;
 			border-bottom: 1px solid $border;
 			margin-bottom: 2em;
 
@@ -88,6 +88,8 @@
 				width: 40%;
 				img {
 					max-height: 100%;
+					width: auto;
+					height: 20vw;
 				}
 			}
 			.post-meta {
