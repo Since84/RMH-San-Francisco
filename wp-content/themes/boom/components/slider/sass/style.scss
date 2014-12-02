@@ -1,6 +1,6 @@
 @import "dynamite";
 
-$sliderHeight: 465px;
+$sliderHeight: 30vw;
 $sliderWidth: 100%;
 $containerWidth: 1260px;
 
@@ -119,7 +119,7 @@ $containerWidth: 1260px;
 			}
 			&:not(.active) {
 				opacity: .5;
-				height: $sliderHeight - 40;
+				height: $sliderHeight - 1vw;
 				padding: 20px 0;
 				img {
 	    		}

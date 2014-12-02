@@ -497,13 +497,7 @@ header .menu-header-nav-container li .sub-menu a {
 .content-area .post-scroller.four-per-page .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid #999d9f;
 }
-@media screen and (min-width: 780px) {
-  /* line 81, sass/_post-scroller.scss */
-  .content-area .post-scroller.four-per-page .blog-post-preview .post-feature img {
-    padding-top: 1em;
-  }
-}
-/* line 87, sass/_post-scroller.scss */
+/* line 84, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .pager-button {
   display: block;
   position: absolute;
@@ -519,32 +513,32 @@ header .menu-header-nav-container li .sub-menu a {
   transition: opacity .5s;
 }
 @media screen and (max-width: 780px) {
-  /* line 87, sass/_post-scroller.scss */
+  /* line 84, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 0;
   }
 }
 @media screen and (min-width: 780px) {
-  /* line 87, sass/_post-scroller.scss */
+  /* line 84, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 10px;
   }
 }
-/* line 108, sass/_post-scroller.scss */
+/* line 105, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page:hover .pager-button {
   opacity: .25;
 }
-/* line 112, sass/_post-scroller.scss */
+/* line 109, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-next {
   right: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_right.png');
 }
-/* line 116, sass/_post-scroller.scss */
+/* line 113, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-prev {
   left: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_left.png');
 }
-/* line 133, sass/_post-scroller.scss */
+/* line 130, sass/_post-scroller.scss */
 .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
   position: absolute;
   right: 0;
@@ -585,7 +579,7 @@ header .menu-header-nav-container li .sub-menu a {
   background-size: 100% auto;
 }
 @media screen and (max-width: 780px) {
-  /* line 133, sass/_post-scroller.scss */
+  /* line 130, sass/_post-scroller.scss */
   .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
     width: 60px;
   }
@@ -595,7 +589,7 @@ header .menu-header-nav-container li .sub-menu a {
     height: 20px;
   }
 }
-/* line 137, sass/_post-scroller.scss */
+/* line 134, sass/_post-scroller.scss */
 .content-area .mobile-four-per-pagination {
   display: none;
 }
@@ -648,10 +642,6 @@ header .menu-header-nav-container li .sub-menu a {
   vertical-align: top;
   width: 24.5%;
   max-width: 315px;
-}
-/* line 48, sass/_content.scss */
-.home .content-area .social-block .fb-activity {
-  margin: 0 1em 0;
 }
 /* line 54, sass/_content.scss */
 .home .content-area .whats-happening h2, .home .content-area .family-stories h2, .home .content-area .social-block h2 {
@@ -801,7 +791,7 @@ header .menu-header-nav-container li .sub-menu a {
   /* line 151, sass/_content.scss */
   .content-area .blog-post-preview a {
     display: inline-block;
-    width: auto;
+    width: 100%;
   }
   /* line 154, sass/_content.scss */
   .content-area .blog-post-preview a img {

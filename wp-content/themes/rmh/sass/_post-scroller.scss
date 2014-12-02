@@ -78,9 +78,6 @@
 
 			//Desktop Only
 			@media screen and ( min-width: $tablet ){
-				.post-feature img {
-					padding-top: 1em; 
-				}
 			}
 		}
 
@@ -118,7 +115,7 @@
 			background-image: $largeleftarrow;
 		}
 	}
-
+	
 	//Desktop Only
 	@media screen and ( min-width: $tablet ){
 		// .four-post
