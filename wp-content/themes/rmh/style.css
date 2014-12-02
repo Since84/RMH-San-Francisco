@@ -455,24 +455,30 @@ header .menu-header-nav-container li .sub-menu a {
   display: inline-block;
   vertical-align: top;
   width: 24.5%;
+  padding: 0 1em;
 }
-/* line 14, sass/_post-scroller.scss */
+/* line 15, sass/_post-scroller.scss */
 .content-area .post-scroller .blog-post-preview .thumbnail {
   display: block;
   width: 100%;
   height: 15vw;
+  margin-bottom: 1rem;
   text-align: center;
   position: relative;
 }
-/* line 20, sass/_post-scroller.scss */
+/* line 22, sass/_post-scroller.scss */
 .content-area .post-scroller .blog-post-preview .thumbnail img {
   display: inline-block;
-  width: auto;
+  width: 100%;
   height: auto;
   max-width: 100%;
   max-height: 100%;
 }
-/* line 39, sass/_post-scroller.scss */
+/* line 41, sass/_post-scroller.scss */
+.content-area .post-scroller .blog-post-preview .post-content {
+  padding: 0 1em;
+}
+/* line 45, sass/_post-scroller.scss */
 .content-area .post-scroller .blog-post-preview .readmore {
   margin-top: .5em;
   color: #ffc829;
@@ -480,25 +486,19 @@ header .menu-header-nav-container li .sub-menu a {
   font-weight: 600;
   font-size: 12px;
 }
-/* line 54, sass/_post-scroller.scss */
+/* line 60, sass/_post-scroller.scss */
 .content-area .post-scroller .cycle-slide {
   width: 100%;
 }
-/* line 60, sass/_post-scroller.scss */
+/* line 66, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview {
   overflow: hidden;
 }
-/* line 63, sass/_post-scroller.scss */
+/* line 69, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid #999d9f;
 }
-@media screen and (min-width: 780px) {
-  /* line 60, sass/_post-scroller.scss */
-  .content-area .post-scroller.four-per-page .blog-post-preview {
-    padding: 10px;
-  }
-}
-/* line 80, sass/_post-scroller.scss */
+/* line 86, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .pager-button {
   display: block;
   position: absolute;
@@ -514,32 +514,32 @@ header .menu-header-nav-container li .sub-menu a {
   transition: opacity .5s;
 }
 @media screen and (max-width: 780px) {
-  /* line 80, sass/_post-scroller.scss */
+  /* line 86, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 0;
   }
 }
 @media screen and (min-width: 780px) {
-  /* line 80, sass/_post-scroller.scss */
+  /* line 86, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 10px;
   }
 }
-/* line 101, sass/_post-scroller.scss */
+/* line 107, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page:hover .pager-button {
   opacity: .25;
 }
-/* line 105, sass/_post-scroller.scss */
+/* line 111, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-next {
   right: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_right.png');
 }
-/* line 109, sass/_post-scroller.scss */
+/* line 115, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-prev {
   left: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_left.png');
 }
-/* line 126, sass/_post-scroller.scss */
+/* line 132, sass/_post-scroller.scss */
 .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
   position: absolute;
   right: 0;
@@ -580,7 +580,7 @@ header .menu-header-nav-container li .sub-menu a {
   background-size: 100% auto;
 }
 @media screen and (max-width: 780px) {
-  /* line 126, sass/_post-scroller.scss */
+  /* line 132, sass/_post-scroller.scss */
   .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
     width: 60px;
   }
@@ -590,7 +590,7 @@ header .menu-header-nav-container li .sub-menu a {
     height: 20px;
   }
 }
-/* line 130, sass/_post-scroller.scss */
+/* line 136, sass/_post-scroller.scss */
 .content-area .mobile-four-per-pagination {
   display: none;
 }
@@ -979,6 +979,11 @@ footer a {
 footer .menu-corporate-menu-container {
   display: inline-block;
   margin-left: 2em;
+}
+/* line 17, sass/_footer.scss */
+footer .footer-sitemap {
+  border-bottom: 1px solid white;
+  margin-bottom: 2rem;
 }
 
 /* Mobile Styles for RMH */

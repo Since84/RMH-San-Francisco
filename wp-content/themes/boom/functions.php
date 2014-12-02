@@ -5,6 +5,7 @@
 	require_once('functions/header-image.php');
 	require_once('functions/sidebars.php');
 	require_once('functions/post-meta.php');
+	require_once('functions/images.php');
 
 	require_once('components/slider/slider.php');
 

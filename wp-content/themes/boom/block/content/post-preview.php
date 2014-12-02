@@ -5,7 +5,7 @@
 <div class="blog-post-preview">
 	<div class="post-feature">
 		<a class="thumbnail" href="<?php the_permalink(); ?>">
-			<?php the_post_thumbnail('thumbnail'); ?>
+			<?php the_post_thumbnail('preview'); ?>
 		</a>
 	</div>
 	<div class="post-content">

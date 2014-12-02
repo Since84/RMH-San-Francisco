@@ -57,16 +57,7 @@
 		resizeGallery: function(){
 			var self = this;
 			var gallery = $(self.element).find('.dGallery');
-
-			gallery.each(function() {
-        		var newHeight = 0, 
-        		$this = $( this );
-
-		        $.each( $this.children(), function() {
-		            newHeight += $( this ).height();
-		        });
-		        $this.height( newHeight );
-		    });
+			//TODO: Rethink this.
 		},
 		resizeContainer: function( first, activeSlidePosition ){
 			var self = this;
