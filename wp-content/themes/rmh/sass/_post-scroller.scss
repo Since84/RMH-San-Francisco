@@ -63,13 +63,17 @@
 	&.four-per-page {
 
 		.blog-post-preview {
-			// height: 300px;
+			height: 30vw;
 			overflow: hidden;
 			&:not(:last-of-type){
 				border-right: 1px solid $border;
 			}
 
 			.post-feature {
+				.thumbnail {
+					height: 15vw;
+					overflow: hidden;
+				}
 				img {
 
 				}
@@ -115,7 +119,7 @@
 			background-image: $largeleftarrow;
 		}
 	}
-	
+
 	//Desktop Only
 	@media screen and ( min-width: $tablet ){
 		// .four-post
