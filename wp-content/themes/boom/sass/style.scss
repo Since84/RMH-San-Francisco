@@ -69,12 +69,22 @@ body {
  //Default Page Template 
  .single, .page, .category {
  	.content-area{
- 		padding: 1em 1em 1em 270px;
  		position: relative;
  		min-height: 600px;
+ 		width: 60%;
+ 		display: inline-block;
+ 		vertical-align: top;
  	}
+ 	.sidebar-container {
+ 		position: relative;
+ 		display: inline-block;
+ 		width: 20%;
+ 	}
+	.post-feature-image .sidebar-container {
+		position: absolute;
+	}
  	.page-sidebar{
- 		position: absolute;
+ 		vertical-align: top;
  		padding-top: 1em;
  		left: 0;
 
