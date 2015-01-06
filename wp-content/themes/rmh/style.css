@@ -1013,8 +1013,9 @@ footer .menu-corporate-menu-container {
 /* line 15, sass/_footer.scss */
 footer .menu-corporate-menu-container li {
   display: inline-block;
+  margin-right: 1em;
 }
-/* line 20, sass/_footer.scss */
+/* line 21, sass/_footer.scss */
 footer .footer-sitemap {
   border-bottom: 1px solid white;
   margin-bottom: 2rem;
