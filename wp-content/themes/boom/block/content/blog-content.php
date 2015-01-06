@@ -9,13 +9,19 @@
 	);
 //PAGE CONTENT
 ?>
-<div class="content-area blog-content container">
+<div class="container">
 <?php 	
 		Boom_Util::get_template_parts(
-			array('block/layout/page-sidebar', 'block/component/blog-roll')
+			array('block/layout/page-sidebar')
 		); 
 ?>
-</div>
+	<div class="content-area blog-content container">
+	<?php 	
+			Boom_Util::get_template_parts(
+				array('block/component/blog-roll')
+			); 
+	?>
+	</div>
 <?php 
 //FOOTER
 	Boom_Util::get_template_parts(
@@ -24,3 +30,5 @@
 			,'block/layout/html-footer'
 		)
 	);
+?>
+</div>

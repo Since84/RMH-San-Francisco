@@ -1,5 +1,4 @@
 <?php //Home 
-
 	Boom_Util::get_template_parts(
 		array(
 //HEADER
@@ -9,13 +8,19 @@
 	);
 //PAGE CONTENT
 ?>
-<div class="content-area blog-content container">
+<div class="container">
 <?php 	
 		Boom_Util::get_template_parts(
-			array('block/layout/page-sidebar', 'block/component/category-roll')
+			array('block/layout/page-sidebar')
+		)
+?>
+	<div class="content-area blog-content container">
+<?php 	
+		Boom_Util::get_template_parts(
+			array('block/component/category-roll')
 		); 
 ?>
-</div>
+	</div>
 <?php 
 //FOOTER
 	Boom_Util::get_template_parts(
@@ -24,3 +29,5 @@
 			,'block/layout/html-footer'
 		)
 	);
+?>
+</div>

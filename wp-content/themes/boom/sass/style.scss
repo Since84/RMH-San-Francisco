@@ -68,10 +68,15 @@ body {
 
  //Default Page Template 
  .single, .page, .category {
+ 	.blogroll-container{
+ 		display: block;
+ 		margin: auto;
+
+ 	}
  	.content-area{
  		position: relative;
  		min-height: 600px;
- 		width: 60%;
+ 		width: 75%; 
  		display: inline-block;
  		vertical-align: top;
  	}
@@ -80,8 +85,10 @@ body {
  		display: inline-block;
  		width: 20%;
  	}
-	.post-feature-image .sidebar-container {
-		position: absolute;
+	.post-feature-image, .post-feature-gallery {
+		.sidebar-container {
+			position: absolute;
+		}
 	}
  	.page-sidebar{
  		vertical-align: top;

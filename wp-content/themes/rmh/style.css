@@ -18,7 +18,7 @@ body {
 /* line 21, sass/style.scss */
 h1 {
   color: #628ecc;
-  font-size: 30px;
+  font-size: 31px;
   text-transform: uppercase;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
@@ -221,49 +221,49 @@ header .site-head-right .social-links .widget.widget_cnss_widget {
 }
 
 /* line 3, sass/_menu.scss */
-header .menu-header-nav-container {
+header .spark-header, header .menu-header-nav-container {
   background: #628ecc;
 }
 /* line 6, sass/_menu.scss */
-header .menu-header-nav-container ul {
+header .spark-header ul, header .menu-header-nav-container ul {
   text-align: center;
   padding-left: 0;
 }
 /* line 12, sass/_menu.scss */
-header .menu-header-nav-container li {
+header .spark-header li, header .menu-header-nav-container li {
   background: #628ecc;
   padding: 15px 1.2vw;
 }
 /* line 15, sass/_menu.scss */
-header .menu-header-nav-container li.current-menu-item {
+header .spark-header li.current-menu-item, header .menu-header-nav-container li.current-menu-item {
   background: #a5a299;
 }
 /* line 19, sass/_menu.scss */
-header .menu-header-nav-container li li {
+header .spark-header li li, header .menu-header-nav-container li li {
   padding: .7em;
 }
 /* line 21, sass/_menu.scss */
-header .menu-header-nav-container li li:hover:not(.current-menu-item) {
+header .spark-header li li:hover:not(.current-menu-item), header .menu-header-nav-container li li:hover:not(.current-menu-item) {
   background: rgba(98, 142, 204, 0.75);
 }
 /* line 25, sass/_menu.scss */
-header .menu-header-nav-container li a {
+header .spark-header li a, header .menu-header-nav-container li a {
   font-size: 16px;
 }
 @media screen and (max-width: 920px) {
   /* line 29, sass/_menu.scss */
-  header .menu-header-nav-container li a {
+  header .spark-header li a, header .menu-header-nav-container li a {
     font-size: 16px;
   }
 }
 /* line 33, sass/_menu.scss */
-header .menu-header-nav-container li .sub-menu {
+header .spark-header li .sub-menu, header .menu-header-nav-container li .sub-menu {
   margin-top: 1em;
   width: 200px;
   text-align: left;
 }
 /* line 37, sass/_menu.scss */
-header .menu-header-nav-container li .sub-menu a {
+header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-menu a {
   font-size: .9rem;
 }
 
@@ -433,7 +433,7 @@ header .menu-header-nav-container li .sub-menu a {
 
 /* line 58, sass/style.scss */
 .post-feature-image {
-  background: white;
+  background: #a5a299;
   position: relative;
   z-index: 1000;
 }
@@ -441,6 +441,9 @@ header .menu-header-nav-container li .sub-menu a {
 .post-feature-image img {
   width: 100%;
   height: auto;
+  max-width: 762px;
+  display: block;
+  margin: auto;
 }
 
 /* line 2, sass/_content.scss */
@@ -682,27 +685,28 @@ header .menu-header-nav-container li .sub-menu a {
   float: right;
   display: block;
   width: 40%;
+  overflow: hidden;
 }
-/* line 89, sass/_content.scss */
+/* line 90, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-feature img, .archive.category .content-area .blog-post-preview .post-feature img {
   max-height: 100%;
   width: auto;
   height: 20vw;
 }
-/* line 95, sass/_content.scss */
+/* line 96, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-meta, .archive.category .content-area .blog-post-preview .post-meta {
   display: none;
 }
-/* line 98, sass/_content.scss */
+/* line 99, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-content, .archive.category .content-area .blog-post-preview .post-content {
   width: 60%;
   padding-right: 3%;
 }
-/* line 104, sass/_content.scss */
+/* line 105, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging, .archive.category .content-area .blog-paging {
   font-size: 12px;
 }
-/* line 107, sass/_content.scss */
+/* line 108, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
   position: absolute;
   right: 0;
@@ -745,7 +749,7 @@ header .menu-header-nav-container li .sub-menu a {
   background-size: 100% auto;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_content.scss */
+  /* line 108, sass/_content.scss */
   .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
     width: 60px;
   }
@@ -755,7 +759,7 @@ header .menu-header-nav-container li .sub-menu a {
     height: 20px;
   }
 }
-/* line 112, sass/_content.scss */
+/* line 113, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.next, .page-template-blog-php .content-area .blog-paging .next-prev .paging.prev, .archive.category .content-area .blog-paging .next-prev .paging.next, .archive.category .content-area .blog-paging .next-prev .paging.prev {
   width: 20px;
   height: 20px;
@@ -764,21 +768,41 @@ header .menu-header-nav-container li .sub-menu a {
   left: auto;
   right: auto;
 }
-/* line 122, sass/_content.scss */
+/* line 123, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers, .archive.category .content-area .blog-paging .page-numbers {
   color: #a5a299;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 126, sass/_content.scss */
+/* line 127, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers:not(:last-child), .archive.category .content-area .blog-paging .page-numbers:not(:last-child) {
   margin-right: .75em;
   padding-right: .75em;
   border-right: 1px solid #999d9f;
 }
-/* line 131, sass/_content.scss */
+/* line 132, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers.current, .archive.category .content-area .blog-paging .page-numbers.current {
   font-weight: bold;
+}
+/* line 139, sass/_content.scss */
+.content-area .map-block {
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+/* line 144, sass/_content.scss */
+.content-area .map-block h3 {
+  margin-top: 1em;
+}
+/* line 148, sass/_content.scss */
+.content-area .map-block:first-of-type {
+  margin-right: 20px;
+}
+@media screen and (max-width: 780px) {
+  /* line 139, sass/_content.scss */
+  .content-area .map-block {
+    width: 75%;
+  }
 }
 @media screen and (max-width: 780px) {
   /* line 2, sass/_content.scss */
@@ -786,33 +810,33 @@ header .menu-header-nav-container li .sub-menu a {
     padding: 20px 20px 0;
     /* Pagination */
   }
-  /* line 141, sass/_content.scss */
+  /* line 159, sass/_content.scss */
   .content-area h2 {
     margin: 0;
     padding-bottom: .4rem;
   }
-  /* line 148, sass/_content.scss */
+  /* line 166, sass/_content.scss */
   .content-area .blog-post-preview {
     padding: 1em .5em;
     width: 100%;
   }
-  /* line 151, sass/_content.scss */
+  /* line 169, sass/_content.scss */
   .content-area .blog-post-preview a {
     display: inline-block;
     width: 100%;
   }
-  /* line 154, sass/_content.scss */
+  /* line 172, sass/_content.scss */
   .content-area .blog-post-preview a img {
     position: relative;
     width: 100%;
     height: auto;
     bottom: auto;
   }
-  /* line 161, sass/_content.scss */
+  /* line 179, sass/_content.scss */
   .content-area .blog-post-preview h3 {
     margin-top: 0;
   }
-  /* line 162, sass/_content.scss */
+  /* line 180, sass/_content.scss */
   .content-area .blog-post-preview .post-feature {
     width: 25vw;
     height: 25vw;
@@ -821,7 +845,7 @@ header .menu-header-nav-container li .sub-menu a {
     vertical-align: top;
     padding-top: 1em;
   }
-  /* line 170, sass/_content.scss */
+  /* line 188, sass/_content.scss */
   .content-area .blog-post-preview .post-content {
     display: inline-block;
     width: 55vw;
@@ -829,26 +853,26 @@ header .menu-header-nav-container li .sub-menu a {
     line-height: 1.3em;
     margin-top: 1em;
   }
-  /* line 176, sass/_content.scss */
+  /* line 194, sass/_content.scss */
   .content-area .blog-post-preview .post-content .post-excerpt p {
     margin-bottom: 0;
   }
-  /* line 184, sass/_content.scss */
+  /* line 202, sass/_content.scss */
   .content-area .mobile-four-per-pagination {
     display: block;
   }
-  /* line 190, sass/_content.scss */
+  /* line 208, sass/_content.scss */
   .home .content-area .social-block {
     display: none;
   }
 }
 
-/* line 72, sass/style.scss */
+/* line 75, sass/style.scss */
 .page-content {
   color: #a5a299;
   position: relative;
 }
-/* line 75, sass/style.scss */
+/* line 78, sass/style.scss */
 .page-content h2 {
   border: none;
   padding: 0;
@@ -856,7 +880,7 @@ header .menu-header-nav-container li .sub-menu a {
   font-size: 16px;
   color: #a5a299;
 }
-/* line 82, sass/style.scss */
+/* line 85, sass/style.scss */
 .page-content p {
   display: inline-block;
   vertical-align: top;
@@ -864,7 +888,7 @@ header .menu-header-nav-container li .sub-menu a {
   max-width: 945px;
 }
 
-/* line 91, sass/style.scss */
+/* line 94, sass/style.scss */
 .sidebar-container {
   width: 100%;
   max-width: 1260px;
@@ -872,7 +896,7 @@ header .menu-header-nav-container li .sub-menu a {
   position: relative;
 }
 
-/* line 98, sass/style.scss */
+/* line 101, sass/style.scss */
 .page-sidebar {
   display: inline-block;
   vertical-align: top;
@@ -884,22 +908,22 @@ header .menu-header-nav-container li .sub-menu a {
   font-size: 14px;
   z-index: 1001;
 }
-/* line 106, sass/style.scss */
+/* line 109, sass/style.scss */
 .page-sidebar li {
   list-style: none;
   width: 90%;
 }
-/* line 110, sass/style.scss */
+/* line 113, sass/style.scss */
 .page-sidebar .call-to-action {
   white-space: nowrap;
   padding-top: 5em;
 }
-/* line 114, sass/style.scss */
+/* line 117, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons {
   padding-left: 0;
   width: 100%;
 }
-/* line 117, sass/style.scss */
+/* line 120, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -945,27 +969,27 @@ header .menu-header-nav-container li .sub-menu a {
     font-size: 3.2vw;
   }
 }
-/* line 126, sass/style.scss */
+/* line 129, sass/style.scss */
 .page-sidebar .parent-menu {
   text-transform: uppercase;
 }
-/* line 128, sass/style.scss */
+/* line 131, sass/style.scss */
 .page-sidebar .parent-menu ul {
   padding: 0;
 }
-/* line 132, sass/style.scss */
+/* line 135, sass/style.scss */
 .page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
   margin-top: 1.5em;
   color: #628ecc;
   text-decoration: none;
 }
-/* line 137, sass/style.scss */
+/* line 140, sass/style.scss */
 .page-sidebar .parent-menu > div > ul {
   list-style: none;
   padding: 1em;
   margin-top: .5em;
 }
-/* line 142, sass/style.scss */
+/* line 145, sass/style.scss */
 .page-sidebar .parent-menu > div > ul ul {
   padding-left: 1em;
 }

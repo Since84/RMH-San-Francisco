@@ -10,6 +10,7 @@
 	);
 	$blogQuery->query('showposts=5');
 ?>
+<div class="page-blogroll">
 	<h1 class='page-title'><?php the_title() ?></h1>
 <?
 	if ( $blogQuery->have_posts() ): while ( $blogQuery->have_posts() ): $blogQuery->the_post();
@@ -22,15 +23,15 @@
 
 ?>
 
-<div class='blog-paging'>
-	<div class='next-prev'>
+	<div class='blog-paging'>
+		<div class='next-prev'>
 <?php 
 	$prevPage = $paged - 1;
 	$nextPage = $paged + 1;
 ?>
 		<a class="paging prev" href="<?php echo get_permalink( get_page_by_path( 'news' ) ); ?>/?paged=<?= $prevPage; ?>"></a>
 		<a class="paging next" href="<?php echo get_permalink( get_page_by_path( 'news' ) ); ?>/?paged=<?= $nextPage; ?>"></a>
-	</div>
+		</div>
 <?php
 	$big = 999999999; // need an unlikely integer
 
@@ -43,8 +44,8 @@
 	) );
 
 ?>
+		</div>
 	</div>
-</div>
 
 <?php
 

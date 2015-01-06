@@ -2,7 +2,7 @@
 	global $wp_query;
 	if ( have_posts() ): 
 ?>
-<h1 class='page-title'><?php echo single_cat_title( '', false ); ?></h1>
+	<h1 class='page-title'><?php echo single_cat_title( '', false ); ?></h1>
 <?php
 
 		while ( have_posts() ): the_post();
@@ -15,8 +15,8 @@
 
 ?>
 
-<div class='blog-paging'>
-	<div class='next-prev'>
+	<div class='blog-paging'>
+		<div class='next-prev'>
 <?php 
 	
 	$ppl=explode('"',get_previous_posts_link()); 
@@ -26,15 +26,15 @@
 
 	if ( $prevPage ){
 ?>
-		<a class="paging prev" href="<?= $prevPage; ?>"></a>
+			<a class="paging prev" href="<?= $prevPage; ?>"></a>
 <?	} 
 	if ( $nextPage ){
 ?>
-		<a class="paging next" href="<?= $nextPage; ?>"></a>
+			<a class="paging next" href="<?= $nextPage; ?>"></a>
 <?
 	}
 ?>
-	</div>
+		</div>
 <?php
 	$big = 999999999; // need an unlikely integer
 
@@ -49,11 +49,10 @@
 
 ?>
 	</div>
-</div>
+	</div>
 
 <?php
 
 	endif; 
 
 /* Blog Paging */
-?>
