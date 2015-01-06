@@ -1010,7 +1010,11 @@ footer .menu-corporate-menu-container {
   display: inline-block;
   margin-left: 2em;
 }
-/* line 17, sass/_footer.scss */
+/* line 15, sass/_footer.scss */
+footer .menu-corporate-menu-container li {
+  display: inline-block;
+}
+/* line 20, sass/_footer.scss */
 footer .footer-sitemap {
   border-bottom: 1px solid white;
   margin-bottom: 2rem;
