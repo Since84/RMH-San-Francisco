@@ -1016,6 +1016,10 @@ footer .menu-corporate-menu-container li {
   margin-right: 1em;
 }
 /* line 21, sass/_footer.scss */
+footer .trademark {
+  margin-top: 1em;
+}
+/* line 25, sass/_footer.scss */
 footer .footer-sitemap {
   border-bottom: 1px solid white;
   margin-bottom: 2rem;
