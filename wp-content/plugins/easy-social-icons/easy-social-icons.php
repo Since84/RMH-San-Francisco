@@ -3,21 +3,34 @@
 Plugin Name: Easy Social Icons
 Plugin URI: http://www.cybernetikz.com
 Description: You can upload your own social icon, set your social URL, choose weather you want to display vertical or horizontal. You can use the shortcode <strong>[cn-social-icon]</strong> in page/post, template tag for php file <strong>&lt;?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?&gt;</strong> also you can use the widget <strong>"Easy Social Icons"</strong> for sidebar.
-Version: 1.1
+Version: 1.2.1
 Author: cybernetikz
 Author URI: http://www.cybernetikz.com
 License: GPL2
 */
 
+if( !defined('ABSPATH') ) die('-1');
 $upload_dir = wp_upload_dir();
 //print_r($upload_dir);
 $baseDir = $upload_dir['basedir'].'/';
-$baseURL = $upload_dir['baseurl'].'/';
+$baseURL = $upload_dir['baseurl'].'';
 $pluginsURI = plugins_url('/easy-social-icons/');
+
+function generateRandomCode($length)
+{
+	$chars = "234567890abcdefghijkmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	$i = 0;
+	$url = "";
+	while ($i <= $length) {
+		$url .= $chars{mt_rand(0,strlen($chars))};
+		$i++;
+	}
+	return $url;
+}
 
 function cnss_my_script() {
 	global $pluginsURI;
-	wp_enqueue_script( 'jquery' );	
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script('jquery-ui-sortable');
 	wp_register_script('cnss_js', $pluginsURI . 'js/cnss.js', array(), '1.0' );
 	wp_enqueue_script( 'cnss_js' );	
@@ -25,6 +38,18 @@ function cnss_my_script() {
 	wp_register_style('cnss_css', $pluginsURI . 'css/cnss.css', array(), '1.0' );
 	wp_enqueue_style( 'cnss_css' );	
 }
+
+function cnss_admin_enqueue() {
+	//if ($hook!='easy-social-icon_page_cnss_social_icon_add') return; //$hook
+	global $pluginsURI;
+	wp_enqueue_media();
+	wp_register_script('cnss_admin_js', $pluginsURI . 'js/cnss_admin.js', array(), '1.0' );
+	wp_enqueue_script( 'cnss_admin_js' );	
+}
+if( $_GET['page']=='cnss_social_icon_add' ) {
+	add_action('admin_enqueue_scripts', 'cnss_admin_enqueue' );
+}
+
 add_action('init', 'cnss_my_script');
 add_action('wp_ajax_update-social-icon-order', 'cnss_save_ajax_order' );
 add_action('admin_menu', 'cnss_add_menu_pages');
@@ -107,8 +132,9 @@ function cnss_db_install () {
    global $wpdb;
    global $cnss_db_version;
    
-	$srcdir   = ABSPATH.'wp-content/plugins/easy-social-icons/images/icon/';
 	$upload_dir = wp_upload_dir();
+
+	/*$srcdir   = ABSPATH.'wp-content/plugins/easy-social-icons/images/icon/';
 	$targetdir = $upload_dir['basedir'].'/';
 	
 	$files = scandir($srcdir);
@@ -117,12 +143,12 @@ function cnss_db_install () {
 		if($fname=='.')continue;
 		if($fname=='..')continue;
 		copy($srcdir.$fname, $targetdir.$fname);
-	}
+	}*/
 
    $table_name = $wpdb->prefix . "cn_social_icon";
    if($wpdb->get_var("show tables like '$table_name'") != $table_name) {
       
-	$sql2 = "CREATE TABLE " . $table_name . " (
+	$sql2 = "CREATE TABLE `$table_name` (
 	`id` BIGINT(20) NOT NULL AUTO_INCREMENT, 
 	`title` VARCHAR(255) NULL, 
 	`url` VARCHAR(255) NOT NULL, 
@@ -130,14 +156,17 @@ function cnss_db_install () {
 	`sortorder` INT NOT NULL DEFAULT '0', 
 	`date_upload` VARCHAR(100) NULL, 
 	`target` tinyint(1) NOT NULL DEFAULT '1',
-	PRIMARY KEY (`id`)) ENGINE = InnoDB;
-	INSERT INTO `wp_cn_social_icon` (`id`, `title`, `url`, `image_url`, `sortorder`, `date_upload`, `target`) VALUES
-	(1, 'facebook', 'http://facebook.com/your-fan-page', '1368459524_facebook.png', 1, '1368459524', 1),
-	(2, 'twitter', 'http://twitter/username', '1368459556_twitter.png', 2, '1368459556', 1),
-	(3, 'flickr', 'http://flickr.com/?username', '1368459641_flicker.png', 3, '1368459641', 1),
-	(4, 'linkedin', 'http://linkedin.com', '1368459699_in.png', 4, '1368459699', 1),
-	(5, 'youtube', 'http://youtube.com/user', '1368459724_youtube.png', 5, '1368459724', 1);	
-	";
+	PRIMARY KEY (`id`)) ENGINE = InnoDB;";
+	
+	/*
+	INSERT INTO `$table_name` (`title`, `url`, `image_url`, `sortorder`, `date_upload`, `target`) VALUES
+	('facebook', 'http://facebook.com/your-fan-page', '1368459524_facebook.png', 1, '1368459524', 1),
+	('twitter', 'http://twitter/username', '1368459556_twitter.png', 2, '1368459556', 1),
+	('flickr', 'http://flickr.com/?username', '1368459641_flicker.png', 3, '1368459641', 1),
+	('linkedin', 'http://linkedin.com', '1368459699_in.png', 4, '1368459699', 1),
+	('youtube', 'http://youtube.com/user', '1368459724_youtube.png', 5, '1368459724', 1);	
+	*/
+	
 	require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 	dbDelta($sql2);
 	
@@ -154,19 +183,19 @@ register_activation_hook(__FILE__,'cnss_db_install');
 
 if (isset($_GET['delete'])) {
 	
-	if ($_REQUEST['id'] != '')
+	if ($_GET['id'] != '')
 	{
 	
 		$table_name = $wpdb->prefix . "cn_social_icon";
 		$image_file_path = $baseDir; //"../wp-content/uploads/";
-		$sql = "SELECT * FROM ".$table_name." WHERE id =".$_REQUEST['id'];
+		/*$sql = "SELECT * FROM ".$table_name." WHERE id =".$_GET['id'];
 		$video_info = $wpdb->get_results($sql);
 		
 		if (!empty($video_info))
 		{
 			@unlink($image_file_path.$video_info[0]->image_url);
-		}
-		$delete = "DELETE FROM ".$table_name." WHERE id = ".$_REQUEST['id']." LIMIT 1";
+		}*/
+		$delete = "DELETE FROM ".$table_name." WHERE id = ".$_GET['id']." LIMIT 1";
 		$results = $wpdb->query( $delete );
 		$msg = "Delete Successfully!!!"."<br />";
 	}
@@ -184,14 +213,105 @@ if (isset($_POST['submit_button'])) {
 		//$image_file_path = "../wp-content/uploads/";
 		$image_file_path = $baseDir;
 		
-			if ($_FILES["image_file"]["name"] != "" ){
+		/*if ($_FILES["image_file"]["name"] != "" ){
+		
+			$extArr = array('jpg','png','gif','jpeg');
+			$target_file = $image_file_path . basename($_FILES["image_file"]["name"]);
+			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			$check = getimagesize($_FILES["image_file"]["tmp_name"]);
+			if($check === false || !in_array($imageFileType,$extArr)) {
+				$err .= "Invalid file type<br />";
+			}
+			else
+			{
+				if( $err=='' and $_FILES["image_file"]["size"] < 1024*1024*1 ) {
+				
+					if ($_FILES["image_file"]["error"] > 0)
+					{
+						$err .= "Return Code: " . $_FILES["image_file"]["error"] . "<br />";
+					}
+				  else
+					{
+					if (file_exists($image_file_path . $_FILES["image_file"]["name"]))
+					  {
+					  $err .= $_FILES["image_file"]["name"] . " already exists. ";
+					  }
+					else
+					  {
+						$image_file_name = time().generateRandomCode(16).'.'.$imageFileType;
+						$fstatus = move_uploaded_file($_FILES["image_file"]["tmp_name"], $image_file_path . $image_file_name);
+						if ($fstatus == true){
+							$msg = "Icon upload successful !"."<br />";
+						}
+					  }
+					}
+				  }
+				else
+				{
+					$err .= "Max file size exceded" . "<br />";
+				}
+			}
+		}
+		else
+		{
+			$err .= "Please input image file". "<br />";
+		}// end if image file*/
+		
+		if ($err == '')
+		{
+			$table_name = $wpdb->prefix . "cn_social_icon";
+	
+			$insert = "INSERT INTO " . $table_name .
+			" (title, url, image_url, sortorder, date_upload, target) " .
+			"VALUES ('" . 
+			$wpdb->escape( $_POST['title']) . "','" . 
+			$wpdb->escape( $_POST['url']) . "','" . 
+			$_POST['image_file'] . "'," . 
+			$_POST['sortorder'] . ",'" . 
+			time() . "'," . 
+			$_POST['target'] . "" . 
+			")";
+			$results = $wpdb->query( $insert );
 			
-				if( 
-					($_FILES["image_file"]["type"] == "image/gif")
-				|| ($_FILES["image_file"]["type"] == "image/jpeg")
-				|| ($_FILES["image_file"]["type"] == "image/pjpeg")
-				|| ($_FILES["image_file"]["type"] == "image/png")
-				&& ($_FILES["image_file"]["size"] < 1024*1024*1))
+			if (!$results)
+				$err .= "Fail to update database" . "<br />";
+			else
+				$msg .= "Update successful !" . "<br />";
+		
+		}
+	}// end if update
+	
+	if ( $_POST['action'] == 'edit' and $_POST['id'] != '' )
+	{
+		$err = "";
+		$msg = "";
+
+		$url = $_POST['url'];
+		$target = $_POST['target'];
+		
+		//$image_file_path = "../wp-content/uploads/";
+		$image_file_path = $baseDir;
+		
+		$table_name = $wpdb->prefix . "cn_social_icon";
+		$sql = "SELECT * FROM ".$table_name." WHERE id =".$_POST['id'];
+		$video_info = $wpdb->get_results($sql);
+		$image_file_name = $video_info[0]->image_url;
+		$update = "";
+		
+		$type= 1;
+		/*if ($_FILES["image_file"]["name"] != ""){
+		
+			$extArr = array('jpg','png','gif','jpeg');
+			$target_file = $image_file_path . basename($_FILES["image_file"]["name"]);
+			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+			$check = getimagesize($_FILES["image_file"]["tmp_name"]);
+			if($check === false || !in_array($imageFileType,$extArr)) {
+				$err .= "Invalid file type<br />";
+			}
+			else
+			{
+		
+				if( $err=='' && $_FILES["image_file"]["size"] <= 1024*1024*1 )
 				  {
 					if ($_FILES["image_file"]["error"] > 0)
 					{
@@ -205,105 +325,31 @@ if (isset($_POST['submit_button'])) {
 					  }
 					else
 					  {
-						$image_file_name = time().'_'.$_FILES["image_file"]["name"];
+						$image_file_name = time().generateRandomCode(16).'.'.$imageFileType;
 						$fstatus = move_uploaded_file($_FILES["image_file"]["tmp_name"], $image_file_path . $image_file_name);
+						
 						if ($fstatus == true){
-							$msg = "Icon upload successfully !"."<br />";
+							$msg = "File Uploaded Successfully!!!".'<br />';
+							@unlink($image_file_path.$video_info[0]->image_url);
+							$update = "UPDATE " . $table_name . " SET " . 
+							"image_url='" .$image_file_name . "'" . 
+							" WHERE id=" . $_POST['id'];
+							$results1 = $wpdb->query( $update );
 						}
 					  }
 					}
 				  }
 				else
 				{
-					$err .= "Invalid file type or max file size exceded" . "<br />";
+					$err .= "Invalid file type or max file size exceded";
 				}
 			}
-			else
-			{
-				$err .= "Please input image file". "<br />";
-			}// end if image file
-		
-		if ($err == '')
-		{
-			$table_name = $wpdb->prefix . "cn_social_icon";
-	
-			$insert = "INSERT INTO " . $table_name .
-			" (title, url, image_url, sortorder, date_upload, target) " .
-			"VALUES ('" . 
-			$wpdb->escape( $_REQUEST['title']) . "','" . 
-			$wpdb->escape( $_REQUEST['url']) . "','" . 
-			$image_file_name . "'," . 
-			$_REQUEST['sortorder'] . ",'" . 
-			time() . "'," . 
-			$_REQUEST['target'] . "" . 
-			")";
-			$results = $wpdb->query( $insert );
-			
-			if (!$results)
-				$err .= "Fail to update database" . "<br />";
-			else
-				$msg .= "Update successful !" . "<br />";
-		
-		}
-	}// end if update
-	
-	if ( $_REQUEST['action'] == 'edit' and $_REQUEST['id'] != '' )
-	{
-		$err = "";
-		$msg = "";
-
-		$url = $_REQUEST['url'];
-		$target = $_REQUEST['target'];
-		
-		//$image_file_path = "../wp-content/uploads/";
-		$image_file_path = $baseDir;
-		
-		$table_name = $wpdb->prefix . "cn_social_icon";
-		$sql = "SELECT * FROM ".$table_name." WHERE id =".$_REQUEST['id'];
-		$video_info = $wpdb->get_results($sql);
-		$image_file_name = $video_info[0]->image_url;
-		$update = "";
-		
-		$imgExtArray = array('image/gif','image/jpeg','image/pjpeg','image/png');
-		$type= 1;
-		if ($_FILES["image_file"]["name"] != ""){
-			if( in_array($_FILES["image_file"]["type"],$imgExtArray) && $_FILES["image_file"]["size"] <= 1024*1024*1 )
-			  {
-				if ($_FILES["image_file"]["error"] > 0)
-				{
-					$err .= "Return Code: " . $_FILES["image_file"]["error"] . "<br />";
-				}
-			  else
-				{
-				if (file_exists($image_file_path . $_FILES["image_file"]["name"]))
-				  {
-				  $err .= $_FILES["image_file"]["name"] . " already exists. ";
-				  }
-				else
-				  {
-					$image_file_name = time().'_'.$_FILES["image_file"]["name"];
-					$fstatus = move_uploaded_file($_FILES["image_file"]["tmp_name"], $image_file_path . $image_file_name);
-					
-					if ($fstatus == true){
-						$msg = "File Uploaded Successfully!!!".'<br />';
-						@unlink($image_file_path.$video_info[0]->image_url);
-						$update = "UPDATE " . $table_name . " SET " . 
-						"image_url='" .$image_file_name . "'" . 
-						" WHERE id=" . $_REQUEST['id'];
-						$results1 = $wpdb->query( $update );
-					}
-				  }
-				}
-			  }
-			else
-			{
-				$err .= "Invalid file type or max file size exceded";
-			}
-		}
+		}*/
 		
 		$update = "UPDATE " . $table_name . " SET " . 
 		"title='" .$wpdb->escape( $_POST['title']) . "'," . 
 		"url='" . $url . "'," . 
+		"image_url='" . $_POST['image_file'] . "'," . 
 		"sortorder=" .$_POST['sortorder'] . "," . 
 		"date_upload='" .time(). "'," . 
 		"target=$target " .
@@ -352,11 +398,18 @@ function cnss_social_icon_sort_fn() {
 		
 		<div id="order-post-type">
 			<ul id="sortable">
-			<?php foreach($video_info as $vdoinfo) { ?>
+			<?php 
+			foreach($video_info as $vdoinfo) { 
+				if(strpos($vdoinfo->image_url,'/')===false)
+					$image_url = $image_file_path.'/'.$vdoinfo->image_url;
+				else
+					$image_url = $vdoinfo->image_url;
+			
+			?>
 					<li id="item_<?php echo $vdoinfo->id ?>">
 					<table width="100%" border="0" cellspacing="0" cellpadding="0">
 					  <tr style="background:#f7f7f7">
-						<td width="60">&nbsp;<img src="<?php echo $image_file_path.$vdoinfo->image_url;?>" border="0" width="<?php echo $cnss_width ?>" height="<?php echo $cnss_height ?>" alt="<?php echo $vdoinfo->title;?>" /></td>
+						<td width="60">&nbsp;<img src="<?php echo $image_url;?>" border="0" width="<?php echo $cnss_width ?>" height="<?php echo $cnss_height ?>" alt="<?php echo $vdoinfo->title;?>" /></td>
 						<td><span><?php echo $vdoinfo->title;?></span></td>
 					  </tr>
 					</table>
@@ -421,7 +474,7 @@ function cnss_social_icon_add_fn() {
 	global $err,$msg,$baseURL;
 
 	if (isset($_GET['mode'])) {
-		if ( $_REQUEST['mode'] != '' and $_REQUEST['mode'] == 'edit' and  $_REQUEST['id'] != '' )
+		if ( $_GET['mode'] != '' and $_GET['mode'] == 'edit' and  $_GET['id'] != '' )
 		{
 		
 			$cnss_width = get_option('cnss-width');
@@ -429,12 +482,12 @@ function cnss_social_icon_add_fn() {
 			//$cnss_margin = get_option('cnss-margin');
 	
 			$page_title = 'Edit Icon';
-			$uptxt = 'Upload Icon';
+			$uptxt = 'Icon';
 			
 			global $wpdb;
 			$table_name = $wpdb->prefix . "cn_social_icon";
 			$image_file_path = $baseURL; //"../wp-content/uploads/";
-			$sql = "SELECT * FROM ".$table_name." WHERE id =".$_REQUEST['id'];
+			$sql = "SELECT * FROM ".$table_name." WHERE id =".$_GET['id'];
 			$video_info = $wpdb->get_results($sql);
 			
 			if (!empty($video_info))
@@ -442,9 +495,15 @@ function cnss_social_icon_add_fn() {
 				$id = $video_info[0]->id;
 				$title = $video_info[0]->title;
 				$url = $video_info[0]->url;
-				$image_url = $image_file_path.$video_info[0]->image_url;
+				$image_url = $video_info[0]->image_url;
 				$sortorder = $video_info[0]->sortorder;
 				$target = $video_info[0]->target;
+				
+				if(strpos($image_url,'/')===false)
+					$image_url = $image_file_path.'/'.$image_url;
+				else
+					$image_url = $image_url;
+				
 			}
 		}
 	}
@@ -457,7 +516,7 @@ function cnss_social_icon_add_fn() {
 		$image_url = "";
 		$sortorder = "0";
 		$target = "";
-		$uptxt = 'Upload Icon';
+		$uptxt = 'Icon';
 	
 	}
 ?>
@@ -472,7 +531,7 @@ if($err!='') echo '<div id="message" class="error fade">'.$err.'</div>';
     
     <table class="form-table">
         <tr valign="top">
-			<th scope="row">Icon Title</th>
+			<th scope="row">Title</th>
 			<td>
 				<input type="text" name="title" id="title" class="regular-text" value="<?php echo $title?>" />
 			</td>
@@ -481,10 +540,11 @@ if($err!='') echo '<div id="message" class="error fade">'.$err.'</div>';
         <tr valign="top">
 			<th scope="row"><?php echo $uptxt;?></th>
 			<td>
-				<?php if (isset($_GET['mode'])) { ?>
-					<br /><img src="<?php echo $image_url?>" border="0" width="<?php echo $cnss_width ?>"  height="<?php echo $cnss_height ?>" alt="<?php echo $title?>" /><br />
-				<?php } ?>
-				<input type="file" name="image_file" id="image_file" value="" />
+				<?php //if (isset($_GET['mode'])) { } ?>
+				<!--<input type="file" name="image_file" id="image_file" value="" />-->
+				<input style="vertical-align:top" type="text" name="image_file" id="image_file" class="regular-text" value="<?php echo $image_url ?>" />
+				<input style="vertical-align:top" id="logo_image_button" class="button" type="button" value="Choose Icon" />
+				<img style="vertical-align:top" id="logoimg" src="<?php echo $image_url ?>" border="0" width="<?php echo $cnss_width ?>"  height="<?php echo $cnss_height ?>" alt="<?php echo $title?>" /><br />
 			</td>
         </tr>
 		
@@ -553,8 +613,9 @@ function cnss_social_icon_page_fn() {
 		var r=confirm('Are you confirm to delete "'+title+'"');
 		if (r==true)
 		{
-			rpath1 = '<?php echo $_SERVER['REQUEST_URI']; ?>';
+			rpath1 = '<?php echo $_SERVER['PHP_SELF'].'?page=cnss_social_icon_page'; ?>';
 			rpath2 = '&delete=y&id='+id;
+			//alert(rpath1+rpath2);
 			window.location = rpath1+rpath2;
 		}
 	}
@@ -576,7 +637,13 @@ function cnss_social_icon_page_fn() {
 			</thead>
 			
 			<tbody>
-			<?php foreach($video_info as $vdoinfo){ ?>
+			<?php
+			foreach($video_info as $vdoinfo) { 
+				if(strpos($vdoinfo->image_url,'/')===false)
+					$image_url = $image_file_path.'/'.$vdoinfo->image_url;
+				else
+					$image_url = $vdoinfo->image_url;
+			?>
 			<tr valign="top">
 				<td>
 					<?php echo $vdoinfo->title;?>
@@ -589,7 +656,7 @@ function cnss_social_icon_page_fn() {
 				</td>
 				
 				<td>
-					<img src="<?php echo $image_file_path.$vdoinfo->image_url;?>" border="0" width="<?php echo $cnss_width ?>" height="<?php echo $cnss_height ?>" alt="<?php echo $vdoinfo->title;?>" />
+					<img src="<?php echo $image_url;?>" border="0" width="<?php echo $cnss_width ?>" height="<?php echo $cnss_height ?>" alt="<?php echo $vdoinfo->title;?>" />
 				</td>
 	
 				<td>
@@ -655,7 +722,12 @@ function cn_social_icon() {
 	$i=0;
 	foreach($video_info as $icon)
 	{ 
-	$image_url = $image_file_path.'/'.$icon->image_url;
+	
+	if(strpos($icon->image_url,'/')===false)
+		$image_url = $image_file_path.'/'.$icon->image_url;
+	else
+		$image_url = $icon->image_url;
+	
 	echo $vorh=='vertical'?'<tr>':'';
 	if($i++%$_columnCount==0 && $vorh!='vertical' )echo '<tr>';
 	?><td style="width:<?php echo $td_width ?>px"><a <?php echo ($icon->target==1)?'target="_blank"':'' ?> title="<?php echo $icon->title ?>" href="<?php echo $icon->url ?>"><img src="<?php echo $image_url?>" border="0" width="<?php echo $cnss_width ?>" height="<?php echo $cnss_height ?>" alt="<?php echo $icon->title ?>" /></a></td><?php 

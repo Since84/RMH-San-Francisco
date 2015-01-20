@@ -2,15 +2,20 @@
 Contributors: cybernetikz
 Donate link: 
 Tags: easy social icon,easy social icons,social icon,social icons,social,social share,follow,followus,follow us,share,icon
-Requires at least: 2.8.6
-Tested up to: 3.9.1
-Stable tag: 1.1
+Requires at least: 3.5
+Tested up to: 4.1
+Stable tag: 1.2.1
 
 You can upload your own social icon, set your social URL, choose weather you want to display vertical or horizontal.
 
 == Description ==
 
 You can upload your own social icon, set your social URL, choose weather you want to display vertical or horizontal. You can use the shortcode <strong>[cn-social-icon]</strong> in page/post, template tag for php file <strong><?php if ( function_exists('cn_social_icon') ) echo cn_social_icon(); ?></strong> also you can use the widget <strong>"Easy Social Icons"</strong> for sidebar.
+
+<strong>There is no predefined/built-in social icon added in this plugins, you have to upload your own custom social icons first.</strong>
+
+If you are using <strong>wordpress version lower than 3.5</strong> please use "Easy Social Icons" version
+<a href="https://downloads.wordpress.org/plugin/easy-social-icons.1.0.zip">1.1</a>
 
 > <strong>PAID SUPPORT ($30/Hr, We ACCEPT PAYPAL )</strong>
 >
@@ -58,6 +63,10 @@ Use this shortcode for page/post <strong>[cn-social-icon]</strong> , for php cod
 
 Also you can use the widget for the sidebar.
 
+= Ques : What if my wordpress version is below 3.5? =
+Ans : 
+If you are using wordpress version lower than 3.5 please use Easy social Icon version <a href="https://downloads.wordpress.org/plugin/easy-social-icons.1.0.zip">1.1</a>
+
 == Screenshots ==
 
 1. add new icon page layout
@@ -70,6 +79,14 @@ Also you can use the widget for the sidebar.
 8. sort icons usign drag drop
 
 == Changelog ==
+
+= 1.2.1 =
+Fix on WordPress media uploader for different WordPress version
+
+= 1.2 =
+* Integrate WordPress default media uploader
+* Some security updates
+* Remove preloaded sample icon as icon upload method change
 
 = 1.1 =
 * icon upload folder fix

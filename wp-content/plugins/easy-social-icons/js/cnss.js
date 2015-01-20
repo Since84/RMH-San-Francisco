@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function($) {
 	jQuery('table.cnss-social-icon tr td img').hover(function() {
 		jQuery(this).animate({
 			opacity: 0.5

@@ -12,7 +12,8 @@ $containerWidth: 1260px;
 
 body {
 	color: $maintext;
-	font-size: 12px;
+	font-size: 16px;
+	line-height: 1.3em;
 	@include futura;
 	font-weight: 300;
 }
