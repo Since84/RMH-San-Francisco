@@ -1455,15 +1455,8 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 16px;
   color: #a5a299;
 }
-/* line 86, sass/style.scss */
-.page-content p {
-  display: inline-block;
-  vertical-align: top;
-  width: 74.5%;
-  max-width: 945px;
-}
 
-/* line 95, sass/style.scss */
+/* line 92, sass/style.scss */
 .sidebar-container {
   width: 100%;
   max-width: 1260px;
@@ -1471,7 +1464,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   position: relative;
 }
 
-/* line 102, sass/style.scss */
+/* line 99, sass/style.scss */
 .page-sidebar {
   display: inline-block;
   vertical-align: top;
@@ -1483,22 +1476,22 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 14px;
   z-index: 1001;
 }
-/* line 110, sass/style.scss */
+/* line 107, sass/style.scss */
 .page-sidebar li {
   list-style: none;
   width: 90%;
 }
-/* line 114, sass/style.scss */
+/* line 111, sass/style.scss */
 .page-sidebar .call-to-action {
   white-space: nowrap;
   padding-top: 5em;
 }
-/* line 118, sass/style.scss */
+/* line 115, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons {
   padding-left: 0;
   width: 100%;
 }
-/* line 121, sass/style.scss */
+/* line 118, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -1544,27 +1537,27 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
     font-size: 3.2vw;
   }
 }
-/* line 130, sass/style.scss */
+/* line 127, sass/style.scss */
 .page-sidebar .parent-menu {
   text-transform: uppercase;
 }
-/* line 132, sass/style.scss */
+/* line 129, sass/style.scss */
 .page-sidebar .parent-menu ul {
   padding: 0;
 }
-/* line 136, sass/style.scss */
+/* line 133, sass/style.scss */
 .page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
   margin-top: 1.5em;
   color: #628ecc;
   text-decoration: none;
 }
-/* line 141, sass/style.scss */
+/* line 138, sass/style.scss */
 .page-sidebar .parent-menu > div > ul {
   list-style: none;
   padding: 1em;
   margin-top: .5em;
 }
-/* line 146, sass/style.scss */
+/* line 143, sass/style.scss */
 .page-sidebar .parent-menu > div > ul ul {
   padding-left: 1em;
 }
