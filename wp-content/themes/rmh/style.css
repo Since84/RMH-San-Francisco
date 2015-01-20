@@ -447,29 +447,50 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   margin: auto;
 }
 
-/* Additional default styles for the editor */
+/* line 4, sass/_content.scss */
+.content-area {
+  /* Additional default styles for the editor */
+  /* When font-weight is different than the default browser style,
+  Chrome and Safari replace <strong> and <b> with spans with inline styles on pasting?! */
+  /* DFW mode */
+  /* Remove blue highlighting of selected images in WebKit */
+  /* Styles for the WordPress plugins */
+  /* Gallery, audio, video placeholders */
+  /* Image resize handles */
+  /**
+   * WP Views
+   */
+  /* delegate the handling of the selection to the wpview tinymce plugin */
+  /* hide the shortcode content, but allow the content to still be selected */
+  /* An ugly box will appear when this is focussed in IE, so we'll move it outside the window. */
+  /**
+   * Media previews
+   */
+  /* A little "loading" animation, not showing in IE < 10 */
+  /* Audio player is short; therefore let's put the toolbar above */
+  /* rtl */
+  position: relative;
+  padding: 2em 1em;
+}
 /* line 3, sass/_wp-content.scss */
-html.ios {
+.content-area html.ios {
   height: 100%;
 }
-
 /* line 7, sass/_wp-content.scss */
-.ios body#tinymce {
+.content-area .ios body#tinymce {
   height: 200%;
   max-width: none;
 }
-
 /* line 12, sass/_wp-content.scss */
-body {
+.content-area body {
   font-family: Georgia, "Times New Roman", "Bitstream Charter", Times, serif;
   font-size: 13px;
   line-height: 19px;
   color: #333;
   margin: 9px 10px;
 }
-
 /* line 20, sass/_wp-content.scss */
-body.wp-autoresize {
+.content-area body.wp-autoresize {
   max-width: 100%;
   overflow: visible !important;
   /* The padding ensures margins of the children are contained in the body. */
@@ -478,19 +499,14 @@ body.wp-autoresize {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
-/* When font-weight is different than the default browser style,
-Chrome and Safari replace <strong> and <b> with spans with inline styles on pasting?! */
 /* line 32, sass/_wp-content.scss */
-body.webkit strong,
-body.webkit b {
+.content-area body.webkit strong,
+.content-area body.webkit b {
   font-weight: bold !important;
 }
-
-/* DFW mode */
 /* line 38, sass/_wp-content.scss */
-html.wp-fullscreen,
-html.wp-fullscreen body#tinymce {
+.content-area html.wp-fullscreen,
+.content-area html.wp-fullscreen body#tinymce {
   width: auto;
   max-width: none;
   min-height: 0;
@@ -498,101 +514,84 @@ html.wp-fullscreen body#tinymce {
   color: #333;
   background: transparent;
 }
-
 /* line 48, sass/_wp-content.scss */
-.aligncenter,
-dl.aligncenter,
-.html5-captions .wp-caption.aligncenter {
+.content-area .aligncenter,
+.content-area dl.aligncenter,
+.content-area .html5-captions .wp-caption.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-
 /* line 56, sass/_wp-content.scss */
-.alignleft {
+.content-area .alignleft {
   float: left;
 }
-
 /* line 60, sass/_wp-content.scss */
-.alignright {
+.content-area .alignright {
   float: right;
 }
-
 /* line 64, sass/_wp-content.scss */
-.wp-caption {
+.content-area .wp-caption {
   border: 1px solid #ddd;
   text-align: center;
   background-color: #f3f3f3;
   padding-top: 4px;
   margin: 10px 0;
 }
-
 /* line 72, sass/_wp-content.scss */
-.html5-captions .wp-caption {
+.content-area .html5-captions .wp-caption {
   border: none;
   background-color: transparent;
   margin: 0;
   padding: 0;
 }
-
 /* line 79, sass/_wp-content.scss */
-.mceIEcenter {
+.content-area .mceIEcenter {
   text-align: center;
 }
-
 /* line 83, sass/_wp-content.scss */
-.wp-caption img {
+.content-area .wp-caption img {
   margin: 0;
   padding: 0;
   border: 0 none;
 }
-
 /* line 89, sass/_wp-content.scss */
-div.mceTemp {
+.content-area div.mceTemp {
   -ms-user-select: element;
 }
-
 /* line 93, sass/_wp-content.scss */
-dl.wp-caption,
-dl.wp-caption * {
+.content-area dl.wp-caption,
+.content-area dl.wp-caption * {
   -webkit-user-drag: none;
 }
-
 /* line 98, sass/_wp-content.scss */
-.wp-caption-dd {
+.content-area .wp-caption-dd {
   font-size: 11px;
   line-height: 17px;
   padding: 0 4px 5px;
   margin: 0;
 }
-
 /* line 105, sass/_wp-content.scss */
-pre {
+.content-area pre {
   font: 12px/18px Consolas, Monaco, monospace;
 }
-
 /* line 109, sass/_wp-content.scss */
-td {
+.content-area td {
   color: #000;
   font-size: 11px;
   margin: 8px;
 }
-
-/* Remove blue highlighting of selected images in WebKit */
 /* line 116, sass/_wp-content.scss */
-img::selection {
+.content-area img::selection {
   background-color: transparent;
 }
-
-/* Styles for the WordPress plugins */
 /* line 121, sass/_wp-content.scss */
-.mce-content-body img[data-mce-placeholder] {
+.content-area .mce-content-body img[data-mce-placeholder] {
   border-radius: 0;
   padding: 0;
 }
-
 /* line 126, sass/_wp-content.scss */
-.mce-content-body img[data-wp-more] {
+.content-area .mce-content-body img[data-wp-more] {
   border: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -603,25 +602,20 @@ img::selection {
   outline: 0;
   cursor: default;
 }
-
 /* line 138, sass/_wp-content.scss */
-.mce-content-body img[data-wp-more][data-mce-selected] {
+.content-area .mce-content-body img[data-wp-more][data-mce-selected] {
   outline: 1px dotted #888;
 }
-
 /* line 142, sass/_wp-content.scss */
-.mce-content-body img[data-wp-more="more"] {
+.content-area .mce-content-body img[data-wp-more="more"] {
   background: transparent url(images/more.png) repeat-y scroll center center;
 }
-
 /* line 146, sass/_wp-content.scss */
-.mce-content-body img[data-wp-more="nextpage"] {
+.content-area .mce-content-body img[data-wp-more="nextpage"] {
   background: transparent url(images/pagebreak.png) repeat-y scroll center center;
 }
-
-/* Gallery, audio, video placeholders */
 /* line 151, sass/_wp-content.scss */
-.mce-content-body img.wp-media {
+.content-area .mce-content-body img.wp-media {
   border: 1px solid #aaa;
   background-color: #f2f2f2;
   background-repeat: no-repeat;
@@ -631,82 +625,65 @@ img::selection {
   outline: 0;
   cursor: pointer;
 }
-
 /* line 162, sass/_wp-content.scss */
-.mce-content-body img.wp-media:hover {
+.content-area .mce-content-body img.wp-media:hover {
   background-color: #ededed;
   border-color: #777;
 }
-
 /* line 167, sass/_wp-content.scss */
-.mce-content-body img.wp-media.wp-media-selected {
+.content-area .mce-content-body img.wp-media.wp-media-selected {
   background-color: #d8d8d8;
   border-color: #777;
 }
-
 /* line 172, sass/_wp-content.scss */
-.mce-content-body img.wp-media.wp-gallery {
+.content-area .mce-content-body img.wp-media.wp-gallery {
   background-image: url(images/gallery.png);
 }
-
-/* Image resize handles */
 /* line 177, sass/_wp-content.scss */
-.mce-content-body div.mce-resizehandle {
+.content-area .mce-content-body div.mce-resizehandle {
   border-color: #777;
   width: 7px;
   height: 7px;
 }
-
 /* line 183, sass/_wp-content.scss */
-.mce-content-body img[data-mce-selected] {
+.content-area .mce-content-body img[data-mce-selected] {
   outline: 1px solid #777;
 }
-
 /* line 187, sass/_wp-content.scss */
-.mce-content-body img[data-mce-resize="false"] {
+.content-area .mce-content-body img[data-mce-resize="false"] {
   outline: 0;
 }
-
 /* line 191, sass/_wp-content.scss */
-audio,
-video,
-embed {
+.content-area audio,
+.content-area video,
+.content-area embed {
   display: -moz-inline-stack;
   display: inline-block;
 }
-
 /* line 198, sass/_wp-content.scss */
-audio {
+.content-area audio {
   visibility: hidden;
 }
-
-/**
- * WP Views
- */
 /* line 206, sass/_wp-content.scss */
-.wpview-wrap {
+.content-area .wpview-wrap {
   width: 99.99%;
   /* All IE need hasLayout, incl. 11 (ugh, not again!!) */
   position: relative;
   clear: both;
 }
-
-/* delegate the handling of the selection to the wpview tinymce plugin */
 /* line 213, sass/_wp-content.scss */
-.wpview-wrap,
-.wpview-wrap *,
-#wp-image-toolbar,
-#wp-image-toolbar * {
+.content-area .wpview-wrap,
+.content-area .wpview-wrap *,
+.content-area #wp-image-toolbar,
+.content-area #wp-image-toolbar * {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
-
-/* hide the shortcode content, but allow the content to still be selected */
 /* line 224, sass/_wp-content.scss */
-.wpview-wrap .wpview-clipboard,
-.wpview-wrap > p {
+.content-area .wpview-wrap .wpview-clipboard,
+.content-area .wpview-wrap > p {
   position: absolute;
   top: 0;
   left: 0;
@@ -721,27 +698,23 @@ audio {
   width: 1px;
   height: 1px;
 }
-
-/* An ugly box will appear when this is focussed in IE, so we'll move it outside the window. */
 /* line 241, sass/_wp-content.scss */
-.wpview-wrap.wpview-selection-before > p,
-.wpview-wrap.wpview-selection-after > p {
+.content-area .wpview-wrap.wpview-selection-before > p,
+.content-area .wpview-wrap.wpview-selection-after > p {
   left: -10000px;
 }
-
 /* line 246, sass/_wp-content.scss */
-.wpview-wrap .wpview-clipboard,
-.wpview-wrap .wpview-clipboard *,
-.wpview-wrap > p {
+.content-area .wpview-wrap .wpview-clipboard,
+.content-area .wpview-wrap .wpview-clipboard *,
+.content-area .wpview-wrap > p {
   -moz-user-select: text;
   -webkit-user-select: text;
   -ms-user-select: text;
   user-select: text;
 }
-
 /* line 255, sass/_wp-content.scss */
-.has-focus .wpview-wrap.wpview-selection-before:before,
-.has-focus .wpview-wrap.wpview-selection-after:before {
+.content-area .has-focus .wpview-wrap.wpview-selection-before:before,
+.content-area .has-focus .wpview-wrap.wpview-selection-after:before {
   content: '';
   margin: 0;
   padding: 0;
@@ -754,92 +727,75 @@ audio {
   background-color: currentcolor;
   opacity: 1;
 }
-
 /* line 270, sass/_wp-content.scss */
-.has-focus .wpview-wrap.wpview-selection-after:before {
+.content-area .has-focus .wpview-wrap.wpview-selection-after:before {
   left: auto;
   right: -3px;
 }
-
 /* line 275, sass/_wp-content.scss */
-.has-focus .wpview-wrap.wpview-cursor-hide:before {
+.content-area .has-focus .wpview-wrap.wpview-cursor-hide:before {
   opacity: 0;
 }
-
-/**
- * Media previews
- */
 /* line 282, sass/_wp-content.scss */
-.wpview-wrap {
+.content-area .wpview-wrap {
   position: relative;
   margin-bottom: 16px;
   border: 1px solid transparent;
 }
-
 /* line 288, sass/_wp-content.scss */
-.wpview-wrap[data-mce-selected] {
+.content-area .wpview-wrap[data-mce-selected] {
   background-color: rgba(0, 0, 0, 0.1);
   border-color: rgba(0, 0, 0, 0.3);
 }
-
 /* line 293, sass/_wp-content.scss */
-.ie8 .wpview-wrap[data-mce-selected],
-.ie7 .wpview-wrap[data-mce-selected] {
+.content-area .ie8 .wpview-wrap[data-mce-selected],
+.content-area .ie7 .wpview-wrap[data-mce-selected] {
   background-color: #e5e5e5;
   border-color: #777;
 }
-
 /* line 299, sass/_wp-content.scss */
-.wpview-overlay {
+.content-area .wpview-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 }
-
 /* line 307, sass/_wp-content.scss */
-.wpview-wrap[data-mce-selected] .wpview-overlay {
+.content-area .wpview-wrap[data-mce-selected] .wpview-overlay {
   display: none;
 }
-
 /* line 311, sass/_wp-content.scss */
-.wpview-wrap .toolbar {
+.content-area .wpview-wrap .toolbar {
   position: absolute;
   top: 0;
   left: 0;
   display: none;
   z-index: 100;
 }
-
 /* line 319, sass/_wp-content.scss */
-.wpview-wrap[data-mce-selected] .toolbar {
+.content-area .wpview-wrap[data-mce-selected] .toolbar {
   display: block;
 }
-
 /* line 323, sass/_wp-content.scss */
-.wpview-wrap .loading-placeholder {
+.content-area .wpview-wrap .loading-placeholder {
   border: 1px dashed #ccc;
   padding: 10px;
 }
-
 /* line 328, sass/_wp-content.scss */
-.wpview-wrap[data-mce-selected] .loading-placeholder {
+.content-area .wpview-wrap[data-mce-selected] .loading-placeholder {
   border-color: transparent;
 }
-
-/* A little "loading" animation, not showing in IE < 10 */
 /* line 333, sass/_wp-content.scss */
-.wpview-wrap .wpview-loading {
+.content-area .wpview-wrap .wpview-loading {
   width: 60px;
   height: 5px;
   overflow: hidden;
   background-color: transparent;
   margin: 10px auto 0;
 }
-
 /* line 341, sass/_wp-content.scss */
-.wpview-wrap .wpview-loading ins {
+.content-area .wpview-wrap .wpview-loading ins {
   background-color: #333;
   margin: 0 0 0 -60px;
   width: 60px;
@@ -848,7 +804,6 @@ audio {
   -webkit-animation: wpview-loading 1.3s infinite 1s linear;
   animation: wpview-loading 1.3s infinite 1s linear;
 }
-
 @-webkit-keyframes wpview-loading {
   0% {
     margin-left: -60px;
@@ -866,20 +821,18 @@ audio {
   }
 }
 /* line 369, sass/_wp-content.scss */
-.wpview-wrap .wpview-content > iframe {
+.content-area .wpview-wrap .wpview-content > iframe {
   max-width: 100%;
   background: transparent;
 }
-
 /* line 374, sass/_wp-content.scss */
-#wp-image-toolbar {
+.content-area #wp-image-toolbar {
   position: absolute;
   margin: 0;
 }
-
 /* line 379, sass/_wp-content.scss */
-.wpview-wrap .toolbar div,
-#wp-image-toolbar i {
+.content-area .wpview-wrap .toolbar div,
+.content-area #wp-image-toolbar i {
   margin-top: 7px;
   margin-left: 7px;
   padding: 2px;
@@ -892,90 +845,76 @@ audio {
   color: white;
   font-size: 30px;
 }
-
 /* line 394, sass/_wp-content.scss */
-.ie8 .wpview-wrap .toolbar div,
-.ie7 .wpview-wrap .toolbar div,
-.ie8 #wp-image-toolbar i,
-.ie7 #wp-image-toolbar i {
+.content-area .ie8 .wpview-wrap .toolbar div,
+.content-area .ie7 .wpview-wrap .toolbar div,
+.content-area .ie8 #wp-image-toolbar i,
+.content-area .ie7 #wp-image-toolbar i {
   display: inline;
   padding: 0;
 }
-
 /* line 402, sass/_wp-content.scss */
-.ie8 .dashicons-edit,
-.ie7 .dashicons-edit {
+.content-area .ie8 .dashicons-edit,
+.content-area .ie7 .dashicons-edit {
   background-image: url(images/dashicon-edit.png);
 }
-
 /* line 407, sass/_wp-content.scss */
-.ie8 .dashicons-no-alt,
-.ie7 .dashicons-no-alt {
+.content-area .ie8 .dashicons-no-alt,
+.content-area .ie7 .dashicons-no-alt {
   background-image: url(images/dashicon-no-alt.png);
 }
-
 /* line 412, sass/_wp-content.scss */
-.wpview-error {
+.content-area .wpview-error {
   border: 1px solid #dedede;
   padding: 1em 0;
   margin: 0;
   word-wrap: break-word;
 }
-
 /* line 419, sass/_wp-content.scss */
-.wpview-wrap[data-mce-selected] .wpview-error {
+.content-area .wpview-wrap[data-mce-selected] .wpview-error {
   border-color: transparent;
 }
-
 /* line 423, sass/_wp-content.scss */
-.wpview-error .dashicons,
-.loading-placeholder .dashicons {
+.content-area .wpview-error .dashicons,
+.content-area .loading-placeholder .dashicons {
   display: block;
   margin: 0 auto;
   width: 32px;
   height: 32px;
   font-size: 32px;
 }
-
 /* line 432, sass/_wp-content.scss */
-.wpview-error p {
+.content-area .wpview-error p {
   margin: 0;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
 }
-
 /* line 438, sass/_wp-content.scss */
-.wpview-wrap .toolbar div:hover,
-#wp-image-toolbar i:hover {
+.content-area .wpview-wrap .toolbar div:hover,
+.content-area #wp-image-toolbar i:hover {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
   background-color: #000;
   color: #2ea2cc;
 }
-
-/* Audio player is short; therefore let's put the toolbar above */
 /* line 446, sass/_wp-content.scss */
-.wpview-wrap[data-wpview-type="audio"] .toolbar {
+.content-area .wpview-wrap[data-wpview-type="audio"] .toolbar {
   top: auto;
   bottom: -34px;
 }
-
 /* line 451, sass/_wp-content.scss */
-.wpview-wrap[data-wpview-type="audio"] .toolbar div {
+.content-area .wpview-wrap[data-wpview-type="audio"] .toolbar div {
   margin-top: 0;
 }
-
 /* line 455, sass/_wp-content.scss */
-.wpview-wrap[data-wpview-type="audio"] .toolbar div:first-child {
+.content-area .wpview-wrap[data-wpview-type="audio"] .toolbar div:first-child {
   margin-left: 0;
 }
-
 /* line 459, sass/_wp-content.scss */
-.wont-play {
+.content-area .wont-play {
   padding: 4px 0;
 }
-
 /* line 463, sass/_wp-content.scss */
-.wont-play p {
+.content-area .wont-play p {
   font-size: 13px;
   line-height: 1.3;
   display: block;
@@ -983,40 +922,34 @@ audio {
   margin: 0 15%;
   text-align: center;
 }
-
 /* line 472, sass/_wp-content.scss */
-.wpview-type-gallery:after {
+.content-area .wpview-type-gallery:after {
   content: '';
   display: table;
   clear: both;
 }
-
 /* line 478, sass/_wp-content.scss */
-.gallery img[data-mce-selected]:focus {
+.content-area .gallery img[data-mce-selected]:focus {
   outline: none;
 }
-
 /* line 482, sass/_wp-content.scss */
-.gallery a {
+.content-area .gallery a {
   cursor: default;
 }
-
 /* line 486, sass/_wp-content.scss */
-.gallery {
+.content-area .gallery {
   margin: auto -6px;
   padding: 6px 0;
   line-height: 1;
   overflow-x: hidden;
 }
-
 /* line 493, sass/_wp-content.scss */
-.ie7 .gallery,
-.ie8 .gallery {
+.content-area .ie7 .gallery,
+.content-area .ie8 .gallery {
   margin: auto;
 }
-
 /* line 499, sass/_wp-content.scss */
-.gallery .gallery-item {
+.content-area .gallery .gallery-item {
   float: left;
   margin: 0;
   text-align: center;
@@ -1025,129 +958,103 @@ audio {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
 /* line 509, sass/_wp-content.scss */
-.ie7 .gallery .gallery-item,
-.ie8 .gallery .gallery-item {
+.content-area .ie7 .gallery .gallery-item,
+.content-area .ie8 .gallery .gallery-item {
   padding: 6px 0;
 }
-
 /* line 514, sass/_wp-content.scss */
-.gallery .gallery-caption,
-.gallery .gallery-icon {
+.content-area .gallery .gallery-caption,
+.content-area .gallery .gallery-icon {
   margin: 0;
 }
-
 /* line 519, sass/_wp-content.scss */
-.gallery .gallery-caption {
+.content-area .gallery .gallery-caption {
   font-size: 13px;
   margin: 4px 0;
 }
-
 /* line 524, sass/_wp-content.scss */
-.gallery-columns-1 .gallery-item {
+.content-area .gallery-columns-1 .gallery-item {
   width: 100%;
 }
-
 /* line 528, sass/_wp-content.scss */
-.gallery-columns-2 .gallery-item {
+.content-area .gallery-columns-2 .gallery-item {
   width: 50%;
 }
-
 /* line 532, sass/_wp-content.scss */
-.gallery-columns-3 .gallery-item {
+.content-area .gallery-columns-3 .gallery-item {
   width: 33.333%;
 }
-
 /* line 536, sass/_wp-content.scss */
-.ie8 .gallery-columns-3 .gallery-item,
-.ie7 .gallery-columns-3 .gallery-item {
+.content-area .ie8 .gallery-columns-3 .gallery-item,
+.content-area .ie7 .gallery-columns-3 .gallery-item {
   width: 33%;
 }
-
 /* line 541, sass/_wp-content.scss */
-.gallery-columns-4 .gallery-item {
+.content-area .gallery-columns-4 .gallery-item {
   width: 25%;
 }
-
 /* line 545, sass/_wp-content.scss */
-.gallery-columns-5 .gallery-item {
+.content-area .gallery-columns-5 .gallery-item {
   width: 20%;
 }
-
 /* line 549, sass/_wp-content.scss */
-.gallery-columns-6 .gallery-item {
+.content-area .gallery-columns-6 .gallery-item {
   width: 16.665%;
 }
-
 /* line 553, sass/_wp-content.scss */
-.gallery-columns-7 .gallery-item {
+.content-area .gallery-columns-7 .gallery-item {
   width: 14.285%;
 }
-
 /* line 557, sass/_wp-content.scss */
-.gallery-columns-8 .gallery-item {
+.content-area .gallery-columns-8 .gallery-item {
   width: 12.5%;
 }
-
 /* line 561, sass/_wp-content.scss */
-.gallery-columns-9 .gallery-item {
+.content-area .gallery-columns-9 .gallery-item {
   width: 11.111%;
 }
-
 /* line 565, sass/_wp-content.scss */
-.gallery img {
+.content-area .gallery img {
   max-width: 100%;
   height: auto;
   border: none;
   padding: 0;
 }
-
 /* line 572, sass/_wp-content.scss */
-img.wp-oembed {
+.content-area img.wp-oembed {
   border: 1px dashed #888;
   background: #f7f5f2 url(images/embedded.png) no-repeat scroll center center;
   width: 300px;
   height: 250px;
   outline: 0;
 }
-
-/* rtl */
 /* line 581, sass/_wp-content.scss */
-.rtl .gallery .gallery-item {
+.content-area .rtl .gallery .gallery-item {
   float: right;
 }
-
 /* line 585, sass/_wp-content.scss */
-.rtl .wpview-wrap .toolbar {
+.content-area .rtl .wpview-wrap .toolbar {
   left: auto;
   right: 0;
 }
-
 /* line 590, sass/_wp-content.scss */
-.rtl .wpview-wrap .toolbar div,
-.rtl #wp-image-toolbar i {
+.content-area .rtl .wpview-wrap .toolbar div,
+.content-area .rtl #wp-image-toolbar i {
   margin-left: auto;
   margin-right: 7px;
 }
-
 @media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
   /* line 601, sass/_wp-content.scss */
-  .mce-content-body img.mce-wp-more {
+  .content-area .mce-content-body img.mce-wp-more {
     background-image: url(images/more-2x.png);
     background-size: 1900px 20px;
   }
-
   /* line 606, sass/_wp-content.scss */
-  .mce-content-body img.mce-wp-nextpage {
+  .content-area .mce-content-body img.mce-wp-nextpage {
     background-image: url(images/pagebreak-2x.png);
     background-size: 1900px 20px;
   }
-}
-/* line 4, sass/_content.scss */
-.content-area {
-  position: relative;
-  padding: 2em 1em;
 }
 /* line 3, sass/_post-scroller.scss */
 .content-area .post-scroller {
@@ -1308,35 +1215,35 @@ img.wp-oembed {
 .content-area .mobile-four-per-pagination {
   display: none;
 }
-/* line 15, sass/_content.scss */
+/* line 16, sass/_content.scss */
 .home .content-area .whats-happening {
   position: relative;
   margin-bottom: 1em;
 }
-/* line 19, sass/_content.scss */
+/* line 20, sass/_content.scss */
 .home .content-area .family-stories {
   position: relative;
 }
-/* line 21, sass/_content.scss */
+/* line 22, sass/_content.scss */
 .home .content-area .family-stories .blog-post-preview {
   border: 0;
 }
-/* line 24, sass/_content.scss */
+/* line 25, sass/_content.scss */
 .home .content-area .family-stories .blog-post-preview .post-date {
   margin-bottom: 2em;
 }
-/* line 28, sass/_content.scss */
+/* line 29, sass/_content.scss */
 .home .content-area .family-stories .blog-post-preview .post-categories {
   display: none;
 }
-/* line 31, sass/_content.scss */
+/* line 32, sass/_content.scss */
 .home .content-area .family-stories .blog-post-preview .post-content {
   width: 50%;
   display: inline-block;
   vertical-align: top;
 }
 @media screen and (min-width: 780px) {
-  /* line 19, sass/_content.scss */
+  /* line 20, sass/_content.scss */
   .home .content-area .family-stories {
     display: inline-block;
     vertical-align: top;
@@ -1344,73 +1251,73 @@ img.wp-oembed {
     max-width: 840px;
     margin-right: 2em;
   }
-  /* line 40, sass/_content.scss */
+  /* line 41, sass/_content.scss */
   .home .content-area .family-stories .post-feature {
     width: 45%;
     display: inline-block;
     float: right;
   }
 }
-/* line 47, sass/_content.scss */
+/* line 48, sass/_content.scss */
 .home .content-area .social-block {
   display: inline-block;
   vertical-align: top;
   width: 24.5%;
   max-width: 315px;
 }
-/* line 56, sass/_content.scss */
+/* line 57, sass/_content.scss */
 .home .content-area .whats-happening h2, .home .content-area .family-stories h2, .home .content-area .social-block h2 {
   border-bottom: 1px solid #999d9f;
   padding-bottom: 5px;
   margin-top: 0;
 }
-/* line 61, sass/_content.scss */
+/* line 62, sass/_content.scss */
 .home .content-area .whats-happening .post-meta, .home .content-area .family-stories .post-meta, .home .content-area .social-block .post-meta {
   display: none;
 }
-/* line 71, sass/_content.scss */
+/* line 72, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview, .archive.category .content-area .blog-post-preview {
   width: 100%;
   height: 21vw;
   border-bottom: 1px solid #999d9f;
   margin-bottom: 2em;
 }
-/* line 78, sass/_content.scss */
+/* line 79, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview a, .page-template-blog-php .content-area .blog-post-preview h3, .archive.category .content-area .blog-post-preview a, .archive.category .content-area .blog-post-preview h3 {
   text-decoration: none;
   color: #a5a299;
 }
-/* line 83, sass/_content.scss */
+/* line 84, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview p, .archive.category .content-area .blog-post-preview p {
   margin-top: .5em;
 }
-/* line 87, sass/_content.scss */
+/* line 88, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-feature, .archive.category .content-area .blog-post-preview .post-feature {
   float: right;
   display: block;
   width: 40%;
   overflow: hidden;
 }
-/* line 92, sass/_content.scss */
+/* line 93, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-feature img, .archive.category .content-area .blog-post-preview .post-feature img {
   max-height: 100%;
   width: auto;
   height: 20vw;
 }
-/* line 98, sass/_content.scss */
+/* line 99, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-meta, .archive.category .content-area .blog-post-preview .post-meta {
   display: none;
 }
-/* line 101, sass/_content.scss */
+/* line 102, sass/_content.scss */
 .page-template-blog-php .content-area .blog-post-preview .post-content, .archive.category .content-area .blog-post-preview .post-content {
   width: 60%;
   padding-right: 3%;
 }
-/* line 107, sass/_content.scss */
+/* line 108, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging, .archive.category .content-area .blog-paging {
   font-size: 12px;
 }
-/* line 110, sass/_content.scss */
+/* line 111, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
   position: absolute;
   right: 0;
@@ -1453,7 +1360,7 @@ img.wp-oembed {
   background-size: 100% auto;
 }
 @media screen and (max-width: 780px) {
-  /* line 110, sass/_content.scss */
+  /* line 111, sass/_content.scss */
   .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
     width: 60px;
   }
@@ -1463,7 +1370,7 @@ img.wp-oembed {
     height: 20px;
   }
 }
-/* line 115, sass/_content.scss */
+/* line 116, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.next, .page-template-blog-php .content-area .blog-paging .next-prev .paging.prev, .archive.category .content-area .blog-paging .next-prev .paging.next, .archive.category .content-area .blog-paging .next-prev .paging.prev {
   width: 20px;
   height: 20px;
@@ -1472,38 +1379,38 @@ img.wp-oembed {
   left: auto;
   right: auto;
 }
-/* line 125, sass/_content.scss */
+/* line 126, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers, .archive.category .content-area .blog-paging .page-numbers {
   color: #a5a299;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 129, sass/_content.scss */
+/* line 130, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers:not(:last-child), .archive.category .content-area .blog-paging .page-numbers:not(:last-child) {
   margin-right: .75em;
   padding-right: .75em;
   border-right: 1px solid #999d9f;
 }
-/* line 134, sass/_content.scss */
+/* line 135, sass/_content.scss */
 .page-template-blog-php .content-area .blog-paging .page-numbers.current, .archive.category .content-area .blog-paging .page-numbers.current {
   font-weight: bold;
 }
-/* line 141, sass/_content.scss */
+/* line 142, sass/_content.scss */
 .content-area .map-block {
   display: inline-block;
   vertical-align: top;
   width: 45%;
 }
-/* line 146, sass/_content.scss */
+/* line 147, sass/_content.scss */
 .content-area .map-block h3 {
   margin-top: 1em;
 }
-/* line 150, sass/_content.scss */
+/* line 151, sass/_content.scss */
 .content-area .map-block:first-of-type {
   margin-right: 20px;
 }
 @media screen and (max-width: 780px) {
-  /* line 141, sass/_content.scss */
+  /* line 142, sass/_content.scss */
   .content-area .map-block {
     width: 75%;
   }
@@ -1514,33 +1421,33 @@ img.wp-oembed {
     padding: 20px 20px 0;
     /* Pagination */
   }
-  /* line 161, sass/_content.scss */
+  /* line 162, sass/_content.scss */
   .content-area h2 {
     margin: 0;
     padding-bottom: .4rem;
   }
-  /* line 168, sass/_content.scss */
+  /* line 169, sass/_content.scss */
   .content-area .blog-post-preview {
     padding: 1em .5em;
     width: 100%;
   }
-  /* line 171, sass/_content.scss */
+  /* line 172, sass/_content.scss */
   .content-area .blog-post-preview a {
     display: inline-block;
     width: 100%;
   }
-  /* line 174, sass/_content.scss */
+  /* line 175, sass/_content.scss */
   .content-area .blog-post-preview a img {
     position: relative;
     width: 100%;
     height: auto;
     bottom: auto;
   }
-  /* line 181, sass/_content.scss */
+  /* line 182, sass/_content.scss */
   .content-area .blog-post-preview h3 {
     margin-top: 0;
   }
-  /* line 182, sass/_content.scss */
+  /* line 183, sass/_content.scss */
   .content-area .blog-post-preview .post-feature {
     width: 25vw;
     height: 25vw;
@@ -1549,7 +1456,7 @@ img.wp-oembed {
     vertical-align: top;
     padding-top: 1em;
   }
-  /* line 190, sass/_content.scss */
+  /* line 191, sass/_content.scss */
   .content-area .blog-post-preview .post-content {
     display: inline-block;
     width: 55vw;
@@ -1557,15 +1464,15 @@ img.wp-oembed {
     line-height: 1.3em;
     margin-top: 1em;
   }
-  /* line 196, sass/_content.scss */
+  /* line 197, sass/_content.scss */
   .content-area .blog-post-preview .post-content .post-excerpt p {
     margin-bottom: 0;
   }
-  /* line 204, sass/_content.scss */
+  /* line 205, sass/_content.scss */
   .content-area .mobile-four-per-pagination {
     display: block;
   }
-  /* line 210, sass/_content.scss */
+  /* line 211, sass/_content.scss */
   .home .content-area .social-block {
     display: none;
   }
