@@ -2,6 +2,7 @@
 
 .post-scroller {
 	position: relative;
+	margin-bottom: 4em;
 
 	.blog-post-preview {
 		display: inline-block;
@@ -63,7 +64,7 @@
 	&.four-per-page {
 
 		.blog-post-preview {
-			height: 30vw;
+			height: 33vw;
 			overflow: hidden;
 			&:not(:last-of-type){
 				border-right: 1px solid $border;
@@ -79,6 +80,10 @@
 				}
 			}
 			.post-content {}
+			.readmore {
+				position: absolute;
+				bottom: 0;	
+			}
 
 			//Desktop Only
 			@media screen and ( min-width: $tablet ){

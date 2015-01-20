@@ -9,7 +9,8 @@
 
 //BASE STYLES
 body {
-	color: $maintext;
+	color: $text-gray;
+	font-size: 22px;
 	@include futura;
 	font-weight: 300;
 }

@@ -50,7 +50,7 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 		font-size: 16px;
 		margin-bottom: 0px;
 		@include futura;
-	
+	}
 
 	@mixin bodytext {
 		color: $tertiary-gray;
@@ -140,3 +140,5 @@ $columnWidth: $frameWidth / $columns;
 	}
 
 }
+
+
