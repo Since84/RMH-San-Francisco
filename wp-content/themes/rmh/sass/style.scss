@@ -31,8 +31,9 @@ h3 {
 p {
 	@include p;
 }
-a {
+a, a:link {
 	text-decoration: none;
+	color: $primary;
 }
 
 

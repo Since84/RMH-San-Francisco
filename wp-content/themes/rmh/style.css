@@ -20,6 +20,7 @@ body {
 h1 {
   color: #628ecc;
   font-size: 31px;
+  line-height: 1.2em;
   text-transform: uppercase;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
@@ -29,6 +30,7 @@ h1 {
 h2 {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
 }
@@ -49,8 +51,9 @@ p {
 }
 
 /* line 34, sass/style.scss */
-a {
+a, a:link {
   text-decoration: none;
+  color: #628ecc;
 }
 
 /* line 3, sass/_header.scss */
@@ -112,14 +115,15 @@ header .site-head-right .social-links .widget .menu-item {
   padding: 5px 1em;
   width: 90%;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -128,13 +132,13 @@ header .site-head-right .social-links .widget .menu-item a {
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   header .site-head-right .social-links .widget .menu-item a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   header .site-head-right .social-links .widget .menu-item a {
     font-size: 3.2vw;
   }
@@ -344,14 +348,15 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 20px;
   width: 200px;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -360,13 +365,13 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .home .call-to-action #menu-action-buttons li a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .home .call-to-action #menu-action-buttons li a {
     font-size: 3.2vw;
   }
@@ -432,13 +437,13 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   }
 }
 
-/* line 59, sass/style.scss */
+/* line 60, sass/style.scss */
 .post-feature-image {
   background: #a5a299;
   position: relative;
   z-index: 1000;
 }
-/* line 63, sass/style.scss */
+/* line 64, sass/style.scss */
 .post-feature-image img {
   width: 100%;
   height: auto;
@@ -1062,7 +1067,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 /* line 45, sass/_post-scroller.scss */
 .content-area .post-scroller .blog-post-preview .readmore {
   margin-top: .5em;
-  color: #ffc829;
+  color: #628ecc;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -1140,7 +1145,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   height: 25px;
   top: 0;
 }
-/* line 128, sass/_rmh.scss */
+/* line 130, sass/_rmh.scss */
 .content-area .slider-pagination .paging, .content-area .mobile-four-per-pagination .paging {
   width: 25px;
   height: 25px;
@@ -1156,7 +1161,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   transition: opacity .5s, transform .5s;
   position: absolute;
 }
-/* line 143, sass/_rmh.scss */
+/* line 145, sass/_rmh.scss */
 .content-area .slider-pagination .paging.prev, .content-area .mobile-four-per-pagination .paging.prev {
   left: 0px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
@@ -1164,7 +1169,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-/* line 151, sass/_rmh.scss */
+/* line 153, sass/_rmh.scss */
 .content-area .slider-pagination .paging.next, .content-area .mobile-four-per-pagination .paging.next {
   right: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
@@ -1177,7 +1182,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
     width: 60px;
   }
-  /* line 161, sass/_rmh.scss */
+  /* line 163, sass/_rmh.scss */
   .content-area .slider-pagination .paging, .content-area .mobile-four-per-pagination .paging {
     width: 20px;
     height: 20px;
@@ -1299,7 +1304,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   display: inline-block;
   vertical-align: top;
 }
-/* line 128, sass/_rmh.scss */
+/* line 130, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging, .archive.category .content-area .blog-paging .next-prev .paging {
   width: 25px;
   height: 25px;
@@ -1315,7 +1320,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   transition: opacity .5s, transform .5s;
   position: absolute;
 }
-/* line 143, sass/_rmh.scss */
+/* line 145, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.prev, .archive.category .content-area .blog-paging .next-prev .paging.prev {
   left: 0px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
@@ -1323,7 +1328,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-/* line 151, sass/_rmh.scss */
+/* line 153, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.next, .archive.category .content-area .blog-paging .next-prev .paging.next {
   right: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
@@ -1336,7 +1341,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
     width: 60px;
   }
-  /* line 161, sass/_rmh.scss */
+  /* line 163, sass/_rmh.scss */
   .page-template-blog-php .content-area .blog-paging .next-prev .paging, .archive.category .content-area .blog-paging .next-prev .paging {
     width: 20px;
     height: 20px;
@@ -1450,12 +1455,12 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   }
 }
 
-/* line 76, sass/style.scss */
+/* line 77, sass/style.scss */
 .page-content {
   color: #565656;
   position: relative;
 }
-/* line 79, sass/style.scss */
+/* line 80, sass/style.scss */
 .page-content h2 {
   border: none;
   padding: 0;
@@ -1464,7 +1469,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   color: #a5a299;
 }
 
-/* line 92, sass/style.scss */
+/* line 93, sass/style.scss */
 .sidebar-container {
   width: 100%;
   max-width: 1260px;
@@ -1472,7 +1477,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   position: relative;
 }
 
-/* line 99, sass/style.scss */
+/* line 100, sass/style.scss */
 .page-sidebar {
   display: inline-block;
   vertical-align: top;
@@ -1484,22 +1489,22 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 14px;
   z-index: 1001;
 }
-/* line 107, sass/style.scss */
+/* line 108, sass/style.scss */
 .page-sidebar li {
   list-style: none;
   width: 90%;
 }
-/* line 111, sass/style.scss */
+/* line 112, sass/style.scss */
 .page-sidebar .call-to-action {
   white-space: nowrap;
   padding-top: 5em;
 }
-/* line 115, sass/style.scss */
+/* line 116, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons {
   padding-left: 0;
   width: 100%;
 }
-/* line 118, sass/style.scss */
+/* line 119, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -1518,14 +1523,15 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   margin-bottom: .5em;
   width: 100%;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 .page-sidebar .call-to-action #menu-action-buttons li:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 .page-sidebar .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -1534,38 +1540,38 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .page-sidebar .call-to-action #menu-action-buttons li a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .page-sidebar .call-to-action #menu-action-buttons li a {
     font-size: 3.2vw;
   }
 }
-/* line 127, sass/style.scss */
+/* line 128, sass/style.scss */
 .page-sidebar .parent-menu {
   text-transform: uppercase;
 }
-/* line 129, sass/style.scss */
+/* line 130, sass/style.scss */
 .page-sidebar .parent-menu ul {
   padding: 0;
 }
-/* line 133, sass/style.scss */
+/* line 134, sass/style.scss */
 .page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
   margin-top: 1.5em;
   color: #628ecc;
   text-decoration: none;
 }
-/* line 138, sass/style.scss */
+/* line 139, sass/style.scss */
 .page-sidebar .parent-menu > div > ul {
   list-style: none;
   padding: 1em;
   margin-top: .5em;
 }
-/* line 143, sass/style.scss */
+/* line 144, sass/style.scss */
 .page-sidebar .parent-menu > div > ul ul {
   padding-left: 1em;
 }
