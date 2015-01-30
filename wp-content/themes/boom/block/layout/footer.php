@@ -16,7 +16,7 @@
 	Ronald McDonald House Charities Logo, RMHC, Ronald McDonald House, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.
 					</p>
 					<br>
-					<span><a href="http://agdesigngroup.net" title="San Francisco Web Design">Website</a> By <a href="http://agdesigngroup.net" title="Walnut Creek Web Design">AG Design Group</a>
+					<span><a href="http://agdesigngroup.net" target="_blank" title="San Francisco Web Design">Website</a> By <a href="http://agdesigngroup.net" target="_blank" title="Walnut Creek Web Design">AG Design Group</a>
 				</div>
 			</ul>
 		</div>
