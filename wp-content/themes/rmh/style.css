@@ -51,6 +51,7 @@ p {
 /* line 34, sass/style.scss */
 a {
   text-decoration: none;
+  color: #628ecc;
 }
 
 /* line 3, sass/_header.scss */
@@ -432,13 +433,13 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   }
 }
 
-/* line 59, sass/style.scss */
+/* line 60, sass/style.scss */
 .post-feature-image {
   background: #a5a299;
   position: relative;
   z-index: 1000;
 }
-/* line 63, sass/style.scss */
+/* line 64, sass/style.scss */
 .post-feature-image img {
   width: 100%;
   height: auto;
@@ -1062,7 +1063,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 /* line 45, sass/_post-scroller.scss */
 .content-area .post-scroller .blog-post-preview .readmore {
   margin-top: .5em;
-  color: #ffc829;
+  color: #628ecc;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 12px;
@@ -1450,12 +1451,12 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   }
 }
 
-/* line 76, sass/style.scss */
+/* line 77, sass/style.scss */
 .page-content {
   color: #565656;
   position: relative;
 }
-/* line 79, sass/style.scss */
+/* line 80, sass/style.scss */
 .page-content h2 {
   border: none;
   padding: 0;
@@ -1464,7 +1465,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   color: #a5a299;
 }
 
-/* line 92, sass/style.scss */
+/* line 93, sass/style.scss */
 .sidebar-container {
   width: 100%;
   max-width: 1260px;
@@ -1472,7 +1473,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   position: relative;
 }
 
-/* line 99, sass/style.scss */
+/* line 100, sass/style.scss */
 .page-sidebar {
   display: inline-block;
   vertical-align: top;
@@ -1484,22 +1485,22 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 14px;
   z-index: 1001;
 }
-/* line 107, sass/style.scss */
+/* line 108, sass/style.scss */
 .page-sidebar li {
   list-style: none;
   width: 90%;
 }
-/* line 111, sass/style.scss */
+/* line 112, sass/style.scss */
 .page-sidebar .call-to-action {
   white-space: nowrap;
   padding-top: 5em;
 }
-/* line 115, sass/style.scss */
+/* line 116, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons {
   padding-left: 0;
   width: 100%;
 }
-/* line 118, sass/style.scss */
+/* line 119, sass/style.scss */
 .page-sidebar .call-to-action #menu-action-buttons li {
   display: inline-block;
   color: white;
@@ -1545,27 +1546,27 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
     font-size: 3.2vw;
   }
 }
-/* line 127, sass/style.scss */
+/* line 128, sass/style.scss */
 .page-sidebar .parent-menu {
   text-transform: uppercase;
 }
-/* line 129, sass/style.scss */
+/* line 130, sass/style.scss */
 .page-sidebar .parent-menu ul {
   padding: 0;
 }
-/* line 133, sass/style.scss */
+/* line 134, sass/style.scss */
 .page-sidebar .parent-menu a, .page-sidebar .parent-menu li {
   margin-top: 1.5em;
   color: #628ecc;
   text-decoration: none;
 }
-/* line 138, sass/style.scss */
+/* line 139, sass/style.scss */
 .page-sidebar .parent-menu > div > ul {
   list-style: none;
   padding: 1em;
   margin-top: .5em;
 }
-/* line 143, sass/style.scss */
+/* line 144, sass/style.scss */
 .page-sidebar .parent-menu > div > ul ul {
   padding-left: 1em;
 }
