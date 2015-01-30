@@ -263,7 +263,7 @@ header .spark-header li a, header .menu-header-nav-container li a {
 }
 /* line 33, sass/_menu.scss */
 header .spark-header li .sub-menu, header .menu-header-nav-container li .sub-menu {
-  margin-top: 1em;
+  margin-top: .8em;
   width: 200px;
   text-align: left;
 }
