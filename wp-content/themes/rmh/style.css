@@ -20,6 +20,7 @@ body {
 h1 {
   color: #628ecc;
   font-size: 31px;
+  line-height: 1.2em;
   text-transform: uppercase;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
@@ -29,6 +30,7 @@ h1 {
 h2 {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
 }
@@ -49,7 +51,7 @@ p {
 }
 
 /* line 34, sass/style.scss */
-a {
+a, a:link {
   text-decoration: none;
   color: #628ecc;
 }
@@ -113,14 +115,15 @@ header .site-head-right .social-links .widget .menu-item {
   padding: 5px 1em;
   width: 90%;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 header .site-head-right .social-links .widget .menu-item a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -129,13 +132,13 @@ header .site-head-right .social-links .widget .menu-item a {
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   header .site-head-right .social-links .widget .menu-item a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   header .site-head-right .social-links .widget .menu-item a {
     font-size: 3.2vw;
   }
@@ -345,14 +348,15 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   font-size: 20px;
   width: 200px;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 .home .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -361,13 +365,13 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .home .call-to-action #menu-action-buttons li a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .home .call-to-action #menu-action-buttons li a {
     font-size: 3.2vw;
   }
@@ -1141,7 +1145,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   height: 25px;
   top: 0;
 }
-/* line 128, sass/_rmh.scss */
+/* line 130, sass/_rmh.scss */
 .content-area .slider-pagination .paging, .content-area .mobile-four-per-pagination .paging {
   width: 25px;
   height: 25px;
@@ -1157,7 +1161,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   transition: opacity .5s, transform .5s;
   position: absolute;
 }
-/* line 143, sass/_rmh.scss */
+/* line 145, sass/_rmh.scss */
 .content-area .slider-pagination .paging.prev, .content-area .mobile-four-per-pagination .paging.prev {
   left: 0px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
@@ -1165,7 +1169,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-/* line 151, sass/_rmh.scss */
+/* line 153, sass/_rmh.scss */
 .content-area .slider-pagination .paging.next, .content-area .mobile-four-per-pagination .paging.next {
   right: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
@@ -1178,7 +1182,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
     width: 60px;
   }
-  /* line 161, sass/_rmh.scss */
+  /* line 163, sass/_rmh.scss */
   .content-area .slider-pagination .paging, .content-area .mobile-four-per-pagination .paging {
     width: 20px;
     height: 20px;
@@ -1300,7 +1304,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   display: inline-block;
   vertical-align: top;
 }
-/* line 128, sass/_rmh.scss */
+/* line 130, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging, .archive.category .content-area .blog-paging .next-prev .paging {
   width: 25px;
   height: 25px;
@@ -1316,7 +1320,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   transition: opacity .5s, transform .5s;
   position: absolute;
 }
-/* line 143, sass/_rmh.scss */
+/* line 145, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.prev, .archive.category .content-area .blog-paging .next-prev .paging.prev {
   left: 0px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-prev.png');
@@ -1324,7 +1328,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
-/* line 151, sass/_rmh.scss */
+/* line 153, sass/_rmh.scss */
 .page-template-blog-php .content-area .blog-paging .next-prev .paging.next, .archive.category .content-area .blog-paging .next-prev .paging.next {
   right: 10px;
   background-image: url('/wp-content/themes/rmh/images/icons/slider-page-next.png');
@@ -1337,7 +1341,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   .page-template-blog-php .content-area .blog-paging .next-prev, .archive.category .content-area .blog-paging .next-prev {
     width: 60px;
   }
-  /* line 161, sass/_rmh.scss */
+  /* line 163, sass/_rmh.scss */
   .page-template-blog-php .content-area .blog-paging .next-prev .paging, .archive.category .content-area .blog-paging .next-prev .paging {
     width: 20px;
     height: 20px;
@@ -1519,14 +1523,15 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   margin-bottom: .5em;
   width: 100%;
 }
-/* line 103, sass/_rmh.scss */
+/* line 105, sass/_rmh.scss */
 .page-sidebar .call-to-action #menu-action-buttons li:hover {
   background-color: #F1D480;
 }
-/* line 107, sass/_rmh.scss */
+/* line 109, sass/_rmh.scss */
 .page-sidebar .call-to-action #menu-action-buttons li a {
   color: #a5a299;
   font-size: 22px;
+  line-height: 1.3em;
   font-family: "futura-pt",sans-serif;
   font-family: "Futura",sans-serif;
   font-size: 16px;
@@ -1535,13 +1540,13 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   text-transform: uppercase;
 }
 @media screen and (max-width: 780px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .page-sidebar .call-to-action #menu-action-buttons li a {
     font-size: 2.5vw;
   }
 }
 @media screen and (max-width: 590px) {
-  /* line 107, sass/_rmh.scss */
+  /* line 109, sass/_rmh.scss */
   .page-sidebar .call-to-action #menu-action-buttons li a {
     font-size: 3.2vw;
   }

@@ -42,6 +42,7 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 	@mixin header1 {
 		color: $primary;
 		font-size: 31px;
+		line-height: 1.2em;
 		text-transform: uppercase;
 		@include futura;
 	}
@@ -49,6 +50,7 @@ $largerightarrow: image-url('icons/four_scroll_paging_arrow_right.png', false, f
 	@mixin header2 {
 		color: $tertiary;
 		font-size: 22px;
+		line-height: 1.3em;
 		@include futura;
 	}
 
