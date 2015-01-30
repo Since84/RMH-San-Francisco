@@ -64,7 +64,8 @@
 	&.four-per-page {
 
 		.blog-post-preview {
-			height: 33vw;
+			// height: 33vw;
+			height: 400px;
 			overflow: hidden;
 			&:not(:last-of-type){
 				border-right: 1px solid $border;
@@ -73,6 +74,7 @@
 			.post-feature {
 				.thumbnail {
 					height: 15vw;
+					max-height: 150px; 
 					overflow: hidden;
 				}
 				img {

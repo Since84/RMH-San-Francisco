@@ -1066,24 +1066,25 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 }
 /* line 66, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview {
-  height: 33vw;
+  height: 400px;
   overflow: hidden;
 }
-/* line 69, sass/_post-scroller.scss */
+/* line 70, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview:not(:last-of-type) {
   border-right: 1px solid #999d9f;
 }
-/* line 74, sass/_post-scroller.scss */
+/* line 75, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview .post-feature .thumbnail {
   height: 15vw;
+  max-height: 150px;
   overflow: hidden;
 }
-/* line 83, sass/_post-scroller.scss */
+/* line 85, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview .readmore {
   position: absolute;
   bottom: 0;
 }
-/* line 93, sass/_post-scroller.scss */
+/* line 95, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .pager-button {
   display: block;
   position: absolute;
@@ -1099,32 +1100,32 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   transition: opacity .5s;
 }
 @media screen and (max-width: 780px) {
-  /* line 93, sass/_post-scroller.scss */
+  /* line 95, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 0;
   }
 }
 @media screen and (min-width: 780px) {
-  /* line 93, sass/_post-scroller.scss */
+  /* line 95, sass/_post-scroller.scss */
   .content-area .post-scroller.four-per-page .pager-button {
     top: 10px;
   }
 }
-/* line 114, sass/_post-scroller.scss */
+/* line 116, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page:hover .pager-button {
   opacity: .25;
 }
-/* line 118, sass/_post-scroller.scss */
+/* line 120, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-next {
   right: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_right.png');
 }
-/* line 122, sass/_post-scroller.scss */
+/* line 124, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .cycle-prev {
   left: 0;
   background-image: url('/wp-content/themes/rmh/images/icons/four_scroll_paging_arrow_left.png');
 }
-/* line 139, sass/_post-scroller.scss */
+/* line 141, sass/_post-scroller.scss */
 .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
   position: absolute;
   right: 0;
@@ -1165,7 +1166,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   background-size: 100% auto;
 }
 @media screen and (max-width: 780px) {
-  /* line 139, sass/_post-scroller.scss */
+  /* line 141, sass/_post-scroller.scss */
   .content-area .slider-pagination, .content-area .mobile-four-per-pagination {
     width: 60px;
   }
@@ -1175,7 +1176,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
     height: 20px;
   }
 }
-/* line 143, sass/_post-scroller.scss */
+/* line 145, sass/_post-scroller.scss */
 .content-area .mobile-four-per-pagination {
   display: none;
 }
