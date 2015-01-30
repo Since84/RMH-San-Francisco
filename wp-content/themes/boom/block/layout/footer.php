@@ -15,6 +15,8 @@
 						The following trademarks used herein are owned by McDonald's Corporation and its affiliates:McDonald's, Ronald McDonald House Charities,
 	Ronald McDonald House Charities Logo, RMHC, Ronald McDonald House, Ronald McDonald Family Room, and Ronald McDonald Care Mobile.
 					</p>
+					<br>
+					<span><a href="http://agdesigngroup.net" title="San Francisco Web Design">Website</a> By <a href="http://agdesigngroup.net" title="Walnut Creek Web Design">AG Design Group</a>
 				</div>
 			</ul>
 		</div>
