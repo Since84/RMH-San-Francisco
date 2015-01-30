@@ -1082,7 +1082,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 }
 /* line 75, sass/_post-scroller.scss */
 .content-area .post-scroller.four-per-page .blog-post-preview .post-feature .thumbnail {
-  height: 15vw;
+  height: auto;
   max-height: 150px;
   overflow: hidden;
 }
