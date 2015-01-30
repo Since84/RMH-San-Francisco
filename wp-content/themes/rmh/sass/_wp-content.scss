@@ -19,10 +19,12 @@ dl.aligncenter,
 
 .alignleft {
 	float: left;
+	margin: 0 1em 1em 0;
 }
 
 .alignright {
 	float: right;
+	margin: 0 0 1em 1em;
 }
 
 .wp-caption {
