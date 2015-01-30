@@ -1568,26 +1568,27 @@ footer {
   color: white;
   line-height: 1.5em;
   padding: 0 1em;
+  font-size: 12px;
 }
-/* line 8, sass/_footer.scss */
+/* line 9, sass/_footer.scss */
 footer a {
   color: white;
 }
-/* line 12, sass/_footer.scss */
+/* line 13, sass/_footer.scss */
 footer .menu-corporate-menu-container {
   display: inline-block;
   margin-left: 2em;
 }
-/* line 15, sass/_footer.scss */
+/* line 16, sass/_footer.scss */
 footer .menu-corporate-menu-container li {
   display: inline-block;
   margin-right: 1em;
 }
-/* line 21, sass/_footer.scss */
+/* line 22, sass/_footer.scss */
 footer .trademark {
   margin-top: 1em;
 }
-/* line 25, sass/_footer.scss */
+/* line 26, sass/_footer.scss */
 footer .footer-sitemap {
   border-bottom: 1px solid white;
   margin-bottom: 2rem;
