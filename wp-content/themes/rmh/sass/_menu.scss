@@ -31,10 +31,72 @@ header .spark-header, header .menu-header-nav-container {
 
 		//Sub Menu
 		.sub-menu {
-			margin-top: 1em;
+			margin-top: .8em;
 			width: 200px;
 			text-align: left;
 			a { font-size: .9rem; }
 		}
+	}
+}
+
+@media screen and ( max-width: $tablet ) {
+	#sidr{
+		background: $primary;
+		border: none;
+		color: white; 
+
+		//Nav Items
+		ul, ul li { border: none; }
+		li {
+			padding-bottom: 0;
+			list-style: none;
+			a { 
+				color: white; 
+				position: relative;
+				padding: 20px 15px;
+				display: block;
+				text-decoration: none;
+				// &.sidr-class-nav-main-link {
+					&::after{
+						content: "";
+						display: block;
+						width: 0; 
+						height: 0; 
+						border-top: 5px solid transparent;
+						border-bottom: 5px solid transparent;
+						border-left: 5px solid white;
+						position: absolute;
+						right: 10px;
+						top: 0;
+						bottom: 0;
+						margin: auto;
+					}
+				// }
+			}
+			border-bottom: 1px solid white;
+		}
+
+		.sidr-class-sub-menu{
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 1s;
+			margin: 0;
+			background: $tertiary;
+		}
+		.open .sidr-class-sub-menu, & > li:hover .sidr-class-sub-menu {
+			max-height: 1000px;
+		}
+
+		.sidr-class-menu-item-has-children.open {
+			a.sidr-class-nav-main-link{
+				border-bottom: 1px solid white;
+				&::after{
+					border-top: 5px solid white;
+					border-right: 5px solid transparent;
+					border-left: 5px solid transparent;
+				}
+			}
+		}
+
 	}
 }

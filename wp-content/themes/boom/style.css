@@ -267,12 +267,12 @@ footer .footer-sidebar .widget_nav_menu {
 }
 
 /* line 71, sass/style.scss */
-.single .blogroll-container, .page .blogroll-container, .category .blogroll-container {
+.single .blogroll-container, .page .blogroll-container, .category .blogroll-container, .search .blogroll-container {
   display: block;
   margin: auto;
 }
 /* line 76, sass/style.scss */
-.single .content-area, .page .content-area, .category .content-area {
+.single .content-area, .page .content-area, .category .content-area, .search .content-area {
   position: relative;
   min-height: 600px;
   width: 75%;
@@ -280,23 +280,23 @@ footer .footer-sidebar .widget_nav_menu {
   vertical-align: top;
 }
 /* line 83, sass/style.scss */
-.single .sidebar-container, .page .sidebar-container, .category .sidebar-container {
+.single .sidebar-container, .page .sidebar-container, .category .sidebar-container, .search .sidebar-container {
   position: relative;
   display: inline-block;
   width: 20%;
 }
 /* line 89, sass/style.scss */
-.single .post-feature-image .sidebar-container, .single .post-feature-gallery .sidebar-container, .page .post-feature-image .sidebar-container, .page .post-feature-gallery .sidebar-container, .category .post-feature-image .sidebar-container, .category .post-feature-gallery .sidebar-container {
+.single .post-feature-image .sidebar-container, .single .post-feature-gallery .sidebar-container, .page .post-feature-image .sidebar-container, .page .post-feature-gallery .sidebar-container, .category .post-feature-image .sidebar-container, .category .post-feature-gallery .sidebar-container, .search .post-feature-image .sidebar-container, .search .post-feature-gallery .sidebar-container {
   position: absolute;
 }
 /* line 93, sass/style.scss */
-.single .page-sidebar, .page .page-sidebar, .category .page-sidebar {
+.single .page-sidebar, .page .page-sidebar, .category .page-sidebar, .search .page-sidebar {
   vertical-align: top;
   padding-top: 1em;
   left: 0;
 }
 /* line 99, sass/style.scss */
-.single .page-sidebar .call-to-action .widget_text, .page .page-sidebar .call-to-action .widget_text, .category .page-sidebar .call-to-action .widget_text {
+.single .page-sidebar .call-to-action .widget_text, .page .page-sidebar .call-to-action .widget_text, .category .page-sidebar .call-to-action .widget_text, .search .page-sidebar .call-to-action .widget_text {
   display: none;
 }
 

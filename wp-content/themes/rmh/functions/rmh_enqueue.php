@@ -1,5 +1,8 @@
 <?php
 function rmh_enqueue() {
+
+	//Scripts 
+	wp_enqueue_script( 'rmh_menu', get_stylesheet_directory_uri().'/rmh.menu.js', array('jquery','sidr') );
 	
 	//Stylesheets
 	wp_register_style( 'Nunito', 'http://fonts.googleapis.com/css?family=Nunito:400,700' );
