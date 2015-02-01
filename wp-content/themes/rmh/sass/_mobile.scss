@@ -2,22 +2,22 @@
 
 @media (max-width: 780px){ 
 
-h1 {
-	font-size: 16px;
-}
+	h1 {
+		font-size: 16px;
+	}
 
-h2 {
-	font-size: 16px;
-}
+	h2 {
+		font-size: 16px;
+	}
 
-h3 {
-	font-size: 13px;
-}
+	h3 {
+		font-size: 13px;
+	}
 
-p  {
-	font-size: 13px;
-	line-height: 1.3em;
-}
+	p  {
+		font-size: 13px;
+		line-height: 1.3em;
+	}
 
 	//Menu
 	.main-menu {
@@ -90,55 +90,60 @@ p  {
 
 	// Blog Roll 
 	.page-template-blog-php, .archive.category, .single, .search {
-		.content-area {
+		
+		.page-sidebar {
 			padding: 0;
+			padding-top: 0;
+			position: relative;
 			width: 100%;
-
-			.page-sidebar {
+			max-width: none;
+			.call-to-action {
+				height: auto;
 				padding: 0;
-				position: relative;
-				width: 100%;
-				max-width: none;
-				.call-to-action {
-					height: auto;
-					padding: 0;
-					white-space: nowrap;
-					& > li {
-						width: 100%;
-						&.widget_text{
-							display: none;
-						}
-						#menu-action-buttons {
+				white-space: nowrap;
+				& > li {
+					width: 100%;
+					&.widget_text{
+						display: none;
+					}
+					#menu-action-buttons {
+						margin: 0;
+						li{
+							display: inline-block;
+							vertical-align: middle;
+							height: 7vw; 
+							width: 33.4vw;
 							margin: 0;
-							li{
-								display: inline-block;
-								vertical-align: middle;
-								height: 7vw; 
-								width: 33.4vw;
-								margin: 0;
-								background-image: none;
-								padding: 1vw 0;
-								text-align: center;
-								border-radius: 0;
-								font-weight: 600;
-								letter-spacing: 1px; 
+							background-image: none;
+							padding: 1vw 0;
+							text-align: center;
+							border-radius: 0;
+							font-weight: 600;
+							letter-spacing: 1px; 
+							a {
+								font-size: 3vw;
+								height: 1.5em;
+								line-height: 1.6em;
+							}
+							&:not(:first-child) {
+								margin-left: -5px;
 								a {
-									font-size: 3vw;
-									height: 1.5em;
-									line-height: 1.6em;
-								}
-								&:not(:first-child) {
-									margin-left: -5px;
-									a {
-										display: block;
-										border-left: 1px solid white;
-									}
+									display: block;
+									border-left: 1px solid white;
 								}
 							}
 						}
 					}
 				}
-			}	
+			}
+			.parent-menu{
+				display: none;
+			}
+		}
+
+		.content-area {
+			padding: 0;
+			width: 100%;	
 
 			.page-title, .blog-post-preview { //TODO: Wrap title and posts in own div
 				margin: 0 1em;
@@ -154,8 +159,8 @@ p  {
 				height: auto;
 
 				.post-feature {
-					float: none;
-					width: 100%;
+					float: left;
+					width: 30%;
 					text-align: center;
 					height: auto;
 					min-height: inherit;
@@ -171,8 +176,15 @@ p  {
 					}
 				}
 				.post-content {
-					width: 100%;
+					width: 65%;
 				}
+
+				&::after{
+					content: "";
+					display: block;
+					clear:both;
+				}
+
 			}
 
 			.blog-paging {
@@ -181,6 +193,10 @@ p  {
 					vertical-align: middle;
 					line-height: 1em;
 					padding: 0.4em 1em;
+					width: 80px;
+				}
+				.paging.next {
+					margin-left: 1em;
 				}
 			}
 
