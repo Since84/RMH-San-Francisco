@@ -9,6 +9,7 @@ $fArgs = array(
 	);
 
 $slides = new WP_Query( $fArgs );
+
 ?>
 <div class='featured-content dynamite-slide'>
 	<div class='dynamite-slider'>
@@ -24,6 +25,7 @@ $slides = new WP_Query( $fArgs );
 					getSlide('gallery-image', $images);
 				} else {
 					foreach ( $images as $image  ) {
+
 						getSlide('gallery-image', $image);
 					}
 				}

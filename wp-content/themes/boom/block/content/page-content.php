@@ -15,17 +15,18 @@
 	$slider = get_post_meta( get_the_id(), 'gallery', true );
 	if ( has_post_format( 'gallery' ) && $slider ) {
 		$slider = strpos( $slider, ',' ) ? explode(',', $slider) : $slider;
+
 ?>	
-	<div class="post-feature-gallery">
-		<div class="sidebar-container">
+		<div class="post-feature-gallery">
+			<div class="sidebar-container">
 <?php 		
-			Boom_Util::get_template_parts(array('block/layout/page-feature-sidebar')); 
+				Boom_Util::get_template_parts(array('block/layout/page-feature-sidebar')); 
+?>
+			</div>
+<?php
+			getSlideshow($slider);
 ?>
 		</div>
-<?php
-		getSlideshow($slider);
-?>
-	</div>
 <?php
 	}
 //IMAGE 

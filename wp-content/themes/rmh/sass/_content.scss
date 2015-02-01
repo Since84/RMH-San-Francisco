@@ -90,6 +90,7 @@
 
 			h3 {
 				font-size: 22px;
+				line-height: 1.3em;
 			}
 
 			p {
@@ -118,6 +119,7 @@
 
 		.blog-paging {
 			font-size: 12px;
+			padding: 2em 1em;
 
 			.next-prev {
 				@include pagination;
