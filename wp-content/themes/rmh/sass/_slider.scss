@@ -2,6 +2,7 @@
 
 .dynamite-slide .dynamite-slide-container {
 	height: 31.3vw !important;
+	max-height: 413px !important;
 }
 
 .dynamite-slide .dynamite-slider{
@@ -28,6 +29,7 @@
 	.dynamite-slider {
 		.slide{
 			height: 31.3vw!important; 
+			max-height: 413px !important;
 			&.active{
 				// height: vw!important;
 			}

@@ -404,17 +404,18 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 /* line 3, sass/_slider.scss */
 .dynamite-slide .dynamite-slide-container {
   height: 31.3vw !important;
+  max-height: 413px !important;
 }
 
-/* line 7, sass/_slider.scss */
+/* line 8, sass/_slider.scss */
 .dynamite-slide .dynamite-slider {
   overflow: visible !important;
 }
-/* line 11, sass/_slider.scss */
+/* line 12, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .dynamite-slide-window {
   margin-top: -39px;
 }
-/* line 13, sass/_slider.scss */
+/* line 14, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .dynamite-slide-window::before {
   content: '';
   display: block;
@@ -427,9 +428,10 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   z-index: 1;
 }
 
-/* line 29, sass/_slider.scss */
+/* line 30, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .slide {
   height: 31.3vw !important;
+  max-height: 413px !important;
 }
 
 /* line 3, sass/_call-to-action.scss */
