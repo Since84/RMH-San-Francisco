@@ -429,11 +429,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 
 /* line 29, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .slide {
-  height: 32vw !important;
-}
-/* line 31, sass/_slider.scss */
-.dynamite-slide .dynamite-slider .slide.active {
-  height: 34vw !important;
+  height: 31.3vw !important;
 }
 
 /* line 3, sass/_call-to-action.scss */
