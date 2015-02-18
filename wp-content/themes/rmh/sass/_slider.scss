@@ -1,7 +1,7 @@
 //Slider
 
 .dynamite-slide .dynamite-slide-container {
-	height: 26vw;
+	height: 34vw !important;
 }
 
 .dynamite-slide .dynamite-slider{
@@ -27,9 +27,9 @@
 .dynamite-slide {
 	.dynamite-slider {
 		.slide{
-			height: 35vw;
+			height: 32vw!important;
 			&.active{
-				height: 36vw;
+				height: 34vw!important;
 			}
 		}
 	}

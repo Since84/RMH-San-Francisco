@@ -403,7 +403,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 }
 /* line 3, sass/_slider.scss */
 .dynamite-slide .dynamite-slide-container {
-  height: 26vw;
+  height: 34vw !important;
 }
 
 /* line 7, sass/_slider.scss */
@@ -429,11 +429,11 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
 
 /* line 29, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .slide {
-  height: 35vw;
+  height: 32vw !important;
 }
 /* line 31, sass/_slider.scss */
 .dynamite-slide .dynamite-slider .slide.active {
-  height: 36vw;
+  height: 34vw !important;
 }
 
 /* line 3, sass/_call-to-action.scss */
@@ -1584,7 +1584,7 @@ header .spark-header li .sub-menu a, header .menu-header-nav-container li .sub-m
   /* line 204, sass/_content.scss */
   .content-area .blog-post-preview .post-content {
     display: inline-block;
-    width: 55vw;
+    width: 53vw;
     font-size: 14px;
     line-height: 1.3em;
     margin-top: 1em;
@@ -1733,7 +1733,7 @@ footer {
   font-size: 13px;
 }
 /* line 9, sass/_footer.scss */
-footer a {
+footer a, footer a:link, footer a:visited {
   color: white;
 }
 /* line 13, sass/_footer.scss */
