@@ -1,5 +1,9 @@
 //Slider
 
+.dynamite-slide .dynamite-slide-container {
+	height: 26vw;
+}
+
 .dynamite-slide .dynamite-slider{
 	overflow: visible !important;
 
@@ -16,6 +20,17 @@
 			left: 0;
 			background: $primary;
 			z-index: 1;
+		}
+	}
+}
+
+.dynamite-slide {
+	.dynamite-slider {
+		.slide{
+			height: 35vw;
+			&.active{
+				height: 36vw;
+			}
 		}
 	}
 }
